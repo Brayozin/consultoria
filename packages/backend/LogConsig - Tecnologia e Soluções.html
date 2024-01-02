@@ -1,0 +1,1143 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head><link rel="stylesheet" type="text/css" href="/App_Themes/Common/style.css?v=&lt;%#versao %>" /><link rel="stylesheet" type="text/css" href="/App_Themes/Common/dist/style.min.css?v=&lt;%#versao %>" /><link rel="stylesheet" type="text/css" href="/App_Themes/Common/atualizarBrowser.css?v=&lt;%#versao %>" /><link rel="stylesheet" type="text/css" href="/App_Themes/Common/smoothness/jquery-ui.css" /><link rel="stylesheet" type="text/css" href="../App_Themes/Common/dist/style.css" /><link rel="icon" type="image/icon" href="../img/favicon.ico" /><link href="/App_Themes/Common/BoxPopover.css" rel="stylesheet" />
+	<style> 
+		#blip-chat-open-iframe {
+			display: none !important;          
+		}
+	</style>
+
+	<!--<script type="text/javascript" src="/scripts/jquery-2.1.3.min.js"></script>-->
+	<script type="text/javascript" src="/scripts/jquery-3.6.3.min.js" ></script>
+	<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery-ui.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.maskedinput.js"></script>
+	<script type="text/javascript" src="/scripts/powerbi.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.price_format.1.7.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.validate2.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.maskMoney.js"></script>
+	<script type="text/javascript" src="/scripts/funcoes.js?v=170929.5.2.6.3"></script>
+	<script type="text/javascript" src="/scripts/menu.js?v=170929.5.2.6.3"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.bundle.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var data = sessionStorage.getItem('chave');
+			var sessao = '1975290628';
+			estiloMenu();
+		});
+
+		function estiloMenu() {
+			document.querySelectorAll('#menu2 li').forEach(liItem => {
+				liItem.addEventListener('mouseenter', (e) => {
+					if (e.target.localName === 'li') {
+						e.target.firstChild.classList.add("mouseenter");
+						e.target.firstChild.classList.remove("mouseleave");
+					}
+				});
+
+				liItem.addEventListener('mouseleave', (e) => {
+					if (e.target.localName === 'li') {
+						e.target.firstChild.classList.remove("mouseenter");
+						e.target.firstChild.classList.add("mouseleave");
+					}
+				});
+			});
+
+			document.querySelectorAll('#menu1 li').forEach(liItem => {
+				liItem.addEventListener('mouseenter', (e) => {
+					if (e.target.localName === 'li') {
+						e.target.classList.remove("mouseleave");
+						e.target.classList.add("mouseenter");
+					}
+				});
+
+				liItem.addEventListener('mouseleave', (e) => {
+					if (e.target.localName === 'li') {
+						e.target.classList.remove("mouseenter");
+						e.target.classList.add("mouseleave");
+					}
+				});
+			});
+
+			//Menu Filiacao
+			var itemMenu = document.querySelectorAll(".subimg_submenu");
+			for (var i = 0; i < itemMenu.length; i++) {
+				if (itemMenu[i].parentElement.parentElement.parentElement.parentElement.firstChild.textContent.indexOf("Filiação") == -1) {
+
+					if (itemMenu[i].lastElementChild == null) {
+						itemMenu[i].parentNode.parentNode.remove();
+					}
+				}
+			}
+
+		}
+
+		function janelaSecundaria(URL) {
+			window.open(URL, "janela1", "width=600,height=565,scrollbars=NO")
+		}
+
+		function DisableEnter(textBox, e, length) {
+
+			var mLen = textBox["MaxLength"];
+			if (null == mLen)
+				mLen = length;
+
+			var maxLength = parseInt(mLen);
+			if (checkSpecialKeys(e)) {
+				if (textBox.value.length > maxLength - 1)
+					return false;
+				else
+					return true;
+			}
+			else
+				return false;
+		}
+
+		function openManual(tag) {
+			var pagina = "";
+
+			if (tag == undefined) {
+				pagina = document.location.pathname.split('/').pop().replace(".aspx", "");
+			}
+			else {
+				pagina = tag;
+			}
+
+			var url = window.location.origin + "/Manual/ManualConsiglog.html#" + pagina
+
+			window.open(url, "LogConsig - Ajuda", "width=800,height=800,scrollbars=yes")
+		}
+
+		function checkSpecialKeys(e) {
+			key = e ? e.which : window.event.keyCode;
+			if (key == 13 || key == 39) {
+				return false;
+			}
+			return true;
+		}
+
+		function DisableEnterOnPaste(textBox, e, length) {
+			//debugger;
+			var mLen = textBox["MaxLength"];
+			if (null == mLen)
+				mLen = length;
+
+			var maxLength = parseInt(mLen);
+
+			if (window.event.ctrlKey)
+				if (window.event.keyCode == 86) {
+					textBox.value = textBox.value.replace(/\n/g, " ").replace("'", '"').replace("	", " ");
+					if (textBox.value.length > maxLength - 1) {
+						textBox.value = textBox.value.substr(0, maxLength);
+					}
+				}
+
+		}
+
+    </script>
+
+	<noscript>Seu navegador não suporta JavaScript.</noscript>
+
+	<meta name="viewport" content="width=device-width" /><title>
+	#Sistema# - Tecnologia e Soluções
+</title>
+    <script type="text/javascript">
+        $(function () {
+            $("tr.margem-detalhe:last").addClass('ultimo');
+        });
+    </script>
+    <style type="text/css">
+        .grid {
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            width: 100% !important;
+        }
+
+        .ultimo {
+            background-color: #717988 !important;
+            color: #ffffff;
+        }
+
+        .alinharDireita {
+            text-align: right;
+        }
+    </style>
+<link href="../App_Themes/SAEC/menu.css" type="text/css" rel="stylesheet" /></head>
+<body onclick="ChecarBrowser(true);" onload="estiloMenu();">
+	<div style="display: none;">
+		<h1>Padrões Web</h1>
+		<p><a href='#' title="link para menu 1">Menu 1</a></p>
+		<p><a href='#' title="link para menu 2">Menu 2</a></p>
+		<h2>Web Semântica</h2>
+		<p>
+			O poder da web está em sua universalidade.
+							Ser acessada por todos, independente de deficiência, é um aspecto essencial.
+		</p>
+		<p>Tim Berners Lee</p>
+	</div>
+
+	<h3 style="display: none">h3</h3>
+
+	<ul style="display: none" id="atalhos">
+		<li><a href="#irconteudo" accesskey="1" title="link para menu 1">Ir Conteudo[1]</a></li>
+		<li><a href="#irmenu" accesskey="2" title="link para menu 2">Ir para menu principal[2]</a></li>
+		<li><a href="#irbusca" title="link para menu 3">Ir para busca [3]</a></li>
+	</ul>
+
+	<div style="display: none">
+		<input type="text" id="irbusca" value="Pesquise aqui" />
+		<input type="text" id="irconteudo" value="Pesquise aqui" />
+		<input type="text" id="irmenu" value="Pesquise aqui" />
+	</div>
+
+	<div id="loading-content" style="display: none;">
+		<div id="loading">
+		</div>
+		<div id="loading-img">
+			<img src="/img/loading.gif" alt="Carregando..." />
+		</div>
+	</div>
+	<div id="browser">
+	</div>
+	<form method="post" action="./ConsultaMargemDados.aspx" id="MasterPageForm1" class="form">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="1MpHWdrYWIFlA14wMxs7GRoqBQMvxW6fXsajxPA0+752VpcSMJGzT7Qvs3PBsnxISUD27Pwl/zskmMQGK1pblWWHq0nUCJqa61zeMmksqJE3VPhmRaCvRL+1t907VV8kURVkLsA4qm5uYaR+Brsu85raEX4imW6yD8k3ZVK91KZOFw99WBxtYQckJ26g3i0yA29ftxJU7ttdEwtiiNb4mkHp2jF8jAA+eZurvmGGqGx/yn/S0RJFdB0VFaDmDPSDmQaKmZOvIOxpBnxNFX1eB46nLqAoX7N+IcMMQvGJwnVsq993tsTITebNEIizYw81sDmgyA13wijfcdx28XGNF3G+EPc9haG+ODWamZGVr3/gQJyHretCOzsUoQ7l3aT1OroaxOF1SEt/BewVfbNtCZlqaQ3tO9vwVX5m9ReGvn6gapYqznyWZSXnJWjB4CrMsA14W1WW1MztKyTqtuzOXZLPrdwRhxGJrK//SDcXowd1J6DYjdb0UibXhE4uUjGhyycBSoqq+7Gm22E/gKo8KWpfZP0XPpiPP7HsiL6yYxFsdO9X5+Bmln+0G6fFMQPf4mA+vJ3ItnkP2Rpu7iBm4SMuJM63oJkS6R6lJGK3wvcb3dyIxePekm82lozeyQNt42lrCEMxohNNNKAoLS3T1FmphMqA6Z7Om5BU/UxOpc5ejPXghfTpB1mCBSEFPc8jGYa83eueHCUpFcJiQmRUIv0LTyd/RYer/Muh88opdWavHHJyvSxfrqndxS9o0V5Y/S+nG4dfUYDJs/M4o2R6KgeNJnbCLqykdknyrSzq/SSmqvWA9ssyTVPotsokjyjAyTRjXyKNNPk5rtZx2+OBqC444hmdV9nt1RKnVI45SRNt+1/qQIIsag/B90m2Cc6ixo6SnmNCL1fxBAfcW/L1oIVQvDAMNF13VZ/3Bwt/FF9wqhtL8qpU9KSM/whiU6uXrVoh9gvby3XXi1qWNLM6szbOQXOVfDdOh9vURbODj+xgjOuJlH+1nNfGTXBSRaaUUKXv70JMR+GJp0zPSnPoFUbrmTrKMYBpr3q7eAqwCl6kaigrJWPb83jJEM8JGdmRw/nUa9T2QpZNUbARa5/E0XhAtIKq66r1Qi+TZNMVBTg7sZrybR5rvzwf7uwBYpP4ujomN1zzMtu2PmI6FGOyjyTSb+eigQBu9E8DQWBgeVjmNt9HIv5YrgnWtHWj6u6CeDr8k7iDpyW+GbseiiXEeHbHfw63AFOw2vireA37HG9GV3MEJhAXfVcK0Ip4nCqsQXLCpbUNRAddhaNyKhIJuGSbmA+BsoSJ653eVJDU67LTfMkK7A/bC6cZoM6zq6fAnXPnm/2M0tg3A5kkkFtk6zPPKODjS91txSB+PxGmLiRH6eCojOxXqWeoJfonRwlGxZqq5RWszb9UV/DunBoBjMgEfkdM0tD9Ohx0VYv86VKZi0QZDjZyZngGBrYtAgG90CSej2E9vUa2TV1pKZxpKWzqG0LFodnCWywgM7sS/pNj6oDL1tk88ClxZA2F7bGgHIQu7Rjq6+V+o3oY2HadzMXDoOcDG7G2+XZL7iyviR9eZLGQI1uX+4ixKPzJcQ+9BxZyDBqekrQ4k1DR9IELkMBI07TqP6stFIYWxtTRvfWK/6z6F9AfNfrQLf4qXqDJS8VzrP8ohfYD3s6Jx/uRAg4KXg1QClWH8Te3X1wUw+S+bZliKvfbJ2jm0NltQiQXiOW/jb7W0INGFJkhw20/PYSL+SDcRhlBjV5QGmeUHAMlL9Rt87VXc3KcTwho4DgM4+f19uiUI7LNSTWQa7p81FFclRM+1eKEigTfXJ173UFMPMlnu9dYT6HbwhhyVm1BQ/cacwvz6Lx/wrg3EyngfQI+Ch8jYGHy4D0z4usHr5yidX5NmTzbfF8mTEcHK8ghLILQ2RZp04f8yRZlVy0XrnzgZoZrQLSkdzvnQdi5ogoYOCw+5fFOWQZcvUgYOq1JJ1S1L7PdWTQi+cuMYkgzT/MJL6ds4mEFaVStzkUeNur4tYQNn36REvoYjsMqKrRSqIAeT/LEWtGlTJWBqoVKYAqCvljBqKQhuuqebQYX0nw41hChRlEoFipC4lUHjPesd8Lc1qbyb3vV6CK4dxxBjHX+QamDPNIjionusxkX09Wm/57nd8J6y8CxI/MFNMhHDzqlPfdZ04w1UgvVERcbQNpn6aQ487bqAnEeClsvS7uHfUAJwYjPBqte4oRfHW46R2jK13VT6KNMc/5S/QtFKS5xjBYU2pfoJ4OpEhLUEdG/Uj6opzhWT9h9GbL9dyJLLXlq5v2S0Wi9Ye1TgaR6xuup40sY69Zt3AAZXBGPwNfEdQBhEN9drlgmQzWwqIH52jBpB+9v+CbTccW8YdsmhGIrgoGtZW3BqEXEfcDGZZccyyEq+wVMkv35VvgiV3H4uHalH0BklSIuq4k7hNpxbm8xXFR+7HXly4Q3xMNjPAqSxT59KA6om8miARS840oQi2zk6JvXWnUSL0IW2LZRaor79axfP1o5NH6XCF6muzLdyB/o9hN/8uLxeY/wW3MfNBBuwJErF/rrLgVqlpp1PoCGp0R4TxfmygNoQF2hnaAX46bEso5g0ezSkbNrrkOPO9bnaK/D1dzQ3mtkwtuoCVlS4iisxn/wU3SzOW9f66gqWFwIZzcgQS5fiM1qwAgzG1gkDLDKtrZ3f8T8N6NpviJ9Fskn8geRdNXuQ7W2Y1c0Ih2UAjQB8jiiGkYh0z4TQpD1dzrb7u2qp6wXWZxBWK0XwU/bLk20jQeLIpqOgNQaKZLXNbIXEj0MARIQDNNBTor8dSBqBGrxL8FQfEp/v9cfZbA9+IujTP2E+qqP5ZTeje+TzU9Kgwn/bSL4he3z0tea17FkkvMaRz1LgmZ7w51nwoPnB3r9dCDeFIAOVp1TDqFDkUgWod0UnE6VUD96SoAb1lQmHIfYhgv7RdfsOHEma1QLSaZbj8DIAh4ShF6FKXJXU6LZEuyCNCQYErLDCgnKfzCk5I/UXl3bGXyvmT1eqldw/sBVnrehlf1z9mEj0SRyQEUD5UPthmw8LSgsxrWzLfCAIXhNQT1itS8Au3p+t+bxi8TuOBJSoPnQ9i2qbpTsbkkL8JTNGDoFXPI7mxonAVGhXaqAFWipXoykOBtyDMFOTq7ARewHPw/SQNwnJatPCy8HDrzaE/sPVqsOK76e8olS6Wgm5WfNdfxsCwwefb/4Lkj4G0p+/cfxA/35H4CTHsh68knEKL87uGRGMYiCfVQIq9LFqHT08skwfW7CkurH0ckf3W0eWB8XyCRLIefCBYf15jPpEJvN3aVaOhEV4OyHnli+T/5ireD2jP32wB0zva9MYov8tGCa1pu2jz1JVpr99arsGGnSnF3IGZFjiCgF4Chc9ntrNywcyWhccKxOllvSQyW72iKKAnZk4sDk1lqKZ8rlOnxcFXE96rrIU0VntYDGRGiee7CPbfnKxp+RpLzqwOb0/p+0L4TVaLrLEYMBU9p08THbk7fdeaJxRoDcW8pcrOdHhOi6wsTDbg5Lj8mLsn2OeXc+0OzvWn2cj0NVzXOEI8FAHmfWRkAenjPGZ3tJb9uStSlSzzTLv5HG8nGo4++h5egxmXDEDv1SOc07dTYhE7kSJQKNVcPQpvzzoVvKGi7hwYZO4GGn7hc2zh3Owi8zLHuyqEOFDrOycyORI4l9Ec8j2ALAABKyDfacE/NYFxWujiHD3vueIGV+Tv6aUKsBSljWQFnPqcHpqm5jMqm3/ez1X79Gcbhd4ab1K7U0F80nntLgeuAbIr+wPo9yfPrZawah9gG8UkGtB3NOaRmIbjjXl/T3HbvYfXgg05c7hS0Ox94nlvTE5PRYr1jInB/DqF5uzmB6UF25z0O1P4eM9NjOq8c6aHoSD/xLBbumGOCdO7VxnsAw+MIHB09yYxfLnzIMrgYr5j3v6csHlw+HQ8VAjnAQiKqG11GYgnPuso/HW0w7PWtkgzOeaLqiArsKh5iRAkacvtoGhNQFaYO4fF2ja4u33fq2o962khVWJh5eGuQLVV8Y88XZUNDHYKj9EbpuECwi8vP1+LT/mW9xxMrACMA0HC0lZdpUVwV6g5unY5F+IQZ68hUxMfw2vGYVTGYmSo4CwTpg7mqdh+3NGVv5S4lehMDZaj8K0ocM3vjUY/lk5WXfQHOGKm0YDzs4VllWAwD3sCdX6V0EDrVfDIMHZqB/Q0slrL74NJ38ejoRTbIJ20mxNpAuazHOlanCq82tt7L/uCwSBE/rQK0Z5NyXRD97zL8eqsj0CN68fV1ZNtq5kuk32y7Bi+JamJnYPZfYiMGtfrzsQs+84E4nCbqUN/C2sXoaZP7RUPs9mcrKq4W3zvWAnOL5YrVrWjQKuPCZYw02qiUXNeGQJ6UxBUFY/Di1AO03T+8kbsUNqZ91yMz9mcq5tvwZnQtdQGdPwTbWPYCyYCDrPtHzUn5g+FIKdC0I4yBxyDvJy+uKMaVNCoSmSsvGSigZrFLclQzsG7+ICUzk9J5RlV1i/Al2t8zdCrdgtaxMjRNcRbkBE1miQe8DheLcIiVeQtPPUF1dIIRRIPYrX1pZwc3ucoQkmWVfhAbyA/8YYsSb+6uk2jIV/20NLMBsF1+EGkD8Owl8HUW/VrCzCIuhPHEscOJ630BklYx8pK3O28W6nXsQ2Gfflmh2yLGs4mTyAbkoaPKxJeQvOYzk5wzNFIH7CvlK80TEqu5yGjhbdZSZ4VYJmqzVtymNZtpDw54gzjEcjyAW53HBij0wEWxi8Z4U7zgKdPA3tiNzFkMyfmCD0QEG2nfm4PVdSywKdmj/aY8ip/FrMcma1iBPNXviJTrICfPGcPet1VciyXD62vmEWEDr8mnS6KvMVGp3mOjvnByrUPBSFDlAZxkqZ0pLgfJIFPbHkR4eXRACPVzSgXgPsP8GjLbkQDJNtb/HIfL1JChoV8MPt2KvxCtke5GzKaCjXekJ6RtTHg0xsFPOrgg4EPlrpB/TvBSrZoa0P7qZn4qWM2I0qU104oh+CeAPIW+IVY30HmuS4b4fYC4blYsy7xvwRNBXCLPRhPx01uae3TEOsKoDFz8bA26mP7rZPFWuY6dy7tclfXzXkOtf3YZHSk3nYvMYtEXxD3H4Jpx4IPQJRAxOgXRbiGjRHusOLEzbt0VXKGqkohL11D0M9oQmWq2aDLx+foAa7KkqGGUPJFK4PTaynXREppDugUWy0TzpoGWJ1WwSqUarnWOkEbTGq0g8EW1zasJrVkTSEiJvAVlmHXz3A/wSVuSGeKiyCP0iw6ey5WXuS1sjprRub/S3+f2WmKFVuCZtYPa6RdNUAqm+EZGvYUzvQWmT8wLMgVLRpoaWuj13W5ITfgoSgsMG7ID4nWlo+JDzDzp8dXXCTjExE4kd3nUmEGDh54tIgFy2H9VFyLmjrEQDRNsW+7YEIYoalhI6LC++Auxw8CYkLqaXx3MD3HRSNPIpKNzegIrYCFBbuM8ov5YuWDIA5QuE7e5GJ5HgqbrhM2HB1SSVuvEugVidbbQrZAw4mDXi/QfAdrpWaBG/yFtZC2h/PncvnC9r+2FXthK8qM26iJfvik4hXMDg+cnNuubYPeWbf93ytk6C96Fu12LlWyh/8fI2NKlxtlgDuTNqzNtdfLyZOh2WRyQFBW1Tp9j3W9cKIGyiX/VAF6n7lxn8iJTX8L/oV8kVa03/GXoKLqSVQ6iXkaNHSPTV0WUkF4KPyIuspl7rTx2xQmxCpRmmXC7zdyggwuCCuq4HM3zkTCH+5Etlol5bGC9qM/5rvl76LBRezuylQ4rBTjT+w6aiTj4m8/+vvUF4PkTK93pofL/X1q9MsZ9n6wpQsIGtUw61vQngO/6jsxW6vSVYuymLg9GECtphIZMsCrOqYy8MAkZmnur5aEEhUPDC6ZJ3g4d+Q3P5X5fo4+Z2GItMa9r/XUpzHNUbRwocdMWb0CHPKMrYoMe042SvyQd+qZOPr/viZ/muQMlXURGR5NhwYgP7ZVVfz6eR43FnQeTGQPRwLnOC3wua2N/f3nVSeufXQQyPvNCtsoF2EXPopC5U8jR47Ss8/WWR/i6pRY76LKOyzvGOjKrCnuGXq7YXPTY4qoB0AlZ3NFPu4N5op05JsGCJHbCsRD0ii/iw1HC1DcUC5ggX0OdfrZyn1afO/9la1LetltXDKIRG+DJlSZ67Qu2ttThRS5MXoOo+Oy9wuJ/2/5ESuRyjJMXmiG6cdarRkC/ofRd13AdKSGp+I5VjgkjAJjOEHRDL8uO/VxuTc9L03YGZy3n4McOTNRnYTn/9UM6l9/ZU3UnJwl9/V4CgRedF7uMGow7VKxziqo6DmvmS8XXMddGV29yIun+19jDWKODxYc+SoMVZEUzEbTJSMgHuIafdDpkLlP5i7AjPVGHSlwxpTHAuKkFXdNONwW/vz9PbwLSOaI7v8sBKeWODoyn3D6TIGYXVKDsnJGfN+JD64+MePveAOyRb/NpSPlhXnYO1RAp03BVFnX32rqYfAtf0CLbTWIQ3V9v2ZRe0jlPpsqYEN8JskMWNC/Lv7v/bkHcrC8VqBq/r3T3lbLTv9+KhZ/Hi0WZ6K1wVeSGe4fbtfElcn0rM/WyybJu51W1PxJTv0a+dZUaIcv3k6otTSt2Lll03GMN/qG+aIEk6NFcU66OnQbvKo6LxXpICdY3Iyo0wriuPyrcSjuhvh5rU3Oxip7ouzXSupkgUrzJblk+OQBe2HsIX+Ps7GMKW11+KDuv0V9yQMexFP0DIqabe7c4zMy4XK5EmvB2vlJT7PUnTWYdadNLnT3hmDUTW+DKnYIBkpV87KlOl1GcgLFQ786e5QBv+hUUvGXGMpRgLSyRW0ETx6nJhdArO1pb+Rab+34AtbvGzhOWqMVlTRj4G3r2EIS1LIS9bIiv7TgTvqrX/CHO80JhlldG4YIsYJ10nJwnMi7xN5X74MjTp2ShtryoX3SLIge5IrgPlnG56v5mRz3POEODBP4i1SXGzKq3g9NRKzVNHzZB/83NQq1kwzWS3C+nu/Q60JjQgUdfHo+6Pm0alh/Q4yy35sQKNYOuBiN6kA7bhcnY1O9L1mx51lv6SPXsJ4i7vPl4idLHI5P3PnnSRfVrJZEBk6DXnZF0/au69Cf3+FKzFuIP4VM/w2d5Chk0P+16xrGxDgRXCF6CcJmHs5tnOKMe96ln+bfNfzJne8CR34QxL0jd5TUwVnUbcqjEf/uiHhJ9Wxs51suBtB7z84y81KiQI9wOsHBUON4JggrWqcexp/HXd2sXKOlBBVJDrD+kS9fSUtevVeDB1yUxiuoMUBcAEg3ogtN7IEjSTHmh5FiamMtyWWl3LCgVAgE6AiGkeD9xiP3kkOF+Op5xD7z4U49ogKAOvIoNywf8RVtlwOBXu3LvqGKz/647OcWTqsW+IsD2+bMgXNEgaSX0UOzPSy3spmzF2QB2GY8JfXdwIFNhlEdh25VTUSxSvnC+qfcul/9RTsXhV5W4kEXSu9uhzB/Ey6+yuEXKl35gIOuHuQ5cyDS+CC0oE69ThJEgt1E1L/R5QM4/YL98UYvA8hes4Pqd9yA1TF8XbIVSR14BvUqBW9I7gbGjeB3Log4ZhJbGzjRuQLn48Ggncq9j3wrOFG3AMcFdf+ZO0KvnJabrAvboiVzoO/9J58VwWQEXMr67Rb4gNu6isH7Alr3EfFTUHh9CweM2m8i2lDj4WpmXYOWLcVD1tFXaER1cIuOSYoD2AYUNKLNrSC2YY98nJ2qgJI7uDYJhmKgajzi9aIkJfJ9CgfR4sF/xG9rvKVxzBykZY6CqhwojoWdh/qyMPoqPYrsW0UepBu3vX9VbPh3hwaogTH2F/H5kK4hSmIcS42ihvqlHTInAGPdN2omdIJZFC37r5arVR4zs0wpu+O/2vrOvMwQbJ4+3cnAkVYxOolYJXSmmsTPNfEbPllTq65IKTjUt9cpb4PHk5CfTB9w/PUXtBLOA3MUQe/kouO71EeGwsZ90wZ1IJ3ydLR3x/q00CHsfbKpUOlaThx2qrN1ju2+EN/UnZg1taDbMdAwfmeE3K9EpR0bsBNZE5b6RbQendGaiezCF41OwI/yfGHLAbM8B6knMdLM+XCxwDq+iUhd0MnSMWBENBygSxD9fdzCG/IEzyzRfak3LCCNoen0M34/IVpThtgQWLGAS9RM4G/XFae/D/GCzW8NPeHMiZSnkSY794yuhdSJwIK5WMfTvkphpZ6B52y2aXK7ZsMWa4fgNEAa3ZQB0RFDib3+qT8XlXGl8sXMWSlz55wncIRbzEs0xCEelyOu7VVqgf3h6qbs1Agwb/Brsq9mNFJHJKYzbQHhkPDQ8K3K0JV8THp0BaXlxsJu+50xb1qRvNwhPYXpH4SDhMhz7iXzX8CoJYG51oWnhaoimMK6sBarz/XJ3Mgc8FaPfHDhKQ8yVQg/LaS+u52BrJ/uopB9TJOCzv+K5I6S12UrwvP75TVm9EzwjC1QvsdgN1r4wBB1h6hGVgh3+gYmed3vzCe7psqr4NClKYdwttDA0vZx7/TtPAw2uBf0CJM0GvpPErk2PMl+2ILeB7KQwwV8osrFvUtoPaaSzTcFRDdvDRbgUzwW+CLMRHlschCAuaioL1DRoz0MA7ld1KPwWuHpOeqkRaMuPO6HB5C+IhDSpkYU6jswCEr942ppTRDcnDBtjxN2ZkH13tVeHWscyU86ryubzPPn2gSHo1Ut5m+lEUCKO0cfRTubmgdtBYlykJ/I/TrngxzLP664Biq9i1xXVjCDx2dJ6EPPKqts+0WedbDhU+GNY0PzHeHe7x62dImY8jnFruTpte0VaJPv1P7eQ03nXgT4DnIxFE2tWPFTHhe8Eqkj2LiEP4oMMlRUTzjTjBGTVByAV8JEeVfdHqKfZ1XC26f0BcZJNpN06o+WXyo3Lf0KJHFQUO42io5lsytIXMuo35xtd3VvfiHmosDVpQki08yKKZnhzCUKiypnHCZDaXAGIwp2r3GDZNqpUHLqjbgSop7GaR+G4FGkvonz8PPtdYSWil4qzKmVDdlAKmvPMIYml1Lm1ZYN+NxAzKLaAMJdxuy+dAz4FvKH3c2w2SJPU46xoNiAk9QF33Ei18lm6b0RhWvJe6J+cgl8ansFT10CJbYU3l5e2WUEYNDZzbStpczjv0XkxKZFD/gtBEqVFU6rhJ5UJ31ZdncazpAM2EMGlgF/1xeR8L5raaWxt0exKhajG8Xj5cPIgDGZOOYktDXpQrHGw2wXzzcjcPpA4hJO5+9f4VbqMhwqNXvDYGqR11qFn7LhFMB3CQR9xHR9bkxeNrf372h3DWqvQ3VUbgoQd884MHyd8jgwLH8z4V1YWVx0TsCv4JffuXztISPGfhs+QeIwGhxVBobOGIWm6zAZTRmu1j8+zWLBPfNi/wdwElmieGNFA5NHgEOHRKdd7vMEYScfnqWovALM4cbv2SE5AQ7eDGgwCC4IKhU2NYA+itam/+aWCdImcM4xQpncQpEiooXDzh0JGGeciO1ZZZnFgVaY5J8DPvbFUnCuvF3+fJell4GeplfgFCZt4qrpe7tTfkQaNaZ0BYj0nCSMScY/+nUp3Dm9L6QSo6hJWHoj2eQ49Yvml/VPsPSDFH1HYRloqV2h/xKqzu/CvCRO597jrc5jptwIJWa2nQjKqCF86NShtJIP4VM/SInwi0llA9u5+xfc+Uy0xTimS+iME0ONJ1aRbXrk3dhHJ3SURgcMqd9jOplpISrcIVfziC18NXURY1AoTy/OmhC5/TnWj59Ee5QZgur3VdOd3eewkSzSWlSkoPNaRi+MSFon9hEFgO0C1pgqmkS7DuAdmCGRT5o9JMTPDvbN1bZxpRxO1EMaJ5D3W7PFqBoHPphz10qSUPXMtCMBd9H7+/cF9ufePV5OSFR6l91w0mduhZkf+iWDVQhui+l8+BIa2P4eVgOS5x3XLkl2Qm+XCiqct1uBR9q3yPgNNCYgxJ4E4JVWaVrz/5oZqlTRUG6epqS+FvzGmKccfblbqRdvXOFZSSefLxYdzOs5YUqkTg46Xm7U3Mh7nCiKIokDzLoC912oz16EfmNV9Kf9kl78D8xkWZwpvA6vsOwEqfvFDlR2zM6YzNBMFbr7DSIkLDxC4HpguX02TmWMofld7gGXO6bLXpM1NUoN8zhTZQwzVIc7VmB4s5uTt5gXtwjww3hMpsGi5/SAOjWZB0x1N2LLc6c9zD35yRMsoeb6OixL/yA7t1BARVtLRn40bME/Jp1JzHYDKYFxwMW5g+ykT2ExQXkx5F9NP0MV19UM9PJLLPuHIPGSFaOpkJwx3qxg4JJIVdUtzFnWOIBvliiTeuj+t6KTHlyE6c6xLGvkqUdWrLFn0YKYN09cvc7a7EsAoheKgGuvlcjZ8DMcX8lPmG+EySRdq0UEsnMAYaU4tnUy+aRN+T7CyAxipg0PE62ab1EISImWa8Iwwx1o9p6OPxvpw+lQgkKcxYTDKDQBoc/qrQE9gzkFBraAvm5q1AN03gQxIHW1A+omAeY7x4YNJsfC2W97snC9UAufpgDVyWt7W9cRfz/EGo71QBPCJe1qbsv7I6Py31wfQgQbofOiJIRn4JR2qjE2DTuHCoUArjwyXBrTxUQvKty9xMchv1LKk812KlCVeTTBRrKkmIBBMB+ZGJKNK6kavdxTnvk0VwJ9FjQJSiLL19UYO0xWI8O0hOAz0czeGoEbfpzjkTNgamGX0LbocpgUDjz+tfvymVciu0T8UAh5XI5/DUooLXnMlnYQ2g0OP6COC8m8gMSFcWoaqcInW+TFhd034JLmYl9QYqpmlCcizEPTYbd7LSwTPE1WmqNLs2JgIhMyVueNxTO86OAP3IcVDQACoXQnWUyL8moMqs70MmdgrtfS9b1N+ENTKI5ymH+7WgFpt1SzBJkpvv3ydKASRu5Seiib5HnU0ZAyCvJyRdXNKJbmfOfPxg2bbI9dy17qx/kGNzqUkXIGBm1kqEPSgPvr6AHgH8Unem6YbQBlm2WRblYW46muOGMkLOgyng4n30axkQhCIe7IIIgjwegtbbgYLDKKc9W92NXhpk1akA736f3Z9Y0ZvZL9DVFOSdCd4xJNjZpZ5cRjmYb74+JkWyQb/wNxHS+3wJ4bTqMgX2M4oZNmPpP4R7HNNV8+98R1mR+/BGtIQpGuUKPcr8WlQr4sHBvv249+WH5nVygbF57Xx99t4hCdfVbCyz5qF3ehR2+FwLCp72kxl3eiHg1MTTDPWgLBi46XlAwhd4Qy8D8LgCHqffqpEz3AI6z2g9zz2CnrDb0RZ93IiL6FvsK2n8g1cpyM8GQx828ynsp0GejZen0o4jQuXKCO1yCMlNyuCByL6hTzLbPlHh3nAyv9sYD+hb+FsBIzjcsWzISHFJNSbkzOGuOwyYzxbGVV9ZLeYms6j1fXQGXOWy6EzwHhA4IdtFIInL0lYz2YlnZFKrs+adISOF6ZRVpdd47tLKPc7MsM7qCzhCUYcsHDR0zqMUofWtXWrSNjlhjZTbfdlwg8KQdMkasN4YvEwU59J/as376/m8y3dJ30E/Dc5ogIkBtwUf1FbrvpD56QbSMpXmGoK/CoIMY/iuHfkGhNOvpO8hJLeBvyQRHjhfEcE2QbnZN+LfARaaSyahTX5Um/zcabgYVWWeSTuTG1yYzlFx2qQR8D0sYBMxDQmL6SMzQ/4DbDWLk/AakvAWqjA60fhAcpnUH3UMK+l13lLyr95MgoSKF8u5J0ku4QDfJpLJW4L1L+8qtBvrQz3SlM5BJNBjFXVqTfOq3FKhklKjxrRq0O+NUHWHRVeYaDa/jdA/r+TOVWGSqqtI5/dMgAQPV7Ch1W3xoivWgqPpeMpg4AdcKZ9FCNhBIDvqstj275zzD7MSWOt8oNfVh4hpQdwysq7eh7QN+/JDVhOSVcX4M9zMU7F65AyEpQbT84KujQ+hlpVaqTTtG0s+y2LVdFDTqEuiU3FfEebzWyzxMVweGoxWR07gHzlm7o9kohm85R3Vm29y14s89vFniBq6uOQoU1sLkNH98AAy7nC0eLllQcUfNJJlYs90mlhbF4TRoHdmrpSzBVGc3z/hwtRiB6T73RbISkcbXgKfEYuFSEOjSQhRjDB7Q8/zwYLJp9EjDv5aubfxytr0OCcyKAJjybzGTC+jPdJkBPiT3SRNADwkzTprPHBCJ5wvxPpD7QwLNuRgSaFg9o2UcCSwA0NqFWUnZageaBhqvgjwoeP9Iy/TakheWhFSpypAP/vzVKL2b3UKXJsYnfuBWhzex9hzEml+ZggbaDo/sGvvQC/tUqdKoM1qBkId6NWOm4i1W51VfeLXxDIrfImLlInJKKQBypzVabRztPIyO7xq+KNHsTGO5U8drimLpQNrAqlxSvDULVTvQ285Y1EE8qsOSfZ8sLbl0SIDDf4NJOzAPGdzrsuTOa3U8NBIv6scdK4CFQDelFRYMq+TeSBPw+0FI1svAhvSGWWycYg/hToD2b6DejNTB994UQSdWx5JGendW5vmpWlBBiZkdpWxVEpCZ9s6LCg1ZddbvupN3rvCLbeUtvSI1PXJvQENTMnfIIzlsqduEMyHY6WBMzOq1XahMSEIoAziZ4qkAIVFY0z7Q4mpc59Em1R8XwBStjFcl8kbnzKFipGxs5/uaACPOoK47Q9pKo5b4p/VoJu6CNyCbRTCr712g0mGjLDQXWv/wi4mg29dvMhmK/lqqmT6rU43zXh60WhhiABXmh3oRARKvra4Zf9wfGCerDxAJyIrrI1aOBN5aQpZxVOYZs3KIrzEYXB6CFnxT3cshyPttUZJ+xGyE6bJq2+nSjQVNaL4t2Jp66fQQQOzUW95NMUZW559TwGltL3rwCvTMGqLFRxTKAtGiQxXH1b7i6jKxhT+Qaz2WBMb0U2868Ycdue7meI2Ruq1QHD+NvLXNk3+gYsOFEQnErFvjs3ib71cJp7yFggM98tj7xw6crc8X0XBrUVmthNVfHxc2bDYN0dKIVFVaa7EvA0AWUZdVE+UEz8ert4oG6g2z9Pm1nPDQF4WfngrpH3QcuY1/YYYAs7QwcMTGshKK/uvIbTuGkVQUx2uH2c7dUX9FeovsWn7Q0RqLQZwkI1IhMDtAW8UxS7T4Z16MdPfhFdSAo/N2NqlaY/5ZFNuAcx5zvRn0Rz3rSd8EvwW77hPeipREAx9tDta1yFgc17cW496kjFttY6YqXNrNn79bXsVJ7gVfFGzUEktBj1fswnQ7BFrj7FYdA5G1PpoXLActeOVjWG7Z8Da1rtN9NZQuT/0h42dlUl4wFC5uapvbnHUGeFkVkCP4pYTXYmLIks2kumnn5XrAzevhF58Pj7ETft5dH+asCYrzWKnEgEcNsJfegu1ldob8skflL57FN0x1yhHUuFjA+U+BphohR46sf855j8ALiXI9FGl0wofXBQTg32Wo9+mWXv0Degn2sTPBGgVsTc+ZQq1KOuz6b6HvOMaXzzegjnFdWLWj1b78RJLa5g+rPqIfDZlesriVZzeaR0GMAVfIDATwZdUpOITdEMgyAEiNu6Hf19LYUkIuH7bQmyW0bFnRQrhLGilVBPWcjXs9hgG8ivr5P4ixsUTO4XECknJ5lpuDRmKAoG4KNnOldbYU6RrPDO+eZ5OXsaslMrQJs84yrtFCx6pOb4gK336likIu3CPzmfsQcbODtNJfmfMLtWUouPmppyRXwWjQRk2RO4cnH0q5VhVbnjgbLZzgskypcff+yzXjeQSXxUzYLpKs4RiNH0Yex0x1eIqCW4Kv11sCB0w0MbsoagqGN+98NfLeEzX2Hf4/aXDCeF84iNhzEIjrp+/PfOdFAhtJz07u+VjB/stD35rVEpTD5xUzPzkdQzXDcYqWkpCF3nRd0FfM05ACry33wzDGtq/Sa1T4Nm1MWFDl6m/IPrU3Vzj1nrEaQwvIVtN0z+MiuS4X2Cm00LY4re4h0+ijv66rRmF5nA06t4fy+Py7hxBPFKlIcrnhLxdhhNK2OcwEL5EoVy4gjXeWLzNxkyH86Al4C+niUqPSP1HF5As/65yLZ2mv1gF8zRMIrL1S40ozAIY0CNNdfsMJ9kQIL96feTNUJYhov5gTqjh1zjAhLSgzFfRZspxWojJSdfuw450zj+hV8wVRDLOJR4rzRSY2Itqn/QjEuW9nRiYubttTABiBU+TvMcgHOqQu+rkLr3UwwNONaXpO5JVZXFwEfJqjZ6nesVxW7MAHSpfk23jLbROw7Ngh/ZFJ11z/4fOK8RnecPiarNiWQpo7xuQ2BDFpgpfDV2q54G+5JuD+AH6TU1CxoNHHoFtYg3AFT1gkQ/w1dRw7qoQbbNK8xTHxG2/lcLaC1kemOr5ZPLGpHpke77m5nmcyTaYwO2/mlxHV4J7KxfOD/1Ppj9aEK71Sjzg9FnhgcqEwSCgiWTlRKBrEdRzzOltz3soxgA9hPCFclJfww/0AP/jowQ5nMYqcMgCptfN9ROTUkvP+F7N1uAq9LykzILBO4wcNk4x6xX29sVQgUzpqvUfcsGsxWM1X4Msxj85Imk9G1/OpyqAYDaoNXDs5YZB921kQdynmkl410mRsG8VRnokjjy3KziKF8FTe5LOtiPhnJvcRVL45Sz9pGSHUkJy0HcOqRNgf/CXah93xmbTXnAOWvzrOXS+2jZVB1v4G586tK4bK2KVsVIuS4/M9LLnZ9DjEkKWOI8tAMhCyyoPNiwIC5Y5qNRY7CEpGEkPm/buVihSw2TEEVthAd6QvBVxfbtV9CmrzFy/tk5Tjpr4GJNvR3E2MFd9orCrKybiH3fBBkeVTDvazaEqokiop7HtkZxwwx9xLP1hMr+PgJ754gVrGB4v3ZN8GksZpUNQN/yXCa4ZuxoDmMftRLHRSMaUrEq4WBcjhSrxFHLguUyq05v4HrwlBPsLrOt4p9icm70U6K6AePKaIs1+hHZN+M+3uHEGlMsisIL4joOe7yStMM2sg2IhMO+zLrfd+HFty3o2neZ5UrM4Qq1HaF4eOMqT15IMrgs5Q4DZXhCgOltHKSdU7rgFvZ+VagelGaC8ccxQv03MwEhzi7jWeuFMIHtS1JofL4hQNemaHrt3KzniiP4bRrceGV246GoVv0r4X21QSn0+G1ZqEfQhZ1lcjlPLn6aJsh2syOZNPgGzSF+tAF9sJBNdPzl184uCC1RJvyfPpbeDLxMJFKzi966aViEW1zlPrvsYjDRxeR4rpqYI93tJNTLSn1+Y4D71FiZ6v75i6nIXufEwUoS+0vkGe3tAghNq3bI1w2HZawYFmS3l26AgvmOgbuCgCnMLNECxjs6yOxX52luwdUOk7/JCPSLXEiISPPBQPyEd5vsF8ZeT7Muewrk6RARXwsTqEJvlZnu9s62Ug4z4fD5gRf/4HUVRYXbAqzNqtFeHZMHwtQKqK9F0N4q7wi0/3gTmyWGCXacOevxfbTxtbiewJUqB6Qnu3CJNXIxOzqQC+rCofd8x9lJ8SfrHx4+vq7kffQakyEqlHuTPW8L3gx+dmO2OTH/08HOnRORclhzoUdmHoVifKo41t5YCZMRQkdso+0HB7NL8Yx1lnkv9L/F/U1BwHxm0N4gRW6ztSe+z10RcBTgI8C8C+TFnibe488Aei7HMKCukJtIrt8JSp8qpRv8cWcdPsElMy+WrMDNVX2G0RNBEnmuum3MTtoZ101ENsqwYtU/OaaYb6WqVFG6OiOTyXO6ZuzSMIxHOHJEs6CAnVd5Db2n2QLss/w9/vHCN2Sg0Ml54MEvpLttg9o3S/YVIIzMuNweZP5vxxDuq5kUtzoT1fnJxP5kVT1NKZLjaAhbvre5gTaf4kCq4W5Jf0LoDwgWZ2ELn2oPxgEQ/buvjni6wxFxcwaIlKhSqJfeaWjneIUYnOEoqABc06UAGsT/TOt7rMADKAh2A9tjc4ZSXTwaJpKZVc7X4aCZKfbUIzxORDfkGLgtfAnRNrp+WM6pVyYNbXYZ6fgs11Pr+7mMCMxlMMvfSLgDUe78h2vcmpaD5Ovm1IJzz/D1DXer/xTEbM4z/8wqpdBzuuvbEdkKlA3KvsECvPKA9uMMeDeyenc98MqVbtwWe7m3Z2feCvyjpFlRvGIalGkzsD8OV5ajvHD2k3rd5ltGuXRdhRrOiXv+JQ8I5rKAcFrxyNkyZd2baTvZVEDnck+pFN37Bovyy+IdFv08XaEAmXSjcMN5W9QcaHXp2trj6Wao2c8kkZGg0KJ/RzYR8G6H/tvwlJ8ROv2CZxo9tyrGpeB5D2Bx/vUdIqJjnZTeXImGxncySs9qCwe64VvVgZBFqKq8TQBqVf6dx6jht8eHtLsUp6vy4BsYsnEl0kYm41MhTPk5Ump2PBaGqU/HUj6ziv4wx2Q/pJa00UhkKjOhEDXzFYdjYbeepGioU4KGU7TjNwzrgz7mDJKSKFW64I6PBNNFT+bDuYDY2105ylGvyNK6qbIucf4f5VwyeRgS9zfEkOoKQpRMTVM+a5bULcmNzbdoSm6solZcOjf+XyRNO6ASkceWt3epJqFM3yqKUFZLQrLKndPft1utdkaV2+5NQ8WDx5tYMM881PDFwoTkFa44Fk/GxX6SPJ+HHQPauvI9ctULwYZib2aMPS9k9bYfzhRnMWLjVhoH17kO3g8zxdjbR8AI1fIHhZsTsdwcfMz3rIyK3tBFT9QD4cZh+eChkfw7voBtA0P/5HSTgn8VZyZg0hzhsXkTBcZrkTy7IR1sgfmzF6B/j29hWHdZA8FUQholWGMijQ33QyCtdNfeClROKh7mV/y2lkb63aR9vQC2AkK4apAaLjBBftG469qyUAmoplj28ziG+rUoeiKsG/v+xUpLzSvfKPLlBumcraA2Lur0Dnh5xG0taNHZXVG8x5Rc6QH7UtWD8SCWtlymqUEMIXdqW53hcAV+su19tNYqw3FY+l6FBoUoSYaMZOAWUp6WqAOMOOLLahlNmZDn36jg+5yDIf9+YWSoy2Bu4SWwGk8oTHQ9Sqsso/h5/iNIozOIcdN1pvjsye7R7BSHhRBDQukBWbqSJey7+fsNc8ApWPt7Te4t1prTkBHKZQ2W6Jxr/OzV1GqXb8bfSEDCCJH8xicngU6KfX+4ZA83h3y0FHtDNtV0+mWNphqV6E54/2r/setwHl0sgA+RMhrodS5vF7UrJOn2mhg4pUyis7PqEVx3S966xj4Br/nSCPMP1SoMhHjKRv2b8XlusEYijgPK6KVb6tmJo0GSJcpORhwDt2rP2dZ3MxGUekeOsU6CNS+ng3UzIG/h2Mi9cbFH8DAEjtwaMlplVAz2RDu9gB8Owwqvf8afW9aeQU5DIlsPhOsujU7SHoO/JZie38RwqFYzMj80U8WWaKoFMSafgKaqHRjbbwT+oPXy0vnAgFZi7shH7DIVdEDt1XQReSW3kkndIw7zEdp4OS8wosMU6wLkC2Xxk0rD9KpcNA713lo/Pt1dSLPb/+Mbl4VUU+4W3mH+dr+D2rv78R8tQqd3M+UEjzzHKk5gLUvuNKyuC2dqrJCsT94mbaY7dhJS+UokihnlnhcQ7VBtOBpwOWTYguRpx0yefU7o2cKhz/TY9rhXjsjWGcTfwCJphVQmyYcqShpqUhV8Pepjg3vnmcQQh0Qdl1Xs2XvA8mku19MoNKEevGiOe/nPld3iJ4cJg9QecBxpDNSjM2Umfn4+pIC2pLhdi9xT9aKT3aMc8hWlKKt2wvKJ+osOYLA4BvhdXsrY07mDfKImnXkpSE+lCM+A6BYdu4e4W/YPYGr2oQ7EcfKolr6dkEF92+mS5oUPxBSpZt62sax9vqhcmiRjA0W7kLEhHswrT325vLGIvyhTJsAhS1V++GtE/mu53i+BZMnR/bhmiDPJsOF3g8jvLbF/5+fR3m6t/m+fZw6Z4InNhn5c9BDfJcEtYjfcP183twd0DzoQ/7dfVWSiMyzg8ng/hzfBVsV9XnPramHuTDBDBskFqGBbva86F25RM1s+1fMGt+Gv/uQMbnX9o67PbPuq93QwvqrhNO1UisVMdowO+eBFu7awAic+VUjgieOvRjrilnHaIbGe5N/kIvnPw+ACPYj7ZaftdPvEVGaSXFo3IiKK0pc42+/KEYWSrDiJWilvyOMrsDZ0hUScxDJkT7se+RHE0v7XWTc2wVO/C1zoOuFYo831MxBF5wHK5Cv0LQpgvdoTmYEaFfNVwkSYeLaGz9qqXX3CRm2pfP/S/w12uSEvWCJIX/2ERHBOGVRl5Ijcp/oFRxQsMq7pDGoQTM26ta3rpjYafUFWDRHwneidBsXPbwyu34xgjAl8cnaDxTCtTA4kX2lDhkjS0QYZpw4BR8+k6liFVf7Ncg7yyzTl6uVMJvYPgQ8Ox2OH86qrE5vTB6O+A5IOc5i8RkP1YkDi/o3kjDRT5B9EQprqdH2jScOj7v1Zih1IAgcomv/jlmmoYLSfSsKa7PSRwJnytUppXOXez/ve6iBtJMqdD49zoLgIO032iKzp9sYyLQ6HSB0IpHOWG7Fpz/psdF+eq16SxVfHXtLP1yNTCorlvb4s93PMuZIHu+whTZ9m8dj7po4zZXJOo8LKAQe/mbHLt7nDLCSuP61Gh7t5ZH11On/L+vZdXLnnXcRarXiHdpLh9R+bm8c14o35TyaproYghC06ZmqEJjfVizbD5sWCFxnR7mIB8BJNLoNHjnqT6JhugCqliD7iJ6eAN3YPLIT0HdyW8lhAtCOlV2LTlX0AiAo92MNtjfMzwuUQ5jGb5ZwB88ETWQq5XFkA5e9e4ubmey/wcz3LJ8DbNmG2tjkhHf/7iJpyUa4FSBewadDAU3Dzbw9QyuXujIwzftYOR61U3cdPD2tQNcWA+0Wq/zFCwx7dFYfaNn54d9zrcJcQ7S+MXeEkwXuZXeC2hbjTaKeEEEmQQfMKYP5E1G/8mPcHiQZa+6h6huzTkFN21/FXFBA9J6feMdtclngAmMVscAouJ6azCtoPYcRizCHYi22nFKrrR3gk6dgxmWzWfufqmRgWsIDmJBW4S23aA7O+fXejmWmfr/EJVxKkW56LFfSkN15CKJ3t6BNMurWs61mRdIdYqh8rj4Ov+iy21zC/cWtla4pSXYh/1Tbv2d8Cx9ID4OCRAYT7D0NhKJdMrsmqsYbKvjMhdzXwlEkQOAT/RZXW30CnyGafIG52I4jSnFzYREyEwwV4IMV1BW6iyvXhz4oUSTAljHNbtMIW2XJf0JRlIVAb/7cGIJ2iQzfZHbQXPCrYij0jjZNsFCL2gUCSjlcKyt2kooW4GmmOaCsY+5j2Wj1JnrNUEWBWKk+K8bm6hEJt60mjF5jLsaYokkixaV36kJxARmtOFXpw1JHSbD0xGGLA28IqG7B3CfDbMC1YREEFsGvsPhfXkJecusOlJy0N5NTOFzP38YIH1Rm1Tgfslt2C0k5J9U3xbvzC8uKh6POR8EwTrkPj0Qahq2f6ByIPAWJDJVXL6SFD4pyxzLFTwufLcBbVJtL86npgNP0fHMri2jovb5UBn18+lB1HVqzaaPxM9XRSTo9eLyZYAPuQnXGQ4LB0+WaoHPKSOO290kA0RM23rQ9IujZgg6k1Neju0Y34HW4smU5GQJw0dvQV5q90uU0mYTji4oIsWnM73FZ0U9/ov/BuPeslrbBNC+bqJpTedgQabQ7/gZZ3u7SSeCdsVYKl6MyKoa91ewzz4AEG1DkYsyagKNtKr2h3RlvXn+MjpbswpQH5NLlaEqTalUPzREClupMQS42FZRfLZeyO8TzqiTwQKK2Hgxt80b5ujZLRsTKnGU+vb9RaHzxHYlzoYYco7p6mwl356F/NdNjJYpbOPqZ2F60h2jJQ/hy1Dfu+QSRCs1kw1EOdeJ9ecH4GrJp2FXr0eyoM2YtFCfprDPeTpFtCH1AUQIb/wQI/j/E/AHblwtoRcPvhZKB9oeaP042+5b6S/d6mpqi7YnqLdGTbt0/zaYjXwP7l9ZOPXIjT5N6A9B0P0gpIYxBLYgsyk6aZyTnbF9JAZVYoM29myAfBl1Ey3MLk82Z4jvUXUUAN/DiTLZ7lgw3zPt7QoLagHt0Wn/P0VDwJS4aEin0YpC+vSr3647zMolAbEEssUzi6QESnJoi9MEbJ00e7qYQd0lfOmBi14PPXEpYu6BJHNXPRUhX2zQzSiwHom5g/FVRFcUHuQOjdNw1zE4Vgr+FEP0isyOxkTVT81CjS9C5ud8f5Nl1EKNAIhCZdVRWkfo2hQK3ABseIDtxFvi4lGhjtbFWvv3qm+yVxt7S2UQSs3yUzlC4UZIXd5scsz2UcVxoczdiAkuFRTSyFx6vriZB0bfvS3ISE277I8Cap8zt2zqM9I9I/dl/SoVRQh/3Hqy28pKuhLpJN1ATFrzcef53coJG9uTDvHicS8yG++ZrWUEncKbEgJEwytLSEF4OxIx6CaQzk7hr2ZXkKbtPWO23HAO/iD+9yGauFL4g4oLVEynBqF6BFwOcTm1/QpJuf5DYb5SwDQOzTIN0V9NQSu1Vq7fo2CTYTawnaS1bzPXzbcJryNeBHTNzwyS0rQ8Z8gz7kdc1obGki/+mmJzEHHVLs/3uDsuzxzGriEsjDxw6guoenP5X4unbyQZA8QN/wXqdBXRZ9/KZsiBRNMGzjH7SA+YNPiYEZ1MfQ5kOmkOTJ7Da1vrvXx4btW3d8KLK/6d055SwtO/zIM7BtVUKsAPK1fR1DX8r6DF7LNVDE1e0eugvipjp4ufA3QUsGh7NWdCVxIn6jXFULfNx9jh5X7KsUpASGHoTthGR5MiFGUEroyCUomnJAShJ8AfSiw1ErkoB5wlsG2VqLHn53eEtlfg/1svwUYLt/u9YQmHa2bbSQArozSfGZfzxK86du52OQZVptVt5edVp0GTaVxU+EnuiiT0HK15vVnEdVjIPOpR3aSVKd+C5zC7DbFFp5afUlLefNIgu82GInYWXjIYYj0rM6oUbj2FDW6tr+t08dkR/oDvdCxzPg05E9WHna5rr5oavcwz3KXLcdoZapv+AGiwWiKiESI53GGVznzYvnwfbWAu1RcywHHD1ic8MToUjXtKjQtCx7FCabDBcL0W237CjF5OXGN4FRw6VK0zcOCy42IXpC6jltdw4/X3ZN9n3bXsimvYA1GJYXl+HAFl5Or1x8NBlzSWypGn6RXACUpZdmtImlu+p/E6p8N0ZU9EkQoZT8aMnOEuckRPWrnKrcaA7d2Moynt/rFUIyZeF1byglV96nshdZKMyM8k4l9S0D5CA8kDtBiBzNVm2Xr5jhgDlzLiMPT3qeX79HX3qDownkvVJnqBf1xTU6MzdFIIra5iSR8Q0qJXx127o0HAfooaN4VI7jwQik0asbDUAE547VoVIC9JFXdfL9Y46h/EmwFrJsOus++vGVIOj1XlVHeikvN27/pIyD+USizrEb8Xq2LyTr1RL7i9eH4pNB/VusJXyCaKnDuPYjtqKR370/TctHEZldK0wx2F+w4KwDCDYOhoF6KFNYcZxKyAXnv4IWiB9sRBgqhbYytoNbVMfo3WQ+SMpKsB6sm4RlfT4QpR5Zxz+muGgc91gIymqmpAD16ag8/0opqSWp0+z7FzDOSbVEPxb4zx7JUeOs5i5CKEndgByLwdo7AYQfc/gDeSfUOTJf9R928sKjkx7zAEvqGME6qK5K0rTnmB1Am0+GX3lodbMraMMd0wdvKWimS/q2GO3iHjPgNUiH2OzYEaZB1E9DhejZlkUcqSRzvmNvcJ8IhrgHu1ShqYQfZAzcyoLUdtR0U3KIOoymi+IjLObtId2/eEFPijj4vGxVEAjSA48fkCQnO9Ks8wEo5DLR1ZRbskz9xTTIpdEaQd97FX0+FBIbLCV1HVditatj0uod8grynZc+mrymKOWtMWVsO8lf66LoWG5GNPhNfWWQwib/BDZ8wsFi9tGZPZ7BN72FLoXZZ4+9mzxb5OpTK2Sp5vKiMfraCYNNDdnK7EBcbhSDWbV2VhDYsCMvThb7aDgNYXtJF0KEYVaOnZpAikxgwUKSl/7o9f3rTrXB6nTq9TgNJbjenOXape09wepaGv6nyxKptzFXnZYvQIe6DnQAIr6IVvtCrr9pbm4gu9FXLTFguuWGHi3zfvwLy7xHrB5/TdiXqx59HAo5FfskH7u8ffuE0WTBvr2BdyXzrquWNeEcGTTvhFbSKq8SjaQ6EqX5C2zwYrRKvC4NebCMpiQnwIhDPJ/knAU8fWEVOysUR2NercOca9mFYQS6zAiSDG/yUIkAlUXs/7aTq3GuIViLhg8owYJOuDmyCIlJMdDcHOglwm/+mRCF8G78UXGuFwT849TuI/cutYv7gTfoYBdaphLo4duaxDSOtU+PkVZcauwq0SRWt57AIG7Ds03aFy5EyPrhUobe5jJjh9x1vTAcTSmx+87nNg3TtmbDz/Sni4OC5JBCzmUnDzPnJLaz5POlJxDzZ5OE4yYxc0dtciGFtO3R28hUhTiGvVuVAn0QIrHvJBs8BNj9EVJNleZTZrNmKbD9O/ohWPIZKUOiRmt2JQ5mMWbv9aFvMw4vL92UhKszQIPGZdJ9AvGeyuyfkTLcFAhtU3ayUTsGlh1zv0j0sjNpHtRa8zYT1s8SRKUqHN2DOot7UCXTnYxl9bOzmLd5bVJ99BCYudqZNFleJ4kC7CJ+A20Vo5w4onbGDg6QTP9llssS3xlMmOm1WCMFbqC6sPovAg7V31R/igM89EeLPYUk8YC4MXbr5WVxsQUX83hPzrQP0dqm2MhpaPU/Y3ekXpNy6DzPLENHksYUppgSOQ1mfR2iU1Xh9r1U+q0rQ8wTRQpz5BuUSJSuJizNjbLBso9bkv5zWd/dCmpC5t3NRsCZzl8YkKSWSxi6DA+7CIOenQlwkXWPYkidO6VtW2HevoBT/ZUY+QJK/DQw+lSjsHS7mWvLmTIcc2eR17T4el1/g1naDYSOwIxf2AqpzxC+RXO+yLCRwtIAJrYOIMVQyaovbgsXQCt5/tSwyZlOoO0NYYMPftq9em6lZd3fKKpRf5hpIcOcK4TM3RQXOTde8jGyUhKDD+j7Ij8NmeAN5jZU6IV2Zbyh0bUcVk3R6g+EgG88aNv989Fm2tTUaK0o1q/5ypzqoEFgdWY/7y5HWrW5o2BexHcRarOqB2rvIe5vrklWENUzUKrbe3WIr82PSGq4OnHwshkKUugJZ91/AZFAVtdtd0rtgg2IV3ky9ChR6B2ohcuLU/yxpu5F2cY7/iZyFtRz31MhsZDqy5AQ1V0HGK4PNQmvAue5hSzW4fbVs9Ke+ROXbD+9wnGHPGVCyKsFUzIPVx/l827/KTQCJxiobXDzBOCeNXNFnjq84JuaGNL96q2eV7hCtUkGLUyNcWmMzYuDzVc7xqs5/M7d4cfwJxM5GqJNcGfZf9j4YNzWkHpvMcMxUa4EyVAjsG9Dw6Q6lEDpfYy8h+bI9WSqCQfsecg9HxnEoNobr7XdhQrMTAuf0/CYFuWUzD1r+iqqu9PVjTwQLR99W2UGIVp8XvOTmelgU9HS6mUMQMhOoi4zh9B58quLsMNSZmdJRt7hFfXbmWZRcQkuSt5xxkOQWzLe7Z8SpBExlc5K17MLnbXYjdRccJIXL6Kywi5NeVeqhV8wVJCSg66YMjJlWFjKld5TS8/03DZcroARwgSYJAHS8CQVLGqt5r8/F48UnnHN+UwoxyStzTNQJN3ZRXd0RK98JP/yHBp1jtiFKN2BBpoPIfgSnr1KZ3NMKLCwbaHGmObt9ZPf/oGZQSz1toavckis526PuvG9d9kTiF9vc3h6OrpVHRM+ni58PsNlv1hdsP5mk6chiXtwscXMCWcQyZIOciJo2j/TIxD2cXk55UgCxrZ0/Z/9dijJxfpGXLNOZl/ts/rPEe4G/Nde9dx1b1AdFzDYH57X0LwXN6xzsvwS8wOU1ylhc2hW+P4set0+xudSlUa2eqaeM0X8u7LOV1GkVwznkyJbwTClzqSjfM2LhRCIet/+LMyN3ArTGvzUlwSMikCIa5SiyokE6n4H5Uureo3gazqd0EYX14RAv0OzEDCJxPtvpG9cORbp+QFb6toyheEXJKZJ87WNPICGf0yW+r0kIROSrEoxvezV6Co2PzWfeYZVeIR4uj8YIf8a66L5ls4AQYR2dw77mhWzi6Yx5UmcIO1BwXc5YRPALVLparYXxZYr9PRu7sFWuNcyMrz0+xRSD6OO4z5b1HG/GhMu1m6hL37IdwDovOuJwPQvyR3BGEnrKQxlaMdwf5WxUiZpJaAbAQPy86QfAWkgCDJCDXQw0NgA+WzXWCzfDcnpChr9HDpQcWrioWOkNmejMT1LHjcWXaGe7cJLRn8seTQRNcODJcVVv1DW+MKNLBGE5ipnZqfc0fCDevzJMcRuT7xTpzfmCbcw04rdaarNRoAapjC9xULVz+SVq3pPfUBTm/S4dB5rtOwEcU2hQwq4mAX7RcL+mG1AGFvoaC1IJlRj0YJ/7UMBdR/Zp7jTq2ZRcYqEQgG1bF7O3wt7yBGT3aXTJ+SudruY9X7CRVSUXgjlByLyhNwLeX1N07PXqH/mKhtf7H0isIUmvJal1Lv/VdFXD+l4q4FRVHTW4ixLanKJsDfA1kVL1eoDNnl/WzPQk6JNDS24S1w/rzyBmCT2M2SDdvmfUkn82eYt+NR0qqKVR+3JPWKmJSBB3LRrQgoXjN7IeK79MMiXkhOxpALdf1UBm/b+41p3EgNLNRcuoTIOt/b62hwfZxvPX0345U+R6gp1XfuFrFej9ceC+UuVdO7ORAPem8sjwPutK2vWjSjsTMfRhcVz+sbJGCOH9BZ/BqjDpODlmKQcdexjeAfPtpnT6CisC7SRRI+XN+kyaDuTgrrlVmUwGHxhhIj4UDD/f7/jCJPayCj1CPoUsXFBW55GBlAXxonhAaMSz2E5kXBR2tKj2L/i+gME5bnWZhghAt/xjzmZ7T5YnkCXiPs4gcAph2aFepySLsV1Nd4CnQ4keuEkrvPtoAuUGPUUNA3b5XsiJixuuXzvO+xwuncbBjMiQ+qJJis92BbvyyYTAvjHtmEZ7X6YYI7lal/tUPqALzVshw5Kl84TrRnz5bAcmZR8cJhsrzGe9rIZpBAVb3eKRZtDn3Umx7Vw+LgcMO2RES9GBpVYcoF86gWiJNnkgQT4XMd6UlpYNktcHXSW76YM5Lnt9W03f1fX9Hi1Kc7iSYsxlIfPW0k5GyMlXGHYeOLQPxWDZEqFCPshz+H7pxmFbUkL+pAVlhce3Y0CWKDiLfDByxibdiW9GKUh3GRoYGZsXAJfwLK8wYHy7EuWPTerecT9UY//7YrC4qGtqQu72ltSC8NvfZRR8LZWyeD5sVigqSnmt3tuPWQREBvrmxZQM2y2PPZ8688Y6+rAJEVQ0Gz10ZOK7sBeauitko8UFFPjmlec0L80p6MAlnjCLdw1RBEswOWIn5LLwS3JyaIfCOlasRdIVR7h8MVStNhm9BCoaIiK1YQMHntmM2Ui2N/qgACnNfgDIxG9rqAZDL6mTcA7oi/DfYiRlCN481kU2qG+zy5ZA9hbGR0bTMLQ7vRu1BtlyCrgtTob+fQt3hQKc0OKa67S6i6geABQ2Ca++nfLgvnNovER88b9tGe1pK4rjPVGId8XnfN1q99jhVxG9gmqvzsPMarW6+bF+Ysn22WdbvYSPiGf+RvkXt1NBucXPfowtrgaIWkr364EhjvPHd/CSkOyNfEENxifp3g6aqsTONS9So1/9i/hn2dpRVkvk21UfTfd12nATJn1XvkSjCtZVikC4syYh10OWjGgQoUGV0XtMWT7bqjbVG8uXy41DQ2JOF3yZdyJrobrwBSwIyCG7Btrh8rRx3+yPCsI/yTgdA5WtOHgYZGNUD26P2uSoWibxq28yohAEip3wpOn5DKRDHcrx75aAnWdajmNR/Mv0LNMBZt02EgIZHvY57COamaHPo3C9ZVJF8D62RFFWdefyGpSDaQnbXzBOGvWpUWYNEaUZl4xDo5eXaCpMgX0HVFzGA1CUFSvjMpKhEGhv0zZ3wuz/AoOj3X3Jp4P2ZBQ0MxTsfbTuyMAF0CThI5SFM+zw2j4fpoPF9Ix+Cv92v50mqV2W2g+8FLsbFun49uDNApPxYhuBr3Mc1jofFyXFQJijBxVER5+EKYIhEIeh/kBxkfG3cuHp0FQPLLtQbOUlrsDgPj3OomYd+x3dEpqzcMjS62Dry4/dfoO2TRw4XxSbdZl45KBGpLdgpP+AUcZkMEqAigpvXCjYlv7S918qaI5aKwBNjxzh9NWUPz42T2zwbc2rWUbWZiTHZPKF4B7mT7/BYEG3DA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MasterPageForm1'];
+if (!theForm) {
+    theForm = document.MasterPageForm1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=-_ctygL84S-zcTxT9S3CKkpQ5IPNgYU3VBjZ3vHbrHH5GUe7oEZGq-amODdlfqhak-_uvV907hG5u1mOYoACqtDfCEt4D5GeOU2CagYqcvw1&amp;t=638285957964787378" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"pt-BR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"R$","NaNSymbol":"NaN (Não é um número)","CurrencyNegativePattern":9,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":2,"PositiveInfinitySymbol":"+Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135589600000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy HH:mm:ss","LongDatePattern":"dddd, d\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d\u0027 de \u0027MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom","seg","ter","qua","qui","sex","sáb"],"ShortestDayNames":["D","S","T","Q","Q","S","S"],"DayNames":["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"],"AbbreviatedMonthNames":["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez",""],"MonthNames":["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",""],"IsReadOnly":true,"NativeCalendarName":"Calendário gregoriano","AbbreviatedMonthGenitiveNames":["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez",""],"MonthGenitiveNames":["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=I8Fu4ZG57iw7vptyOKwDopU06cQeR3B1mPIXNR1eknzCElV6vSdt3SkWyK0Hpj6PUtOrBCmGmcQPlls_Qb-XnCDil_aJZDb-oAI0ndRK4Hyv1Af_ISSAevpkDr69mrGF0&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=kAf7PPSasel4oXA226GaVwrITDYcEZU0x5wyiN2PzqD3VT8WDtWQIvXcBGAvnvFK2PjIyviyfwDKDZRxnO4XqJn-XnUy40-dyCFt2NRESYZC_F67UfN-0Al8HKyWqHehZRi5_wxT8N1zL8fe0Y3igg2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=vUsKp-wCU29zHYixeTjHzkMf7Ti403ZNMeDERi3pr6WltFFYG1Mg-TmpQ6nxMprheEJ0u_jBv3hPYnJgvpi34MCX_4VuE0IYT7noZshueWz02QHJXgREDC6v6yEBiiyT7xGhoh1prrsDjvbp7QcE4w2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=SBSzF1oXCwhFaF8jjysbQfwOmFd4c6FSnSCZ1zOqPCcNIWuUNyvAcgq2O6UjYW4rHw_K5hNXYELebGm_lJnvirj4ioGIdWkgba3O43nNxtfbbgbvAA3I67zMCa-OqFAo0&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_uFccWrtNdoeS5z-vVw_U82V2MZlb_tpwFi1KquFWbvf6Q6XxNLM5c1OTY9zivtnyMar_L9rJ0fpRaYdLAVYLXbcVlDUuETdK_BrocU_FTwImgjTl-5l8-LsLag_RTJ2dlnU2DE6HyMRHbczVuKqtQ2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_mH97CMcRH5y_ax7rt4LxmiPFH0_7J3tNjKd7fE-073lPi9mVTIhYrsGVNecLSHariqtFKgQ3i4k_1lcEuZI5jx3GLNw96hh_TqPwooJQ-MpS6VO59dKJzmDNETGZzss46LKfCWk7AHT-C65fU_HJA2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=q95aAXZ37u6u8VOATCcNRjS5iwWnb8xIRHeujHxjxfV_dq5fQbBMLfhbG3YX5RAMENHHItbfgi_soVKXrNGcxye2lkaeYP5CBWe78UEPk0Z01TjLN0Zg_vyDfZXdsK6DJSUHM1-0vteuqzFIDMFQ_A2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=T-3-MH5Y6rFbsoBvIgw4MvuzQizrWzD6RAikSQhWnIH2JvkVJuVgMhKK4bzQbu92DtZdEtLXMcONIGuNCrcfdvO_F8yT9XLoK9OC2QrMVdo4wq_M_0m4jIMAW-L4dOYOebIg4FJ9VDYMvSu07U7OFjLKOkfOgSaBpwhBfMT6iQU1&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NE6snNT89YiOmr8eQ6Q_u0wE_CHBnWnq8AxbqhfRw5PSyQW97RQRW-Kc-5LyA9QSfuy0AGKHZSAmvTFJ6kIGsJd0kvF632gq1mew0uVSN3l78vWag9jIjroPV8uNVQmZ2B6zxQmBP-ol1OKBxHJUAJIdFLmoA2NqmV-kD2ejUvA1&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=PSSLGQfjWR2hO7zTMfGjUdtEQ5CgYDVKcWgFyVIb7F3hx_x2rWhm6iV7-eHkfS5toNI4F6rl-1Fu_TcehT9mVrHLd999U0fmpxknD7UJRpboAejg_f4CgmU0ERdUosAMW6IqiR9DuN59EK5IiB1utA2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=947WIdT37OUI55Gj8Nnh6sYXCQ47H0-yO4Ejljid-aMrH6LWus_3JDI1an_VmF37ZAQwL_vH-5qBTJ66kHHdvVVrcxJlaxF7jB2csRxRnJWzM3Eq8GWFhnnWn-U9EbfxXqk2XesIF74eK2boqGLZOw2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=vgQvc5o_FjYJArtn7rs1j8HKrAYKnEA9rA4vQTEhxOWD7jUOjLpLd_WPRxTnw5mz3jyxtzoxnbo6hQhj7NZH1iq9UL_PyUexQ1FNjWmi_tIuSljTFgRSBcikbFdTHn-3AHXt7_47oeHkWKpXKQDFFA2&amp;t=397b6a7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=iCsZX2ZJmsesGX09_Gw8RU65qCLfOJVQkhlrpaHq8eGjPnKPkkPmIBHVz0fMcnR1cUiQ-lD4iPsg3PUmgCnKUBBu6gHA1cBHDSot7Csskxp_0UF6kGewCk-IO9DR3chsZPD4tsaXJvOj9m6tE9pnGg2&amp;t=397b6a7" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="003D50BB" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="0ACWdOV_uHPGtr6n35XeL-21_eKnxr9UU28J9XORDcXA2Ygi4dIBXAOV0j3Md63bmw7BHPJyOfNpTYWOeAjbRZAahKMcwev5tOTDEu9qKvaOLMY-Yk6HebdIEO9_hjOK0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="bKrdRgowqFUlbRj9Or8Sc4/KRkVBPr6n5YSBl1iwfdX9J39UBZl3i6SPQWFATJ+OskJED3dr5pSmWNwKFQgy3wj7TS440BYXLPtXX4fyDIthdPyjU3z/Gcwew6oJjBZ5wYJbrag2cw5NPn/DZfDMtoSLUWIl2jvWo5oi9m9V8ehruMgW78gvhb6myyNlEnrdoyWcv0x9exmfAwGLchAPANyZjps9Bbfv8wEU0X3V7zEK4rJZ/DpUNijDP9vkUxEHFopP8vanLC+AIi6PXNyTDxHzAn8q7rlamaJEIJ+AKFIiI6f7ennZRkWWYY7CwNqGgJtVlMIi/eFwUm16WKStj82bCJZfv9tRrs5tMU4w00AjHneObSZpGZpjuSjq3gGgQEC8afhpqv2IZeFzpBBUVoez1Qu1DvDfKjwJd6BV7GGdP7F7CfX9uc/GLPqh1z5whQGs0k11u3RlbM6h1JifKrl43gxC57HHv0SDT8Rz21N/dqjhsXW1GRixjyvpsduSA2aHqiKK7CPUPKIII/BA1HyqrJ1Wmqzu9IcI8qN7TLjl7fiT5QdHh5nFRaaexwKIQRlU95R8inS0E/tY+EW2tpvXZi/c/McEN84av9+qOeRzI59LAbnUyGKBMwXmDeeg2aDLXms9nZ3cub7oKHA2gqgLd8OqTswJtSxexGDJF+3vmSWPB9hAlPVxxCx7/eAvR5T5AF4lrFBH4XPhlBcKLpTbp/3VAm0wTBYgp4wtrF2RNExJn/Cns6V/pZ20xp2BWvV6lXtvOla3jJO36OuLog==" />
+</div>
+		<fieldset style="display: none;">
+			<legend></legend>
+		</fieldset>
+		<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptmanagerPopup', 'MasterPageForm1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+		<div id="ucModalPopupDesconectar1_DivPopup">
+        <div id="ucModalPopupDesconectar1_PanelPopup" class="modalPopup" style="height:111px;width:400px;display: table">
+	
+            <div id="divMensagemPopup">
+                <img src="../img/ImgPopup/icon-ok.png" id="ucModalPopupDesconectar1_iconeMensagem" alt="icone correspondente ao retorno da ação" />
+                <span id="ucModalPopupDesconectar1_lblMensagemPopup"></span>
+            </div>
+            <div class="btns">
+                <input type="submit" name="ctl00$ucModalPopupDesconectar1$btnOKPopup" value="OK" id="ucModalPopupDesconectar1_btnOKPopup" class="botao-azul" />  
+                <input type="submit" name="ctl00$ucModalPopupDesconectar1$btnSair" value="Cancelar" id="ucModalPopupDesconectar1_btnSair" class="botao-azul" /> 
+            </div>
+        
+</div>
+    </div>
+    <a id="ucModalPopupDesconectar1_btnModalPopup" href="javascript:__doPostBack(&#39;ctl00$ucModalPopupDesconectar1$btnModalPopup&#39;,&#39;&#39;)" style="font-size:1px;color:white">.</a>
+    
+
+        
+
+
+		
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var x = Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px";
+        var y = Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px";
+
+        $("#ModalPopupExtenderPopup").attr('X', x);
+        $("#ModalPopupExtenderPopup").attr('Y', y);
+    });
+</script>
+<div id="ucModalPopupMsg_DivPopup">
+    <div id="ucModalPopupMsg_PanelPopup" class="modalPopup" style="height:111px;width:400px;display: table; left: 10px;">
+	
+        <div id="divMensagemPopup">
+            <img src="../img/ImgPopup/icon-ok.png" id="ucModalPopupMsg_iconeMensagem" alt="imagem corresponte a validação" />
+            <span id="ucModalPopupMsg_lblMensagemPopup"></span>
+        </div>
+        <div class="btns">
+            <input type="submit" name="ctl00$ucModalPopupMsg$btnConfirmarPopup" value="OK" id="ucModalPopupMsg_btnConfirmarPopup" class="botao-azul" />
+        </div>
+    
+</div>
+</div>
+<a id="ucModalPopupMsg_btnModalPopup" href="javascript:__doPostBack(&#39;ctl00$ucModalPopupMsg$btnModalPopup&#39;,&#39;&#39;)" style="font-size: 1px; color: white">.</a>
+
+
+		<div id="MsgBG">
+		</div>
+		<div id="Msg">
+			<b id="MsgTitulo">Erros</b>
+			<br />
+			<div id="MsgList">
+			</div>
+			<br />
+			<br />
+			<input id="Button2" type="button" onclick="Fechar()" value="Fechar" />
+		</div>
+		<div id="error-messages">
+			<div id="message-content">
+			</div>
+		</div>
+		<div id="topo" class="noPrint">
+			<div class="wrapper">
+				<div id="logomaster">
+					<img alt="logo" src="../../img/logo.png" class="imglogo" />
+					<br />
+					<div class='titlelg'>Tecnologia e Soluções</div>
+				</div>
+				<div id="sysInfo">
+					<div id="topocoluna">
+						<div class="left">
+							<div class="bx">
+								<div class="posuser">
+									<strong>
+										<span id="userLabel">Usuário:</span></strong>
+									<span id="lblUsuario">FELIPE DOUGLAS SOUZA COST</span>
+								</div>
+								<div class="posconsig">
+									<strong>
+										<span id="consignatariaLabel">Consignatária:</span></strong>
+									<span id="descricaoConsignatariaLabel">DAYCOVAL []</span>
+								</div>
+								<div class="posconsig">
+									<strong>
+										
+									</strong>
+								</div>
+							</div>
+							<div class="bx1">
+								<div class="posorgao">
+									<strong>
+										<span id="orgaoLabel">Convênio:</span></strong>
+									<span id="descricaoOrgaoLabel">GOVERNO AMAZONAS</span>
+								</div>
+								<div class="posorgao">
+									<strong>
+										<span id="tipoAcessoLabel">Tipo acesso:</span></strong>
+									<span id="descricaoTipoAcesso">Correspondente</span>
+								</div>
+								<div class="poscorrespondente">
+									<strong>
+										<span id="correspondenteLabel">Correspondente:</span></strong>
+									<span id="descricaoCorrespLabel">SOLIMOES CORRETORA </span>
+								</div>
+							</div>
+						</div>
+						<div class="posbtn">
+							<input id="btnAjuda" class="botao-Ajuda" type="submit" onclick="openManual();" />
+						</div>
+						<div class="posbtn">
+							<input type="submit" name="ctl00$btnDesconectar" value="" id="btnDesconectar" tabindex="1000" class="botao-Sair" style="border-style:None;" />
+						</div>
+						<div class="buildSistema">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu1" class="noPrint">
+			<div class="col" style="font-size: 12px;">
+				<div id="Div1">
+					<ul class="menu">
+						<li>
+							<a id="LinkInicio" class="parent" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$LinkInicio&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../LoginSelecao.aspx&quot;, false, true))">Início</a></li>
+						<li>
+							<a id="LinkPagPrincipal" class="parent" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$LinkPagPrincipal&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../Default.aspx&quot;, false, true))">Página Principal</a></li>
+						<li>
+							<span id="linkChat" style="display: none;">#ChatOnline#</span>
+							<a href="javascript:blipClient.toogleChat()">Chat OnLine</a>
+						</li>
+						<li><a href="#" class="parent">Manuais</a>
+							<ul class="subimg">
+								<li>
+									<a id="linkReservaMargem" class="parent" href="../Manuais/Modulo_de_consulta_e_reserva_de_margem.pdf" target="_blank">Consulta e Reserva de Margem</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkLayoutCartao" class="parent" href="../Manuais/Layout-Cartao-ConsigLog.pdf" target="_blank">Layout Cartão</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkLayoutCartaoexcel" class="parent" href="../Manuais/LayoutPadraoRemessaCartao.xls" target="_blank">Layout Cartão (Modelo excel)</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkLayoutCompleto" class="parent" href="../Manuais/ConsigLog_Layout_Completo.pdf" target="_blank">Layout Completo Cargas</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkAdministrarAcessos" class="parent" href="../Manuais/Modulo_Administrar_Acesso.pdf" target="_blank">Modulo Administrar Acesso</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkAdministrarTaxaCet" class="parent" href="../Manuais/MODULO-SIMULADOR-E-CADASTRO-DE-TAXAS.pdf" target="_blank">Modulo Administrar Taxas</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkOrgao" class="parent" href="../Manuais/Modulo%20Orgao.pdf" target="_blank">Modulo #Orgao#</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkPortabilidade" class="parent" href="../Manuais/MODULO-PORTABILIDADE.pdf" target="_blank">Modulo Portabilidade</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkSevidor" class="parent" href="../Manuais/Modulo%20Servidor.pdf" target="_blank">Modulo #Servidor#</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkRenogociacaoRefinanciamento" class="parent" href="../Manuais/Modulo-de-Reneg-e-Refin.pdf" target="_blank">Renegociação e Refinanciamento</a>
+									<span class="espacamentoManual"></span>
+								</li>
+								<li>
+									<a id="linkSuspensaoReativaCancelaConsig" class="parent" href="../Manuais/Modulo_de_suspensao_consulta_reativacao_e_cancelamento.pdf" target="_blank">Suspensão, Consulta, Reativação e Cancelamento de Consignação</a>
+									<span class="espacamentoManual"></span>
+								</li>
+							</ul>
+						</li>
+						<span id="menu2">
+							
+								
+									<li><a href="#" class="parent">
+										Operacional</a>
+
+										
+										
+												<ul class="subimg">
+											
+												<li><a href="/Inicial/Inicial.aspx/#AlteracaoDeContrato" class="child" title="" id="subMenuItem">
+													Alteração de Contrato</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Consignacao" class="child" title="" id="subMenuItem">
+													Consignação</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																<li><a href="/Consignacoes/ConsultaConsignacao.aspx" class="child2" title="Consultar Consignacao">
+																	Consultar Consignacao</a> <span id="espacamento"></span></li>
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#ConfirmarOperacao" class="child" title="" id="subMenuItem">
+													Confirmar Operação</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Cancelamento" class="child" title="" id="subMenuItem">
+													Cancelamento</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Liquidacao" class="child" title="" id="subMenuItem">
+													Liquidação</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Leilao" class="child" title="" id="subMenuItem">
+													Leilão</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Margem" class="child" title="" id="subMenuItem">
+													Margem</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																<li><a href="/Margem/ConsultaMargem.aspx" class="child2" title="Consultar Margem">
+																	Consultar Margem</a> <span id="espacamento"></span></li>
+															
+																<li><a href="/Margem/ReservaMargem.aspx" class="child2" title="Reservar Margem">
+																	Reservar Margem</a> <span id="espacamento"></span></li>
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Portabilidade" class="child" title="" id="subMenuItem">
+													Portabilidade</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																<li><a href="/Portabilidade/PortabilidadeMenu.aspx" class="child2" title="Portabilidade">
+																	Portabilidade</a> <span id="espacamento"></span></li>
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#SaldoDevedor" class="child" title="" id="subMenuItem">
+													Saldo Devedor</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												<li><a href="/Inicial/Inicial.aspx/#Simulador" class="child" title="" id="subMenuItem">
+													Simulador</a><span id="separador"></span>
+
+													<div id="RepeaterSub">
+														
+														
+																<ul class="subimg_submenu">
+															
+																</ul>
+															
+														</span>
+													</div>
+												</li>
+											
+												</ul>
+											
+									</li>
+								
+									</ul>
+								
+				</div>
+			</div>
+		</div>
+		
+		<div id="conteudo">
+			<div class="wrapper">
+				
+    <div class="geral">
+        <h1 class="legend">Consulta de Margem Consignável</h1>
+        <fieldset>
+            <center>
+                <span id="body_mensgemLabel" style="color:Blue;font-weight:bold;"></span></center>
+            <div class="row-856">
+                <label>
+                    #Servidor#:</label>
+                <span id="body_situacaoServidorLabel" style="color:Red;font-size:X-Large;"></span>
+                <input name="ctl00$body$clienteTextBox" type="text" value="JOSE DEVANIR DA CUNHA ARAGAO" readonly="readonly" id="body_clienteTextBox" style="background-color:#CCCCCC;" />
+                <input type="hidden" name="ctl00$body$txtCodigoServidor" id="body_txtCodigoServidor" value="66337" />
+            </div>
+            <div class="row-265">
+                <label>
+                    Matrícula:</label>
+                <input name="ctl00$body$matriculaTextBox" type="text" value="0001996576A" readonly="readonly" id="body_matriculaTextBox" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-265">
+                <label>
+                    CPF:</label>
+                <input name="ctl00$body$cpf_nascimentoTextBox" type="text" value="71286110297" readonly="readonly" id="body_cpf_nascimentoTextBox" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-265">
+                <label>
+                    Tipo do #Servidor#:</label>
+                <input name="ctl00$body$categoriaTextBox" type="text" value="ESTATUTARIO" readonly="readonly" id="body_categoriaTextBox" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-265">
+                <label>Data de Admissão:</label>
+                <input name="ctl00$body$txtDataAdmissao" type="text" value="01/10/2008" readonly="readonly" id="body_txtDataAdmissao" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-265">
+                <label>Data Fim do Contrato:</label>
+                <input name="ctl00$body$txtDataDemissao" type="text" readonly="readonly" id="body_txtDataDemissao" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-265">
+            </div>
+            <div class="row-414">
+                <label>
+                    #Orgao#/Entidade:</label>
+                <input name="ctl00$body$txtLotacao" type="text" value="088 - PM-ATIVOS" readonly="readonly" id="body_txtLotacao" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-414">
+                <label>
+                    Situação:</label>
+                <input name="ctl00$body$txtSituacao" type="text" value="Ativo - EXERCICIO REGULAR" readonly="readonly" id="body_txtSituacao" style="background-color:#CCCCCC;" />
+            </div>
+            <div class="row-856">
+                <label>
+                    Motivo Situação:</label>
+                <input name="ctl00$body$txtMotivo" type="text" readonly="readonly" id="body_txtMotivo" style="background-color:#CCCCCC;" />
+            </div>
+
+            <div class="row-856">
+                <h1 class="legend" style="width: 93%">Detalhes da Margem</h1>
+                <a id="body_btnHistoricoMargem" title="Histórico Margem" href="javascript:__doPostBack(&#39;ctl00$body$btnHistoricoMargem&#39;,&#39;&#39;)">
+                     <img alt="Histórico Margem" src="../img/icon-grafico.png"  style="float:right;width:48px;margin-top:-50px;" />
+                </a>
+                
+                        <table width="100%" border="1" class="grid grid-detalhe">
+                            <thead>
+                                <tr style="font-weight: bold;">
+                                    <td>Serviço
+                                    </td>
+                                    <td>Margem Total (R$)
+                                    </td>
+                                    <td>Margem Reservada (R$)
+                                    </td>
+                                    <td>Margem Disponível (R$)
+                                    </td>
+                                </tr>
+                            </thead>
+                    
+                        <tr id="body_rptMargens_headerservico_0" style="color: #ffffff; background-color: #717988 !important;">
+	<td>
+                                MARGEM EMPRESTIMO
+                            </td>
+	<td class="alinharDireita">
+                                R$ 2.433,16
+                            </td>
+	<td id="body_rptMargens_TdMargemReservada_0" class="alinharDireita" title="">
+                                R$ 49,00
+                            </td>
+	<td class="alinharDireita">
+                                R$ 2.384,16
+                                <div class="boxover-left">
+                                    <a href="javascript:__doPostBack(&#39;ctl00$body$rptMargens$ctl01$ctl03&#39;,&#39;&#39;)"></a>
+                                    <div class="box-popover-left-large">
+                                        <h3>Composição</h3>
+                                        <div>
+                                            <div style='color: black;' id='divPopOver'>
+                                                <table id='tabelaPopOver'>
+                                                    <tr>
+                                                        <td><strong>Nome do Serviço</strong></td>
+                                                        <td><strong>Data inclusão</strong></td>
+                                                        <td><strong>Margem Bloqueada</strong></td>
+                                                        <td><strong>Descrição</strong></td>
+                                                    </tr>
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+                        <tr>
+                            <td colspan="4">
+                                <div>
+
+</div>
+                            </td>
+                        </tr>
+                    
+                        <tr id="body_rptMargens_headerservico_1" style="color: #ffffff; background-color: #717988 !important;">
+	<td>
+                                MARGEM CARTAO
+                            </td>
+	<td class="alinharDireita">
+                                R$ 347,59
+                            </td>
+	<td id="body_rptMargens_TdMargemReservada_1" class="alinharDireita" title="">
+                                R$ 0,00
+                            </td>
+	<td class="alinharDireita">
+                                R$ 347,59
+                                <div class="boxover-left">
+                                    <a href="javascript:__doPostBack(&#39;ctl00$body$rptMargens$ctl02$ctl03&#39;,&#39;&#39;)"></a>
+                                    <div class="box-popover-left-large">
+                                        <h3>Composição</h3>
+                                        <div>
+                                            <div style='color: black;' id='divPopOver'>
+                                                <table id='tabelaPopOver'>
+                                                    <tr>
+                                                        <td><strong>Nome do Serviço</strong></td>
+                                                        <td><strong>Data inclusão</strong></td>
+                                                        <td><strong>Margem Bloqueada</strong></td>
+                                                        <td><strong>Descrição</strong></td>
+                                                    </tr>
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+                        <tr>
+                            <td colspan="4">
+                                <div>
+
+</div>
+                            </td>
+                        </tr>
+                    
+                        <tr id="body_rptMargens_headerservico_2" style="color: #ffffff; background-color: #717988 !important;">
+	<td>
+                                MARGEM BENEFICIO SAQUE
+                            </td>
+	<td class="alinharDireita">
+                                R$ 973,26
+                            </td>
+	<td id="body_rptMargens_TdMargemReservada_2" class="alinharDireita" title="">
+                                R$ 0,00
+                            </td>
+	<td class="alinharDireita">
+                                R$ 973,26
+                                <div class="boxover-left">
+                                    <a href="javascript:__doPostBack(&#39;ctl00$body$rptMargens$ctl03$ctl03&#39;,&#39;&#39;)"></a>
+                                    <div class="box-popover-left-large">
+                                        <h3>Composição</h3>
+                                        <div>
+                                            <div style='color: black;' id='divPopOver'>
+                                                <table id='tabelaPopOver'>
+                                                    <tr>
+                                                        <td><strong>Nome do Serviço</strong></td>
+                                                        <td><strong>Data inclusão</strong></td>
+                                                        <td><strong>Margem Bloqueada</strong></td>
+                                                        <td><strong>Descrição</strong></td>
+                                                    </tr>
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+                        <tr>
+                            <td colspan="4">
+                                <div>
+
+</div>
+                            </td>
+                        </tr>
+                    
+                        <tr id="body_rptMargens_headerservico_3" style="color: #ffffff; background-color: #717988 !important;">
+	<td>
+                                MARGEM BENEFICIO COMPRA
+                            </td>
+	<td class="alinharDireita">
+                                R$ 1.390,37
+                            </td>
+	<td id="body_rptMargens_TdMargemReservada_3" class="alinharDireita" title="">
+                                R$ 0,00
+                            </td>
+	<td class="alinharDireita">
+                                R$ 1.390,37
+                                <div class="boxover-left">
+                                    <a href="javascript:__doPostBack(&#39;ctl00$body$rptMargens$ctl04$ctl03&#39;,&#39;&#39;)"></a>
+                                    <div class="box-popover-left-large">
+                                        <h3>Composição</h3>
+                                        <div>
+                                            <div style='color: black;' id='divPopOver'>
+                                                <table id='tabelaPopOver'>
+                                                    <tr>
+                                                        <td><strong>Nome do Serviço</strong></td>
+                                                        <td><strong>Data inclusão</strong></td>
+                                                        <td><strong>Margem Bloqueada</strong></td>
+                                                        <td><strong>Descrição</strong></td>
+                                                    </tr>
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+
+                        <tr>
+                            <td colspan="4">
+                                <div>
+
+</div>
+                            </td>
+                        </tr>
+                    
+                        </table>
+                    
+            </div>
+
+            <div class="buttons">
+                <input type="submit" name="ctl00$body$reservaMargemButton" value="Reservar Margem" id="body_reservaMargemButton" class="botao-cinza" />
+                <input type="submit" name="ctl00$body$voltarButton" value="Voltar" id="body_voltarButton" class="botao-cinza" />
+            </div>
+        </fieldset>
+						<span id="menu2">
+                <input type="hidden" name="ctl00$body$txtServicoDescricao" id="body_txtServicoDescricao" value="CARTAO" />
+                
+                </span>
+        
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var x = Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px";
+        var y = Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px";
+
+        $("#ModalPopupExtenderPopup").attr('X', x);
+        $("#ModalPopupExtenderPopup").attr('Y', y);
+    });
+</script>
+<div id="body_ucAjaxModalPopup1_DivPopup">
+    <div id="body_ucAjaxModalPopup1_PanelPopup" class="modalPopup" style="height:111px;width:400px;display: table; left: 10px;">
+	
+        <div id="divMensagemPopup">
+            <img src="../img/ImgPopup/icon-ok.png" id="body_ucAjaxModalPopup1_iconeMensagem" alt="imagem corresponte a validação" />
+            <span id="body_ucAjaxModalPopup1_lblMensagemPopup"></span>
+        </div>
+        <div class="btns">
+            <input type="submit" name="ctl00$body$ucAjaxModalPopup1$btnConfirmarPopup" value="OK" id="body_ucAjaxModalPopup1_btnConfirmarPopup" class="botao-azul" />
+        </div>
+    
+</div>
+</div>
+<a id="body_ucAjaxModalPopup1_btnModalPopup" href="javascript:__doPostBack(&#39;ctl00$body$ucAjaxModalPopup1$btnModalPopup&#39;,&#39;&#39;)" style="font-size: 1px; color: white">.</a>
+
+
+        <div id="body_pnlArquivosServidor" class="modalPopup" style="display: none">
+	
+            <div id="body_Panel3" style="cursor: move; background-color: #CCC; color: Black; height: 29px; padding: 2px 0 0 2px; text-align: center;">
+		
+                Histórico Margem
+            
+	</div>
+            <div style="height: 700px;">
+                
+<div id="divPrint">
+    <div>
+        <script>
+            function CallPrint(strid) {
+
+                //var prtContent = document.getElementById(strid);
+
+                //var WinPrint = window.open('', '', 'letf=0,top=0,width=700,height=700,toolbar=0,scrollbars=0,status=0');
+
+                //WinPrint.document.write(prtContent.innerHTML);
+
+                //WinPrint.document.close();
+
+                //WinPrint.focus();
+
+                //WinPrint.print();
+
+                //WinPrint.close();
+
+                //prtContent.innerHTML = strOldOne;
+
+                var conteudo = document.getElementById('divPrint').innerHTML;
+                tela_impressao = window.open('about:blank');
+                tela_impressao.document.write(conteudo);
+                tela_impressao.window.print();
+                tela_impressao.window.close();
+            }
+        </script>
+        <style>
+            .myStyle {
+                color: Red;
+                width: 100px;
+            }
+        </style>
+        <center><b> Margem do #Servidor# </b></center>
+        <fieldset style="width: 740px">
+            <legend>Histórico da Margem</legend>
+            <div>
+		<table cellspacing="0" rules="all" border="1" id="body_ucHistoricoMargem1_GridView1" style="height:130px;width:97%;border-collapse:collapse;">
+			<tr style="background-color:#CCCCCC;">
+				<th scope="col">Data</th><th scope="col">Valor da Margem</th><th scope="col" style="width:20px;">Variação</th>
+			</tr><tr align="center">
+				<td>04/12/2023</td><td>R$ 347,59</td><td align="center">
+                            <div class=' myStyle'>
+                                -R$ 5,50
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>09/11/2023</td><td>R$ 353,09</td><td align="center">
+                            <div class=' '>
+                                R$ 6,60
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>05/10/2023</td><td>R$ 346,49</td><td align="center">
+                            <div class=' myStyle'>
+                                -R$ 6,60
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>04/10/2023</td><td>R$ 353,09</td><td align="center">
+                            <div class=' '>
+                                R$ 0,00
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>30/08/2023</td><td>R$ 353,09</td><td align="center">
+                            <div class=' '>
+                                R$ 3,30
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>28/07/2023</td><td>R$ 349,79</td><td align="center">
+                            <div class=' myStyle'>
+                                -R$ 19,80
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>29/06/2023</td><td>R$ 369,59</td><td align="center">
+                            <div class=' myStyle'>
+                                -R$ 3,30
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>01/06/2023</td><td>R$ 372,89</td><td align="center">
+                            <div class=' '>
+                                R$ 0,78
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>26/04/2023</td><td>R$ 372,11</td><td align="center">
+                            <div class=' '>
+                                R$ 0,00
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>29/03/2023</td><td>R$ 372,11</td><td align="center">
+                            <div class=' '>
+                                R$ 0,00
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>27/02/2023</td><td>R$ 372,11</td><td align="center">
+                            <div class=' '>
+                                R$ 63,42
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>27/02/2023</td><td>R$ 308,69</td><td align="center">
+                            <div class=' '>
+                                R$ 202,18
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>27/01/2023</td><td>R$ 106,51</td><td align="center">
+                            <div class=' myStyle'>
+                                -R$ 202,18
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>20/12/2022</td><td>R$ 308,69</td><td align="center">
+                            <div class=' '>
+                                R$ 0,00
+                            </div>
+
+                        </td>
+			</tr><tr align="center">
+				<td>05/12/2022</td><td>R$ 308,69</td><td align="center">
+                            <div class=' '>
+                                R$ 308,69
+                            </div>
+
+                        </td>
+			</tr>
+		</table>
+	</div>
+        </fieldset>
+        <center><b> Média do Período: <label id="body_ucHistoricoMargem1_lblMediaMargem">R$ 332,97</label></b></center>
+    </div>
+
+    <div>
+        <fieldset style="width: 740px">
+            <legend>Variação de consumo de Margem</legend>
+            <img id="body_ucHistoricoMargem1_Chart1" src="/Margem/ChartImg.axd?i=charts_0/chart_0_0.png&amp;g=b45df2d172694bc5b616912dec904aeb" alt="" style="height:303px;width:735px;border-width:0px;" />
+        </fieldset>
+    </div>
+    <input type="submit" name="ctl00$body$ucHistoricoMargem1$IMB_IMPRIMIR" value="Imprimir" onclick="CallPrint(&#39;divPrint&#39;);" id="body_ucHistoricoMargem1_IMB_IMPRIMIR" title="Imprimir" class="botao-cinza" style="height:55px;width:72px;" />
+</div>
+
+                <div class="buttons2" style="width: 100%; text-align: right; margin-top: 10px;">
+                    <input type="submit" name="ctl00$body$btnFechar" value="Fechar" id="body_btnFechar" class="botao-cinza" />
+                </div>
+            </div>
+        
+</div>
+    </div>
+
+			</div>
+		</div>
+
+		<input type="hidden" name="ctl00$hdHandTalk" id="hdHandTalk" value="True" />
+		<script type="text/javascript" src="/scripts/Traducao.js"></script>
+		<script type="text/javascript" src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var hf = document.getElementById('hdHandTalk');
+				if (hf.value == "True") {
+					var ht = new HT({
+                        token: "bc62ea26d4dddbbae6cec030aefd4b21"
+					});
+				}
+			});
+        </script>
+
+
+		<script src="/scripts/blipChat/blip-chat-widget@1.9.1.js" type="text/javascript"></script>
+		<script type="text/javascript">
+            var customStyle = `
+				#blip-chat-header {
+					background-color: #fcc25b !important;
+				}
+				#blip-chat-header .blip-chat-bot-name {
+					font-weight: bold;
+				
+				}
+				#message-input .send-button {
+					background-color: #fcc25b !important;
+				};`;			
+
+            localStorage.removeItem("blipSdkUAccount");
+
+            var blipClient = new BlipChat();		
+			$(document).ready(function () {                
+				blipClient
+                    .withAppKey('Y29uc2lnbmF0YXJpYWVjb252ZW5pbzoyNzRjYzg0Mi04ZmZkLTQwYmYtYjEwNi05Y2FmMTlmOWQxNTk=')
+                    .withCustomStyle(customStyle)
+					.withButton({ "color": "#0096fa", "icon": "" })
+					.withCustomCommonUrl('https://consiglog.chat.blip.ai/');
+				blipClient.build();					
+			});
+        </script>
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"ucModalPopupDesconectar1_PanelPopup","dynamicServicePath":"/Margem/ConsultaMargemDados.aspx","id":"ucModalPopupDesconectar1_ModalPopupExtenderPopup"}, null, null, $get("ucModalPopupDesconectar1_btnModalPopup"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"ucModalPopupMsg_PanelPopup","dynamicServicePath":"/Margem/ConsultaMargemDados.aspx","id":"ucModalPopupMsg_ModalPopupExtenderPopup"}, null, null, $get("ucModalPopupMsg_btnModalPopup"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"body_ucAjaxModalPopup1_PanelPopup","dynamicServicePath":"/Margem/ConsultaMargemDados.aspx","id":"body_ucAjaxModalPopup1_ModalPopupExtenderPopup"}, null, null, $get("body_ucAjaxModalPopup1_btnModalPopup"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
