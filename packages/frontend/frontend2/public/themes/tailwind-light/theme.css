@@ -1148,8 +1148,7 @@
   .p-inputtext {
     font-family: var(--font-family);
     font-feature-settings: var(--font-feature-settings, normal);
-    font-size: 1rem;
-    color: #3f3f46;
+    font-size: 1.5rem !important;
     background: #ffffff;
     padding: 0.75rem 0.75rem;
     border: 1px solid #1e1891 !important;

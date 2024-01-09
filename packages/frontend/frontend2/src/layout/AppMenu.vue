@@ -35,6 +35,11 @@ const model = ref([
                         items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
                     }
                 ]
+            },
+            {
+                label: 'Consultar Cliente',
+                icon: 'pi pi-fw pi-search',
+                to: '/consultar-clientes'
             }
         ]
     },
