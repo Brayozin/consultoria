@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from pyvirtualdisplay import Display
 
 import logging
@@ -210,8 +211,6 @@ class bot:
             total = total[3:].replace('.', '').replace('\n', '')
             reservada = reservada[3:].replace('.', '').replace('\n', '')
             disponivel = disponivel[3:].replace('.', '').replace('\n', '')
-            
-            
             self.total = total
             self.reservada = reservada
             self.disponivel = disponivel
@@ -227,17 +226,16 @@ class bot:
         self.password = password
 
         chrome_options = Options()
-        # chrome_options.add_argument("--headless") # Runs chrome without opening window.
-        # chrome_options.add_argument("--no-sandbox")
-        # chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--headless") # Runs chrome without opening window.
+        chrome_options.add_argument("--timeout=5")
+        #chrome_options.add_argument("--log-path=/root/consultoria/packages/backend/backend/chromedriver.log")
+        #chrome_options.add_argument("--no-sandbox")
+        #chrome_options.add_argument("--disable-dev-shm-usage")
         # make window position(second monitor(1360++) on the second half(+1920/2) and size fixed (1920/2 x 1080))
-        chrome_options.add_argument("--window-position=3280,0")
-        chrome_options.add_argument("--window-size=960,1080")
-
-        self.bot = webdriver.Chrome(
-            executable_path=os.path.join(os.getcwd(), 'chromedriver'),
-            options=chrome_options
-        )
+        #chrome_options.add_argument("--window-position=3280,0")
+        #chrome_options.add_argument("--window-size=960,1080")
+        service = '/root/consultoria/packages/backend/backend/chromedriver'
+        self.bot = webdriver.Chrome(service,options=chrome_options)
 
     def login(self):
         print('Logging in...')
