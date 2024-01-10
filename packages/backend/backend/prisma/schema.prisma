@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --------------------------------------
+// Client Json: 
+//  {
+//    "nome": "JOSE DEVANIR DA CUNHA ARAGAO",
+//  "cpf": "71286110297",
+//  "matriculas": [
+//    {
+//      "matricula": "0001996576A",
+//      "nome": "JOSE DEVANIR DA CUNHA ARAGAO",
+//      "cpf": "71286110297",
+//      "margens": {
+//        "emprestimo": {
+//          "total": "2433,16",
+//          "disponivel": "2384,16          "
+//        },
+//        "cartao": {
+//          "total": "347,59",
+//          "disponivel": "347,59          "
+//        },
+//        "saque": {
+//          "total": "973,26",
+//          "disponivel": "973,26          "
+//        },
+//        "compra": {
+//          "total": "1390,37",
+//          "disponivel": "1390,37          "
+//        }
+//      },
+//      "tipo": "ESTATUTARIO",
+//      "situacao": "Ativo - EXERCICIO REGULAR"
+//    }
+//  ]
+//}
+// --------------------------------------
+model Matricula {
+  id        String   @id @default(uuid())
+  matricula String   @unique
+  cpf       String
+  nome      String
+  tipo      String
+  situacao  String
+  margens   Margem[]
+  owner     Cliente  @relation(fields: [ownerId], references: [id])
+  ownerId   String
+}
+
+model Margem {
+  id          Int        @id @default(autoincrement())
+  categoria   String //emprestimo, cartao, saque, compra
+  total       Float
+  disponivel  Float
+  matricula   Matricula? @relation(fields: [matriculaId], references: [id])
+  matriculaId String
+}
+
+model Cliente {
+  //uuid
+  id             String      @id @default(uuid())
+  nome           String
+  cpf            String      @unique
+  ultimaConsulta DateTime    @default(now())
+  matriculas     Matricula[]
+}

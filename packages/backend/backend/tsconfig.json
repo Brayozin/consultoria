@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "outDir": "dist",
+        "target": "es2018",
+        "strict": true,
+        "lib": ["esnext"],
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "rootDir": "src",
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["node_modules/*", "src/types/*"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
