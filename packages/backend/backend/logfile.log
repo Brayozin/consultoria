@@ -37,3 +37,287 @@
 2024-01-10 18:05:27,477 - LOGGER - ERROR - Error reading command from stdin
 2024-01-10 18:05:27,672 - LOGGER - ERROR - Error reading command from stdin
 2024-01-10 18:05:27,672 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:21:11,786 - LOGGER - INFO - Logging in...
+2024-01-10 18:21:11,786 - LOGGER - INFO - Logging in...
+2024-01-10 18:34:49,998 - LOGGER - INFO - Logging in...
+2024-01-10 18:34:49,998 - LOGGER - INFO - Logging in...
+2024-01-10 18:34:57,270 - LOGGER - INFO - Logged in
+2024-01-10 18:34:57,270 - LOGGER - INFO - Logged in
+2024-01-10 18:35:02,711 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:35:02,711 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:32,649 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:32,649 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,026 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,026 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,321 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,321 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,862 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:33,862 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:34,075 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:34,075 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:36:52,348 - LOGGER - INFO - Logging in...
+2024-01-10 18:36:52,348 - LOGGER - INFO - Logging in...
+2024-01-10 18:36:59,963 - LOGGER - INFO - Logged in
+2024-01-10 18:36:59,963 - LOGGER - INFO - Logged in
+2024-01-10 18:37:06,257 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:06,257 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:06,257 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:37:06,257 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:37:06,257 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:37:06,257 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:37:07,573 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:07,573 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:07,747 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:07,747 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:08,208 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:37:08,208 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:37:08,208 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:08,208 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:08,267 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:08,267 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:08,267 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:37:08,267 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:37:08,267 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:37:08,267 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:37:10,923 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:10,923 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:11,038 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:11,038 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:11,451 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:37:11,451 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:37:11,451 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:11,451 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:11,478 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:11,478 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:11,478 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:37:11,478 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:37:11,478 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:37:11,478 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:37:12,874 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:12,874 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:12,991 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:12,991 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:13,517 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:37:13,517 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:37:13,517 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:13,517 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:13,543 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:13,543 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:13,543 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:37:13,543 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:37:13,543 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:37:13,543 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:37:14,555 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:14,555 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:14,690 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:14,690 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:15,185 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:37:15,185 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:37:15,186 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:15,186 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:15,213 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:15,213 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:15,213 - LOGGER - INFO - CPF: 
+2024-01-10 18:37:15,213 - LOGGER - INFO - CPF: 
+2024-01-10 18:37:15,214 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:37:15,214 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:37:15,896 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:15,896 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:17,439 - LOGGER - INFO - Logging in...
+2024-01-10 18:37:17,439 - LOGGER - INFO - Logging in...
+2024-01-10 18:37:25,007 - LOGGER - INFO - Logged in
+2024-01-10 18:37:25,007 - LOGGER - INFO - Logged in
+2024-01-10 18:37:40,757 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:40,757 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:40,757 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:37:40,757 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:37:40,757 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:37:40,757 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:37:42,140 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:42,140 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:42,319 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:42,319 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:42,824 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:37:42,824 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:37:42,824 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:42,824 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:42,850 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:42,850 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:42,851 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:37:42,851 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:37:42,851 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:37:42,851 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:37:44,270 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:44,270 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:44,404 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:44,404 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:44,907 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:37:44,907 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:37:44,908 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:44,908 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:44,935 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:44,935 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:44,935 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:37:44,935 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:37:44,935 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:37:44,935 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:37:45,847 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:45,847 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:45,958 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:45,958 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:46,434 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:37:46,434 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:37:46,435 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:46,435 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:46,456 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:46,456 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:46,457 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:37:46,457 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:37:46,457 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:37:46,457 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:37:47,413 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:47,413 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:47,547 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:47,547 - LOGGER - INFO - Getting margins
+2024-01-10 18:37:48,142 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:37:48,142 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:37:48,142 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:48,142 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:37:48,168 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:48,168 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:37:48,168 - LOGGER - INFO - CPF: 
+2024-01-10 18:37:48,168 - LOGGER - INFO - CPF: 
+2024-01-10 18:37:48,169 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:37:48,169 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:37:48,806 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:48,806 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:37:50,323 - LOGGER - INFO - Logging in...
+2024-01-10 18:37:50,323 - LOGGER - INFO - Logging in...
+2024-01-10 18:37:57,003 - LOGGER - INFO - Logged in
+2024-01-10 18:37:57,003 - LOGGER - INFO - Logged in
+2024-01-10 18:38:05,313 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:05,313 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:05,313 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:38:05,313 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:38:05,313 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:38:05,313 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:38:08,043 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:08,043 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:08,232 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:08,232 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:08,628 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:38:08,628 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:38:08,628 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:08,628 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:08,656 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:08,656 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:08,656 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:38:08,656 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:38:08,657 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:38:08,657 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:38:11,081 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:11,081 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:11,219 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:11,219 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:11,743 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:38:11,743 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:38:11,743 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:11,743 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:11,766 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:11,766 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:11,767 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:38:11,767 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:38:11,767 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:38:11,767 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:38:12,720 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:12,720 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:12,846 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:12,846 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:13,378 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:38:13,378 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:38:13,378 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:13,378 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:13,401 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:13,401 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:13,401 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:38:13,401 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:38:13,402 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:38:13,402 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:38:14,346 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:14,346 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:14,476 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:14,476 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:14,982 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:38:14,982 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:38:14,983 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:14,983 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:15,008 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:15,008 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:15,009 - LOGGER - INFO - CPF: 
+2024-01-10 18:38:15,009 - LOGGER - INFO - CPF: 
+2024-01-10 18:38:15,009 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:38:15,009 - LOGGER - INFO - Consulting client with cpf: 
+2024-01-10 18:38:15,659 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:15,659 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:17,167 - LOGGER - INFO - Logging in...
+2024-01-10 18:38:17,167 - LOGGER - INFO - Logging in...
+2024-01-10 18:38:23,989 - LOGGER - INFO - Logged in
+2024-01-10 18:38:23,989 - LOGGER - INFO - Logged in
+2024-01-10 18:38:32,300 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:32,300 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:32,300 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:38:32,300 - LOGGER - INFO - CPF: 712104152-91
+2024-01-10 18:38:32,300 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:38:32,300 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-10 18:38:33,700 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:33,700 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:33,841 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:33,841 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:34,314 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:38:34,314 - LOGGER - INFO - Client found: 712104152-91
+2024-01-10 18:38:34,314 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:34,314 - LOGGER - INFO - Cliente: {'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'matriculas': [{'matricula': '0002456508A', 'nome': 'FRANCILANGE BARBOSA FERREIRA', 'cpf': '71210415291', 'margens': {'emprestimo': {'total': '1946,06', 'reservada': '1280,65', 'disponivel': '665,41          '}, 'cartao': {'total': '278,01', 'reservada': '0,00', 'disponivel': '278,01          '}, 'saque': {'total': '778,42', 'reservada': '0,00', 'disponivel': '778,42          '}, 'compra': {'total': '1112,03', 'reservada': '0,00', 'disponivel': '1112,03          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:34,336 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:34,336 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:34,337 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:38:34,337 - LOGGER - INFO - CPF: 712101132-87
+2024-01-10 18:38:34,337 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:38:34,337 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-10 18:38:36,384 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:36,384 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:36,479 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:36,479 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:36,959 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:38:36,959 - LOGGER - INFO - Client found: 712101132-87
+2024-01-10 18:38:36,959 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:36,959 - LOGGER - INFO - Cliente: {'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'matriculas': [{'matricula': '0001997360A', 'nome': 'SMALLEM BARRETO DOS REIS', 'cpf': '71210113287', 'margens': {'emprestimo': {'total': '1918,18', 'reservada': '88,37', 'disponivel': '1829,81          '}, 'cartao': {'total': '274,03', 'reservada': '0,00', 'disponivel': '274,03          '}, 'saque': {'total': '767,27', 'reservada': '0,00', 'disponivel': '767,27          '}, 'compra': {'total': '1096,10', 'reservada': '0,00', 'disponivel': '1096,10          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:36,986 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:36,986 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:36,987 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:38:36,987 - LOGGER - INFO - CPF: 712088102-78
+2024-01-10 18:38:36,987 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:38:36,987 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-10 18:38:37,996 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:37,996 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:38,113 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:38,113 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:38,533 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:38:38,533 - LOGGER - INFO - Client found: 712088102-78
+2024-01-10 18:38:38,533 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:38,533 - LOGGER - INFO - Cliente: {'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'matriculas': [{'matricula': '0001863746A', 'nome': 'DIEGO BOTELHO MUMBACA', 'cpf': '71208810278', 'margens': {'emprestimo': {'total': '2092,14', 'reservada': '83,32', 'disponivel': '2008,82          '}, 'cartao': {'total': '298,88', 'reservada': '0,00', 'disponivel': '298,88          '}, 'saque': {'total': '836,86', 'reservada': '0,00', 'disponivel': '836,86          '}, 'compra': {'total': '1195,51', 'reservada': '0,00', 'disponivel': '1195,51          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:38,564 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:38,564 - LOGGER - INFO - Command: consulta_cpf
+2024-01-10 18:38:38,565 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:38:38,565 - LOGGER - INFO - CPF: 712082672-72
+2024-01-10 18:38:38,565 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:38:38,565 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-10 18:38:39,551 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:39,551 - LOGGER - INFO - Getting data from matricula
+2024-01-10 18:38:39,670 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:39,670 - LOGGER - INFO - Getting margins
+2024-01-10 18:38:40,210 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:38:40,210 - LOGGER - INFO - Client found: 712082672-72
+2024-01-10 18:38:40,210 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:38:40,210 - LOGGER - INFO - Cliente: {'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'matriculas': [{'matricula': '0002336723A', 'nome': 'ELIANA PIMENTEL RODRIGUES', 'cpf': '71208267272', 'margens': {'emprestimo': {'total': '771,94', 'reservada': '962,27', 'disponivel': ' 190,33          '}, 'cartao': {'total': '110,28', 'reservada': '72,65', 'disponivel': '37,63          '}, 'saque': {'total': '308,78', 'reservada': '0,00', 'disponivel': ' 298,04          '}, 'compra': {'total': '441,11', 'reservada': '0,00', 'disponivel': ' 298,04          '}}, 'tipo': 'ESTATUTARIO', 'situacao': 'Ativo - EXERCICIO REGULAR'}]}
+2024-01-10 18:39:13,501 - LOGGER - ERROR - Error reading command from stdin
+2024-01-10 18:39:13,501 - LOGGER - ERROR - Error reading command from stdin

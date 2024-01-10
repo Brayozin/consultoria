@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.options import Options
 from pyvirtualdisplay import Display
+from selenium.webdriver.common.by import By
 
 import logging
 
@@ -234,9 +235,9 @@ class bot:
         chrome_options.add_argument("--timeout=10")
         chrome_options.add_argument("--window-position=3280,0")
         chrome_options.add_argument("--window-size=960,1080")
-
+        service = webdriver.chrome.service.Service( os.path.join(os.getcwd(), 'chromedriver'))
         self.bot = webdriver.Chrome(
-            executable_path=os.path.join(os.getcwd(), 'chromedriver'),
+            service=service,
             options=chrome_options
         )
 
@@ -247,22 +248,22 @@ class bot:
         bot.get('https://govam.consiglog.com.br/Login.aspx')
         print('Waiting for page to load...')
         time.sleep(1)
-        email = bot.find_element_by_name('txtLogin')
+        email = bot.find_element("name",'txtLogin')
         print('Entering email...')
         email.clear()
         email.send_keys(self.email)
-        bot.find_element_by_name('Entrar').click()
-        time.sleep(0.5)
+        bot.find_element("name",'Entrar').click()
+        time.sleep(1)
 
-        password = bot.find_element_by_name('txtSenha')
+        password = bot.find_element("name",'txtSenha')
         password.clear()
         password.send_keys(self.password)
         password.send_keys(Keys.RETURN)
-        time.sleep(0.5)
+        time.sleep(1)
 
         # checks if modal pops up
         try:
-            bot.find_element_by_name(
+            bot.find_element("name",
                 'ucAjaxModalPopupConfirmacao1$btnConfirmarPopup').click()
         except:
             pass
@@ -272,16 +273,16 @@ class bot:
 
         # entrar 'title="Entrar"'
         try:
-            bot.find_element_by_id('gvOrgao_imgEntrar_0').click()
+            bot.find_element(By.ID,'gvOrgao_imgEntrar_0').click()
             print('entrar by id')
         except:
             try:
-                bot.find_element_by_name('gvOrgao$ctl02$imgEntrar').click()
+                bot.find_element("name",'gvOrgao$ctl02$imgEntrar').click()
                 print('entrar by name')
             except:
                 try:
-                    bot.find_elements_by_css_selector(
-                        'input[title="Entrar"]')[0].click()
+                    bot.find_element(By.CSS_SELECTOR,
+                                     'input[title="Entrar"]').click()
                     print('entrar by css')
                 except:
                     pass
@@ -308,11 +309,11 @@ class bot:
         except:
             pass
         
-        bot.find_element_by_name(
+        bot.find_element("name",
             'ctl00$body$matriculaTextBox').send_keys(matricula)
-        bot.find_element_by_name('ctl00$body$pesquisarButton').click()
+        bot.find_element("name",'ctl00$body$pesquisarButton').click()
         try:
-            textModal = bot.find_element_by_id(
+            textModal = bot.find_element(By.ID,
                 "body_ucAjaxModalPopup1_lblMensagemPopup")
             if (textModal.text == "CPF/Matrícula não encontrado."):
                 logger.info('Matricula not found: ' + matricula)
@@ -342,10 +343,10 @@ class bot:
             
         
         
-        bot.find_element_by_name('ctl00$body$cpfTextBox').send_keys(cpf)
-        bot.find_element_by_name('ctl00$body$pesquisarButton').click()
+        bot.find_element("name",'ctl00$body$cpfTextBox').send_keys(cpf)
+        bot.find_element("name",'ctl00$body$pesquisarButton').click()
         try:
-            textModal = bot.find_element_by_id(
+            textModal = bot.find_element(By.ID,
                 "body_ucAjaxModalPopup1_lblMensagemPopup")
             if (textModal.text == "CPF/Matrícula não encontrado."):
                 logger.info('CPF not found: ' + cpf)
@@ -358,29 +359,29 @@ class bot:
         matriculas = []
     
         if bot.current_url.find('https://govam.consiglog.com.br/Servidores/ServidorMatriculaLista.aspx') != -1:
-            table_rows = bot.find_element_by_class_name('grid').find_element_by_tag_name(
-                'tbody').find_elements_by_tag_name('tr')
+            table_rows = bot.find_element(By.CLASS_NAME,'grid').find_element(By.TAG_NAME,
+                'tbody').find_elements(By.TAG_NAME,'tr')
             table_rows = table_rows[1:]  # remove first row (header)
             lenTableRows = len(table_rows)
             for i in range(lenTableRows):
                 # get updated table rows
-                rows = bot.find_element_by_class_name('grid').find_element_by_tag_name(
-                    'tbody').find_elements_by_tag_name('tr')
+                rows = bot.find_element(By.CLASS_NAME,'grid').find_element(By.TAG_NAME,
+                    'tbody').find_elements(By.TAG_NAME,'tr')
                 rows = rows[1:]
-                columns = rows[i].find_elements_by_tag_name('td')
+                columns = rows[i].find_elements(By.TAG_NAME,'td')
                 if (columns[4].text == 'Suspenso'):
                     n_matricula = columns[3].text
                     cliente_suspenso = self.ConsultaClienteMatricula(
                         n_matricula)
                     matriculas.append(cliente_suspenso.get_matriculas()[0])
                 else:
-                    rows[i].find_element_by_tag_name('input').click()
+                    rows[i].find_element(By.TAG_NAME,'input').click()
                     matriculas.append(self.get_dados_matricula())
                 bot.get(
                         'https://govam.consiglog.com.br/Margem/ConsultaMargem.aspx')
-                bot.find_element_by_name(
+                bot.find_element("name",
                         'ctl00$body$cpfTextBox').send_keys(cpf)
-                bot.find_element_by_name(
+                bot.find_element("name",
                         'ctl00$body$pesquisarButton').click()
                 
                 
@@ -397,13 +398,13 @@ class bot:
     def get_margens(self):
         logger.info('Getting margins')
         bot = self.bot
-        table = bot.find_element_by_class_name('grid-detalhe')
-        rows = table.find_element_by_tag_name(
-            'tbody').find_elements_by_tag_name('tr')
+        table = bot.find_element(By.CLASS_NAME,'grid-detalhe')
+        rows = table.find_element(By.TAG_NAME,
+            'tbody').find_elements(By.TAG_NAME,'tr')
 
         dadosMargem = []
         for row in rows:
-            row_tag = row.find_elements_by_tag_name('td')
+            row_tag = row.find_elements(By.TAG_NAME,'td')
             text = row_tag[0].text
             if (text.find("MARGEM") != -1):
                 margem = self.margem(
@@ -416,15 +417,15 @@ class bot:
     def get_dados_matricula(self):
         logger.info('Getting data from matricula')
         bot = self.bot
-        cpf = bot.find_element_by_name(
+        cpf = bot.find_element("name",
             'ctl00$body$cpf_nascimentoTextBox').get_attribute('value')
-        nome = bot.find_element_by_name(
+        nome = bot.find_element("name",
             'ctl00$body$clienteTextBox').get_attribute('value')
-        matricula = bot.find_element_by_name(
+        matricula = bot.find_element("name",
             'ctl00$body$matriculaTextBox').get_attribute('value')
-        tipo = bot.find_element_by_name(
+        tipo = bot.find_element("name",
             'ctl00$body$categoriaTextBox').get_attribute('value')
-        situacao = bot.find_element_by_name(
+        situacao = bot.find_element("name",
             'ctl00$body$txtSituacao').get_attribute('value')
         margens = self.get_margens()
         matricula = self.matricula(
