@@ -254,6 +254,8 @@ const searchClients = async () => {
     console.log('searching clients');
     console.log(cpfList.value);
     loading.value = true;
+    //remove nulls
+    cpfList.value = cpfList.value.filter((cpf) => cpf !== null); 
     let cpflistString = cpfList.value.join(',');
     let request = {
         params: {
