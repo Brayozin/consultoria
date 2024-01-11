@@ -256,7 +256,9 @@ const searchClients = async () => {
     loading.value = true;
     //remove nulls
     cpfList.value = cpfList.value.filter((cpf) => cpf !== null); 
-    let cpflistString = cpfList.value.join(',');
+    // remove - . and , 
+    let cpfs = cpfList.value.map((cpf:any) => cpf.replace(/[.-]/g, ''));
+    let cpflistString = cpfs.join(',');
     let request = {
         params: {
             cpfList: cpflistString // Assuming cpfList.value is an array
