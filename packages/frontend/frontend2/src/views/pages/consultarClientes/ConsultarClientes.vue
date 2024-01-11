@@ -254,14 +254,16 @@ const searchClients = async () => {
     console.log('searching clients');
     console.log(cpfList.value);
     loading.value = true;
+    let cpflistString = cpfList.value.join(',');
     let request = {
         params: {
-            cpfList: cpfList.value // Assuming cpfList.value is an array
+            cpfList: cpflistString // Assuming cpfList.value is an array
         }
     };
 
 
     try {
+
         let response:any = await axios.get('http://24.144.69.149/searchandupdate', request);
         let clientes = response.data.clientes;
         console.log("clientes", clientes);
