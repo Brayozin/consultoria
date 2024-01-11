@@ -262,7 +262,7 @@ const searchClients = async () => {
 
 
     try {
-        let response:any = await axios.get('https://24.144.69.149/searchandupdate', request);
+        let response:any = await axios.get('24.144.69.149/searchandupdate', request);
         let clientes = response.data.clientes;
         console.log("clientes", clientes);
         let matriculas: any = [];
