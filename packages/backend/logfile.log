@@ -2541,3 +2541,943 @@
 2024-01-01 20:55:25,344 - LOGGER - INFO - Getting data from matricula
 2024-01-01 20:55:25,492 - LOGGER - INFO - Getting margins
 2024-01-01 20:55:26,717 - LOGGER - INFO - Client found: 71202021204
+2024-01-02 16:59:15,655 - LOGGER - INFO - Logging in...
+2024-01-02 16:59:22,651 - LOGGER - INFO - Logged in
+2024-01-02 16:59:23,152 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-02 16:59:24,195 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-02 16:59:25,343 - LOGGER - INFO - Getting data from matricula
+2024-01-02 16:59:25,432 - LOGGER - INFO - Getting margins
+2024-01-02 16:59:25,945 - LOGGER - INFO - Client found: 0001794558C
+2024-01-02 16:59:27,309 - LOGGER - INFO - Getting data from matricula
+2024-01-02 16:59:27,442 - LOGGER - INFO - Getting margins
+2024-01-02 16:59:28,639 - LOGGER - INFO - Client found: 71202021204
+2024-01-03 11:40:04,015 - LOGGER - INFO - Logging in...
+2024-01-03 11:40:04,015 - LOGGER - INFO - Logging in...
+2024-01-03 11:40:09,370 - LOGGER - INFO - Logged in
+2024-01-03 11:40:09,370 - LOGGER - INFO - Logged in
+2024-01-03 11:40:09,870 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:40:09,870 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:40:10,042 - LOGGER - INFO - Logging in...
+2024-01-03 11:40:10,042 - LOGGER - INFO - Logging in...
+2024-01-03 11:40:13,956 - LOGGER - INFO - Logged in
+2024-01-03 11:40:13,956 - LOGGER - INFO - Logged in
+2024-01-03 11:43:18,095 - LOGGER - INFO - Logging in...
+2024-01-03 11:43:18,095 - LOGGER - INFO - Logging in...
+2024-01-03 11:43:23,096 - LOGGER - INFO - Logged in
+2024-01-03 11:43:23,096 - LOGGER - INFO - Logged in
+2024-01-03 11:43:23,596 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:43:23,596 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:43:23,790 - LOGGER - INFO - Logging in...
+2024-01-03 11:43:23,790 - LOGGER - INFO - Logging in...
+2024-01-03 11:44:02,800 - LOGGER - INFO - Logging in...
+2024-01-03 11:44:02,800 - LOGGER - INFO - Logging in...
+2024-01-03 11:44:07,273 - LOGGER - INFO - Logged in
+2024-01-03 11:44:07,273 - LOGGER - INFO - Logged in
+2024-01-03 11:44:07,773 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:44:07,773 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:44:07,962 - LOGGER - INFO - Logging in...
+2024-01-03 11:44:07,962 - LOGGER - INFO - Logging in...
+2024-01-03 11:47:05,822 - LOGGER - INFO - Logging in...
+2024-01-03 11:47:05,822 - LOGGER - INFO - Logging in...
+2024-01-03 11:47:13,041 - LOGGER - INFO - Logged in
+2024-01-03 11:47:13,041 - LOGGER - INFO - Logged in
+2024-01-03 11:47:13,541 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:47:13,541 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-03 11:47:14,588 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-03 11:47:14,588 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-03 11:47:15,631 - LOGGER - INFO - Getting data from matricula
+2024-01-03 11:47:15,631 - LOGGER - INFO - Getting data from matricula
+2024-01-03 11:47:15,738 - LOGGER - INFO - Getting margins
+2024-01-03 11:47:15,738 - LOGGER - INFO - Getting margins
+2024-01-03 11:47:16,221 - LOGGER - INFO - Client found: 0001794558C
+2024-01-03 11:47:16,221 - LOGGER - INFO - Client found: 0001794558C
+2024-01-03 11:47:18,150 - LOGGER - INFO - Getting data from matricula
+2024-01-03 11:47:18,150 - LOGGER - INFO - Getting data from matricula
+2024-01-03 11:47:18,296 - LOGGER - INFO - Getting margins
+2024-01-03 11:47:18,296 - LOGGER - INFO - Getting margins
+2024-01-03 11:47:19,449 - LOGGER - INFO - Client found: 71202021204
+2024-01-03 11:47:19,449 - LOGGER - INFO - Client found: 71202021204
+2024-01-04 20:33:09,843 - LOGGER - INFO - Logging in...
+2024-01-04 20:33:09,843 - LOGGER - INFO - Logging in...
+2024-01-04 20:33:15,621 - LOGGER - INFO - Logged in
+2024-01-04 20:33:15,621 - LOGGER - INFO - Logged in
+2024-01-04 20:33:16,121 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-04 20:33:16,121 - LOGGER - INFO - Consulting client with cpf: 71202021204
+2024-01-04 20:33:17,385 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-04 20:33:17,385 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-04 20:33:18,717 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:33:18,717 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:33:18,897 - LOGGER - INFO - Getting margins
+2024-01-04 20:33:18,897 - LOGGER - INFO - Getting margins
+2024-01-04 20:33:19,341 - LOGGER - INFO - Client found: 0001794558C
+2024-01-04 20:33:19,341 - LOGGER - INFO - Client found: 0001794558C
+2024-01-04 20:33:20,521 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:33:20,521 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:33:20,666 - LOGGER - INFO - Getting margins
+2024-01-04 20:33:20,666 - LOGGER - INFO - Getting margins
+2024-01-04 20:33:21,765 - LOGGER - INFO - Client found: 71202021204
+2024-01-04 20:33:21,765 - LOGGER - INFO - Client found: 71202021204
+2024-01-04 20:43:58,959 - LOGGER - INFO - Logging in...
+2024-01-04 20:43:58,959 - LOGGER - INFO - Logging in...
+2024-01-04 20:45:05,095 - LOGGER - INFO - Logged in
+2024-01-04 20:45:05,095 - LOGGER - INFO - Logged in
+2024-01-04 20:45:05,597 - LOGGER - INFO - Consulting client with cpf: 712861102-97
+2024-01-04 20:45:05,597 - LOGGER - INFO - Consulting client with cpf: 712861102-97
+2024-01-04 20:45:06,781 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:06,781 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:06,905 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:06,905 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:07,336 - LOGGER - INFO - Client found: 712861102-97
+2024-01-04 20:45:07,336 - LOGGER - INFO - Client found: 712861102-97
+2024-01-04 20:45:07,337 - LOGGER - INFO - Consulting client with cpf: 712698862-15
+2024-01-04 20:45:07,337 - LOGGER - INFO - Consulting client with cpf: 712698862-15
+2024-01-04 20:45:09,625 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:09,625 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:09,725 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:09,725 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:11,232 - LOGGER - INFO - Consulting client with matricula: 0001863614C
+2024-01-04 20:45:11,232 - LOGGER - INFO - Consulting client with matricula: 0001863614C
+2024-01-04 20:45:12,311 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:12,311 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:12,425 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:12,425 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:12,874 - LOGGER - INFO - Client found: 0001863614C
+2024-01-04 20:45:12,874 - LOGGER - INFO - Client found: 0001863614C
+2024-01-04 20:45:14,292 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:14,292 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:14,365 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:14,365 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:15,889 - LOGGER - INFO - Client found: 712698862-15
+2024-01-04 20:45:15,889 - LOGGER - INFO - Client found: 712698862-15
+2024-01-04 20:45:15,889 - LOGGER - INFO - Consulting client with cpf: 712682862-49
+2024-01-04 20:45:15,889 - LOGGER - INFO - Consulting client with cpf: 712682862-49
+2024-01-04 20:45:17,886 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:17,886 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:17,953 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:17,953 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:18,419 - LOGGER - INFO - Client found: 712682862-49
+2024-01-04 20:45:18,419 - LOGGER - INFO - Client found: 712682862-49
+2024-01-04 20:45:18,419 - LOGGER - INFO - Consulting client with cpf: 712655972-00
+2024-01-04 20:45:18,419 - LOGGER - INFO - Consulting client with cpf: 712655972-00
+2024-01-04 20:45:19,794 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:19,794 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:19,867 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:19,867 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:21,609 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:21,609 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:21,697 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:21,697 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:22,887 - LOGGER - INFO - Client found: 712655972-00
+2024-01-04 20:45:22,887 - LOGGER - INFO - Client found: 712655972-00
+2024-01-04 20:45:22,889 - LOGGER - INFO - Consulting client with cpf: 712635432-00
+2024-01-04 20:45:22,889 - LOGGER - INFO - Consulting client with cpf: 712635432-00
+2024-01-04 20:45:23,852 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:23,852 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:23,916 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:23,916 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:24,351 - LOGGER - INFO - Client found: 712635432-00
+2024-01-04 20:45:24,351 - LOGGER - INFO - Client found: 712635432-00
+2024-01-04 20:45:24,352 - LOGGER - INFO - Consulting client with cpf: 712476612-53
+2024-01-04 20:45:24,352 - LOGGER - INFO - Consulting client with cpf: 712476612-53
+2024-01-04 20:45:25,037 - LOGGER - INFO - CPF not found: 712476612-53
+2024-01-04 20:45:25,037 - LOGGER - INFO - CPF not found: 712476612-53
+2024-01-04 20:45:25,038 - LOGGER - INFO - Consulting client with cpf: 712403062-53
+2024-01-04 20:45:25,038 - LOGGER - INFO - Consulting client with cpf: 712403062-53
+2024-01-04 20:45:26,000 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:26,000 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:26,082 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:26,082 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:26,555 - LOGGER - INFO - Client found: 712403062-53
+2024-01-04 20:45:26,555 - LOGGER - INFO - Client found: 712403062-53
+2024-01-04 20:45:26,556 - LOGGER - INFO - Consulting client with cpf: 712393082-72
+2024-01-04 20:45:26,556 - LOGGER - INFO - Consulting client with cpf: 712393082-72
+2024-01-04 20:45:27,503 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:27,503 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:27,576 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:27,576 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:28,074 - LOGGER - INFO - Client found: 712393082-72
+2024-01-04 20:45:28,074 - LOGGER - INFO - Client found: 712393082-72
+2024-01-04 20:45:28,074 - LOGGER - INFO - Consulting client with cpf: 712387192-87
+2024-01-04 20:45:28,074 - LOGGER - INFO - Consulting client with cpf: 712387192-87
+2024-01-04 20:45:29,073 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:29,073 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:29,152 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:29,152 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:29,512 - LOGGER - INFO - Client found: 712387192-87
+2024-01-04 20:45:29,512 - LOGGER - INFO - Client found: 712387192-87
+2024-01-04 20:45:29,512 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-04 20:45:29,512 - LOGGER - INFO - Consulting client with cpf: 712104152-91
+2024-01-04 20:45:30,509 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:30,509 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:30,586 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:30,586 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:31,051 - LOGGER - INFO - Client found: 712104152-91
+2024-01-04 20:45:31,051 - LOGGER - INFO - Client found: 712104152-91
+2024-01-04 20:45:31,051 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-04 20:45:31,051 - LOGGER - INFO - Consulting client with cpf: 712101132-87
+2024-01-04 20:45:32,044 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:32,044 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:32,126 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:32,126 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:32,603 - LOGGER - INFO - Client found: 712101132-87
+2024-01-04 20:45:32,603 - LOGGER - INFO - Client found: 712101132-87
+2024-01-04 20:45:32,604 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-04 20:45:32,604 - LOGGER - INFO - Consulting client with cpf: 712088102-78
+2024-01-04 20:45:33,640 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:33,640 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:33,751 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:33,751 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:34,309 - LOGGER - INFO - Client found: 712088102-78
+2024-01-04 20:45:34,309 - LOGGER - INFO - Client found: 712088102-78
+2024-01-04 20:45:34,310 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-04 20:45:34,310 - LOGGER - INFO - Consulting client with cpf: 712082672-72
+2024-01-04 20:45:35,267 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:35,267 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:35,364 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:35,364 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:35,827 - LOGGER - INFO - Client found: 712082672-72
+2024-01-04 20:45:35,827 - LOGGER - INFO - Client found: 712082672-72
+2024-01-04 20:45:35,828 - LOGGER - INFO - Consulting client with cpf: 712036802-87
+2024-01-04 20:45:35,828 - LOGGER - INFO - Consulting client with cpf: 712036802-87
+2024-01-04 20:45:36,811 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:36,811 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:36,892 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:36,892 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:37,385 - LOGGER - INFO - Client found: 712036802-87
+2024-01-04 20:45:37,385 - LOGGER - INFO - Client found: 712036802-87
+2024-01-04 20:45:37,386 - LOGGER - INFO - Consulting client with cpf: 712020212-04
+2024-01-04 20:45:37,386 - LOGGER - INFO - Consulting client with cpf: 712020212-04
+2024-01-04 20:45:38,311 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-04 20:45:38,311 - LOGGER - INFO - Consulting client with matricula: 0001794558C
+2024-01-04 20:45:39,326 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:39,326 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:39,390 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:39,390 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:39,890 - LOGGER - INFO - Client found: 0001794558C
+2024-01-04 20:45:39,890 - LOGGER - INFO - Client found: 0001794558C
+2024-01-04 20:45:41,272 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:41,272 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:41,353 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:41,353 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:42,492 - LOGGER - INFO - Client found: 712020212-04
+2024-01-04 20:45:42,492 - LOGGER - INFO - Client found: 712020212-04
+2024-01-04 20:45:42,493 - LOGGER - INFO - Consulting client with cpf: 712019712-68
+2024-01-04 20:45:42,493 - LOGGER - INFO - Consulting client with cpf: 712019712-68
+2024-01-04 20:45:43,534 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:43,534 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:43,614 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:43,614 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:44,057 - LOGGER - INFO - Client found: 712019712-68
+2024-01-04 20:45:44,057 - LOGGER - INFO - Client found: 712019712-68
+2024-01-04 20:45:44,058 - LOGGER - INFO - Consulting client with cpf: 711999002-06
+2024-01-04 20:45:44,058 - LOGGER - INFO - Consulting client with cpf: 711999002-06
+2024-01-04 20:45:45,068 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:45,068 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:45,162 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:45,162 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:45,724 - LOGGER - INFO - Client found: 711999002-06
+2024-01-04 20:45:45,724 - LOGGER - INFO - Client found: 711999002-06
+2024-01-04 20:45:45,724 - LOGGER - INFO - Consulting client with cpf: 711975162-04
+2024-01-04 20:45:45,724 - LOGGER - INFO - Consulting client with cpf: 711975162-04
+2024-01-04 20:45:46,702 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:46,702 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:46,796 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:46,796 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:47,246 - LOGGER - INFO - Client found: 711975162-04
+2024-01-04 20:45:47,246 - LOGGER - INFO - Client found: 711975162-04
+2024-01-04 20:45:47,247 - LOGGER - INFO - Consulting client with cpf: 711928832-68
+2024-01-04 20:45:47,247 - LOGGER - INFO - Consulting client with cpf: 711928832-68
+2024-01-04 20:45:48,058 - LOGGER - INFO - Consulting client with matricula: 0001902644A
+2024-01-04 20:45:48,058 - LOGGER - INFO - Consulting client with matricula: 0001902644A
+2024-01-04 20:45:49,092 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:49,092 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:49,175 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:49,175 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:49,738 - LOGGER - INFO - Client found: 0001902644A
+2024-01-04 20:45:49,738 - LOGGER - INFO - Client found: 0001902644A
+2024-01-04 20:45:50,946 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:50,946 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:51,192 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:51,192 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:52,389 - LOGGER - INFO - Client found: 711928832-68
+2024-01-04 20:45:52,389 - LOGGER - INFO - Client found: 711928832-68
+2024-01-04 20:45:52,390 - LOGGER - INFO - Consulting client with cpf: 711881002-97
+2024-01-04 20:45:52,390 - LOGGER - INFO - Consulting client with cpf: 711881002-97
+2024-01-04 20:45:53,449 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:53,449 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:53,512 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:53,512 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:53,909 - LOGGER - INFO - Client found: 711881002-97
+2024-01-04 20:45:53,909 - LOGGER - INFO - Client found: 711881002-97
+2024-01-04 20:45:53,909 - LOGGER - INFO - Consulting client with cpf: 711874482-49
+2024-01-04 20:45:53,909 - LOGGER - INFO - Consulting client with cpf: 711874482-49
+2024-01-04 20:45:54,887 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:54,887 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:54,971 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:54,971 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:55,376 - LOGGER - INFO - Client found: 711874482-49
+2024-01-04 20:45:55,376 - LOGGER - INFO - Client found: 711874482-49
+2024-01-04 20:45:55,376 - LOGGER - INFO - Consulting client with cpf: 711857122-91
+2024-01-04 20:45:55,376 - LOGGER - INFO - Consulting client with cpf: 711857122-91
+2024-01-04 20:45:56,362 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:56,362 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:56,450 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:56,450 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:56,875 - LOGGER - INFO - Client found: 711857122-91
+2024-01-04 20:45:56,875 - LOGGER - INFO - Client found: 711857122-91
+2024-01-04 20:45:56,876 - LOGGER - INFO - Consulting client with cpf: 711854102-87
+2024-01-04 20:45:56,876 - LOGGER - INFO - Consulting client with cpf: 711854102-87
+2024-01-04 20:45:57,910 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:57,910 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:57,971 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:57,971 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:58,488 - LOGGER - INFO - Client found: 711854102-87
+2024-01-04 20:45:58,488 - LOGGER - INFO - Client found: 711854102-87
+2024-01-04 20:45:58,488 - LOGGER - INFO - Consulting client with cpf: 711842952-04
+2024-01-04 20:45:58,488 - LOGGER - INFO - Consulting client with cpf: 711842952-04
+2024-01-04 20:45:59,428 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:59,428 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:45:59,511 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:59,511 - LOGGER - INFO - Getting margins
+2024-01-04 20:45:59,917 - LOGGER - INFO - Client found: 711842952-04
+2024-01-04 20:45:59,917 - LOGGER - INFO - Client found: 711842952-04
+2024-01-04 20:45:59,918 - LOGGER - INFO - Consulting client with cpf: 711841392-53
+2024-01-04 20:45:59,918 - LOGGER - INFO - Consulting client with cpf: 711841392-53
+2024-01-04 20:46:00,560 - LOGGER - INFO - CPF not found: 711841392-53
+2024-01-04 20:46:00,560 - LOGGER - INFO - CPF not found: 711841392-53
+2024-01-04 20:46:00,560 - LOGGER - INFO - Consulting client with cpf: 711835582-87
+2024-01-04 20:46:00,560 - LOGGER - INFO - Consulting client with cpf: 711835582-87
+2024-01-04 20:46:01,585 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:01,585 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:01,673 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:01,673 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:02,100 - LOGGER - INFO - Client found: 711835582-87
+2024-01-04 20:46:02,100 - LOGGER - INFO - Client found: 711835582-87
+2024-01-04 20:46:02,101 - LOGGER - INFO - Consulting client with cpf: 711788212-34
+2024-01-04 20:46:02,101 - LOGGER - INFO - Consulting client with cpf: 711788212-34
+2024-01-04 20:46:02,789 - LOGGER - INFO - CPF not found: 711788212-34
+2024-01-04 20:46:02,789 - LOGGER - INFO - CPF not found: 711788212-34
+2024-01-04 20:46:02,789 - LOGGER - INFO - Consulting client with cpf: 711764202-59
+2024-01-04 20:46:02,789 - LOGGER - INFO - Consulting client with cpf: 711764202-59
+2024-01-04 20:46:04,307 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:04,307 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:04,392 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:04,392 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:06,151 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:06,151 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:06,428 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:06,428 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:07,645 - LOGGER - INFO - Client found: 711764202-59
+2024-01-04 20:46:07,645 - LOGGER - INFO - Client found: 711764202-59
+2024-01-04 20:46:07,645 - LOGGER - INFO - Consulting client with cpf: 711758302-91
+2024-01-04 20:46:07,645 - LOGGER - INFO - Consulting client with cpf: 711758302-91
+2024-01-04 20:46:08,690 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:08,690 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:08,785 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:08,785 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:09,248 - LOGGER - INFO - Client found: 711758302-91
+2024-01-04 20:46:09,248 - LOGGER - INFO - Client found: 711758302-91
+2024-01-04 20:46:09,248 - LOGGER - INFO - Consulting client with cpf: 711707402-78
+2024-01-04 20:46:09,248 - LOGGER - INFO - Consulting client with cpf: 711707402-78
+2024-01-04 20:46:10,243 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:10,243 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:10,349 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:10,349 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:10,824 - LOGGER - INFO - Client found: 711707402-78
+2024-01-04 20:46:10,824 - LOGGER - INFO - Client found: 711707402-78
+2024-01-04 20:46:10,825 - LOGGER - INFO - Consulting client with cpf: 711694232-72
+2024-01-04 20:46:10,825 - LOGGER - INFO - Consulting client with cpf: 711694232-72
+2024-01-04 20:46:11,773 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:11,773 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:11,865 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:11,865 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:12,340 - LOGGER - INFO - Client found: 711694232-72
+2024-01-04 20:46:12,340 - LOGGER - INFO - Client found: 711694232-72
+2024-01-04 20:46:12,341 - LOGGER - INFO - Consulting client with cpf: 711651852-53
+2024-01-04 20:46:12,341 - LOGGER - INFO - Consulting client with cpf: 711651852-53
+2024-01-04 20:46:13,278 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:13,278 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:13,376 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:13,376 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:13,971 - LOGGER - INFO - Client found: 711651852-53
+2024-01-04 20:46:13,971 - LOGGER - INFO - Client found: 711651852-53
+2024-01-04 20:46:13,972 - LOGGER - INFO - Consulting client with cpf: 711614652-00
+2024-01-04 20:46:13,972 - LOGGER - INFO - Consulting client with cpf: 711614652-00
+2024-01-04 20:46:14,965 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:14,965 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:15,033 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:15,033 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:15,543 - LOGGER - INFO - Client found: 711614652-00
+2024-01-04 20:46:15,543 - LOGGER - INFO - Client found: 711614652-00
+2024-01-04 20:46:15,543 - LOGGER - INFO - Consulting client with cpf: 711602302-00
+2024-01-04 20:46:15,543 - LOGGER - INFO - Consulting client with cpf: 711602302-00
+2024-01-04 20:46:16,454 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:16,454 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:16,543 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:16,543 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:17,018 - LOGGER - INFO - Client found: 711602302-00
+2024-01-04 20:46:17,018 - LOGGER - INFO - Client found: 711602302-00
+2024-01-04 20:46:17,019 - LOGGER - INFO - Consulting client with cpf: 711585532-34
+2024-01-04 20:46:17,019 - LOGGER - INFO - Consulting client with cpf: 711585532-34
+2024-01-04 20:46:17,971 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:17,971 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:18,049 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:18,049 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:18,415 - LOGGER - INFO - Client found: 711585532-34
+2024-01-04 20:46:18,415 - LOGGER - INFO - Client found: 711585532-34
+2024-01-04 20:46:18,415 - LOGGER - INFO - Consulting client with cpf: 711585102-68
+2024-01-04 20:46:18,415 - LOGGER - INFO - Consulting client with cpf: 711585102-68
+2024-01-04 20:46:19,309 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:19,309 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:19,388 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:19,388 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:19,802 - LOGGER - INFO - Client found: 711585102-68
+2024-01-04 20:46:19,802 - LOGGER - INFO - Client found: 711585102-68
+2024-01-04 20:46:19,802 - LOGGER - INFO - Consulting client with cpf: 711478292-68
+2024-01-04 20:46:19,802 - LOGGER - INFO - Consulting client with cpf: 711478292-68
+2024-01-04 20:46:20,722 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:20,722 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:20,802 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:20,802 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:21,244 - LOGGER - INFO - Client found: 711478292-68
+2024-01-04 20:46:21,244 - LOGGER - INFO - Client found: 711478292-68
+2024-01-04 20:46:21,244 - LOGGER - INFO - Consulting client with cpf: 711476752-87
+2024-01-04 20:46:21,244 - LOGGER - INFO - Consulting client with cpf: 711476752-87
+2024-01-04 20:46:22,172 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:22,172 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:22,259 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:22,259 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:22,760 - LOGGER - INFO - Client found: 711476752-87
+2024-01-04 20:46:22,760 - LOGGER - INFO - Client found: 711476752-87
+2024-01-04 20:46:22,760 - LOGGER - INFO - Consulting client with cpf: 711466012-04
+2024-01-04 20:46:22,760 - LOGGER - INFO - Consulting client with cpf: 711466012-04
+2024-01-04 20:46:23,768 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:23,768 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:23,856 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:23,856 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:24,386 - LOGGER - INFO - Client found: 711466012-04
+2024-01-04 20:46:24,386 - LOGGER - INFO - Client found: 711466012-04
+2024-01-04 20:46:24,386 - LOGGER - INFO - Consulting client with cpf: 711453382-91
+2024-01-04 20:46:24,386 - LOGGER - INFO - Consulting client with cpf: 711453382-91
+2024-01-04 20:46:25,388 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:25,388 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:25,484 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:25,484 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:26,008 - LOGGER - INFO - Client found: 711453382-91
+2024-01-04 20:46:26,008 - LOGGER - INFO - Client found: 711453382-91
+2024-01-04 20:46:26,009 - LOGGER - INFO - Consulting client with cpf: 711452142-15
+2024-01-04 20:46:26,009 - LOGGER - INFO - Consulting client with cpf: 711452142-15
+2024-01-04 20:46:27,016 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:27,016 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:27,102 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:27,102 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:27,708 - LOGGER - INFO - Client found: 711452142-15
+2024-01-04 20:46:27,708 - LOGGER - INFO - Client found: 711452142-15
+2024-01-04 20:46:27,709 - LOGGER - INFO - Consulting client with cpf: 711449512-91
+2024-01-04 20:46:27,709 - LOGGER - INFO - Consulting client with cpf: 711449512-91
+2024-01-04 20:46:28,690 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:28,690 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:28,788 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:28,788 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:29,340 - LOGGER - INFO - Client found: 711449512-91
+2024-01-04 20:46:29,340 - LOGGER - INFO - Client found: 711449512-91
+2024-01-04 20:46:29,341 - LOGGER - INFO - Consulting client with cpf: 711395752-87
+2024-01-04 20:46:29,341 - LOGGER - INFO - Consulting client with cpf: 711395752-87
+2024-01-04 20:46:30,678 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:30,678 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:30,771 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:30,771 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:32,018 - LOGGER - INFO - Consulting client with matricula: 0001903365F
+2024-01-04 20:46:32,018 - LOGGER - INFO - Consulting client with matricula: 0001903365F
+2024-01-04 20:46:33,118 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:33,118 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:33,208 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:33,208 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:33,738 - LOGGER - INFO - Client found: 0001903365F
+2024-01-04 20:46:33,738 - LOGGER - INFO - Client found: 0001903365F
+2024-01-04 20:46:34,473 - LOGGER - INFO - Client found: 711395752-87
+2024-01-04 20:46:34,473 - LOGGER - INFO - Client found: 711395752-87
+2024-01-04 20:46:34,474 - LOGGER - INFO - Consulting client with cpf: 711384712-91
+2024-01-04 20:46:34,474 - LOGGER - INFO - Consulting client with cpf: 711384712-91
+2024-01-04 20:46:35,426 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:35,426 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:35,528 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:35,528 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:36,066 - LOGGER - INFO - Client found: 711384712-91
+2024-01-04 20:46:36,066 - LOGGER - INFO - Client found: 711384712-91
+2024-01-04 20:46:36,067 - LOGGER - INFO - Consulting client with cpf: 711369912-04
+2024-01-04 20:46:36,067 - LOGGER - INFO - Consulting client with cpf: 711369912-04
+2024-01-04 20:46:37,071 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:37,071 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:37,185 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:37,185 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:37,678 - LOGGER - INFO - Client found: 711369912-04
+2024-01-04 20:46:37,678 - LOGGER - INFO - Client found: 711369912-04
+2024-01-04 20:46:37,678 - LOGGER - INFO - Consulting client with cpf: 711350302-00
+2024-01-04 20:46:37,678 - LOGGER - INFO - Consulting client with cpf: 711350302-00
+2024-01-04 20:46:38,644 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:38,644 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:38,722 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:38,722 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:39,261 - LOGGER - INFO - Client found: 711350302-00
+2024-01-04 20:46:39,261 - LOGGER - INFO - Client found: 711350302-00
+2024-01-04 20:46:39,262 - LOGGER - INFO - Consulting client with cpf: 711325112-91
+2024-01-04 20:46:39,262 - LOGGER - INFO - Consulting client with cpf: 711325112-91
+2024-01-04 20:46:40,233 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:40,233 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:40,348 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:40,348 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:40,939 - LOGGER - INFO - Client found: 711325112-91
+2024-01-04 20:46:40,939 - LOGGER - INFO - Client found: 711325112-91
+2024-01-04 20:46:40,940 - LOGGER - INFO - Consulting client with cpf: 711305194-49
+2024-01-04 20:46:40,940 - LOGGER - INFO - Consulting client with cpf: 711305194-49
+2024-01-04 20:46:41,959 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:41,959 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:42,047 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:42,047 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:42,483 - LOGGER - INFO - Client found: 711305194-49
+2024-01-04 20:46:42,483 - LOGGER - INFO - Client found: 711305194-49
+2024-01-04 20:46:42,484 - LOGGER - INFO - Consulting client with cpf: 711191912-20
+2024-01-04 20:46:42,484 - LOGGER - INFO - Consulting client with cpf: 711191912-20
+2024-01-04 20:46:43,479 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:43,479 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:43,576 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:43,576 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:43,977 - LOGGER - INFO - Client found: 711191912-20
+2024-01-04 20:46:43,977 - LOGGER - INFO - Client found: 711191912-20
+2024-01-04 20:46:43,977 - LOGGER - INFO - Consulting client with cpf: 711170402-91
+2024-01-04 20:46:43,977 - LOGGER - INFO - Consulting client with cpf: 711170402-91
+2024-01-04 20:46:44,912 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:44,912 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:45,013 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:45,013 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:45,497 - LOGGER - INFO - Client found: 711170402-91
+2024-01-04 20:46:45,497 - LOGGER - INFO - Client found: 711170402-91
+2024-01-04 20:46:45,497 - LOGGER - INFO - Consulting client with cpf: 711155442-68
+2024-01-04 20:46:45,497 - LOGGER - INFO - Consulting client with cpf: 711155442-68
+2024-01-04 20:46:46,133 - LOGGER - INFO - CPF not found: 711155442-68
+2024-01-04 20:46:46,133 - LOGGER - INFO - CPF not found: 711155442-68
+2024-01-04 20:46:46,133 - LOGGER - INFO - Consulting client with cpf: 711147502-04
+2024-01-04 20:46:46,133 - LOGGER - INFO - Consulting client with cpf: 711147502-04
+2024-01-04 20:46:47,047 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:47,047 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:47,122 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:47,122 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:47,544 - LOGGER - INFO - Client found: 711147502-04
+2024-01-04 20:46:47,544 - LOGGER - INFO - Client found: 711147502-04
+2024-01-04 20:46:47,544 - LOGGER - INFO - Consulting client with cpf: 711137032-53
+2024-01-04 20:46:47,544 - LOGGER - INFO - Consulting client with cpf: 711137032-53
+2024-01-04 20:46:48,544 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:48,544 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:48,629 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:48,629 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:49,149 - LOGGER - INFO - Client found: 711137032-53
+2024-01-04 20:46:49,149 - LOGGER - INFO - Client found: 711137032-53
+2024-01-04 20:46:49,149 - LOGGER - INFO - Consulting client with cpf: 711125022-20
+2024-01-04 20:46:49,149 - LOGGER - INFO - Consulting client with cpf: 711125022-20
+2024-01-04 20:46:50,110 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:50,110 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:50,198 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:50,198 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:50,570 - LOGGER - INFO - Client found: 711125022-20
+2024-01-04 20:46:50,570 - LOGGER - INFO - Client found: 711125022-20
+2024-01-04 20:46:50,571 - LOGGER - INFO - Consulting client with cpf: 711027442-04
+2024-01-04 20:46:50,571 - LOGGER - INFO - Consulting client with cpf: 711027442-04
+2024-01-04 20:46:51,546 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:51,546 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:51,638 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:51,638 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:52,062 - LOGGER - INFO - Client found: 711027442-04
+2024-01-04 20:46:52,062 - LOGGER - INFO - Client found: 711027442-04
+2024-01-04 20:46:52,062 - LOGGER - INFO - Consulting client with cpf: 711013572-15
+2024-01-04 20:46:52,062 - LOGGER - INFO - Consulting client with cpf: 711013572-15
+2024-01-04 20:46:53,044 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:53,044 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:53,117 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:53,117 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:53,630 - LOGGER - INFO - Client found: 711013572-15
+2024-01-04 20:46:53,630 - LOGGER - INFO - Client found: 711013572-15
+2024-01-04 20:46:53,631 - LOGGER - INFO - Consulting client with cpf: 711012502-59
+2024-01-04 20:46:53,631 - LOGGER - INFO - Consulting client with cpf: 711012502-59
+2024-01-04 20:46:54,674 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:54,674 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:54,772 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:54,772 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:55,223 - LOGGER - INFO - Client found: 711012502-59
+2024-01-04 20:46:55,223 - LOGGER - INFO - Client found: 711012502-59
+2024-01-04 20:46:55,224 - LOGGER - INFO - Consulting client with cpf: 710976602-06
+2024-01-04 20:46:55,224 - LOGGER - INFO - Consulting client with cpf: 710976602-06
+2024-01-04 20:46:56,202 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:56,202 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:56,255 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:56,255 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:56,743 - LOGGER - INFO - Client found: 710976602-06
+2024-01-04 20:46:56,743 - LOGGER - INFO - Client found: 710976602-06
+2024-01-04 20:46:56,744 - LOGGER - INFO - Consulting client with cpf: 710961912-53
+2024-01-04 20:46:56,744 - LOGGER - INFO - Consulting client with cpf: 710961912-53
+2024-01-04 20:46:57,768 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:57,768 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:57,856 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:57,856 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:58,299 - LOGGER - INFO - Client found: 710961912-53
+2024-01-04 20:46:58,299 - LOGGER - INFO - Client found: 710961912-53
+2024-01-04 20:46:58,300 - LOGGER - INFO - Consulting client with cpf: 710958962-53
+2024-01-04 20:46:58,300 - LOGGER - INFO - Consulting client with cpf: 710958962-53
+2024-01-04 20:46:59,233 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:59,233 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:46:59,319 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:59,319 - LOGGER - INFO - Getting margins
+2024-01-04 20:46:59,788 - LOGGER - INFO - Client found: 710958962-53
+2024-01-04 20:46:59,788 - LOGGER - INFO - Client found: 710958962-53
+2024-01-04 20:46:59,789 - LOGGER - INFO - Consulting client with cpf: 710955272-15
+2024-01-04 20:46:59,789 - LOGGER - INFO - Consulting client with cpf: 710955272-15
+2024-01-04 20:47:00,691 - LOGGER - INFO - Consulting client with matricula: 0002156466A
+2024-01-04 20:47:00,691 - LOGGER - INFO - Consulting client with matricula: 0002156466A
+2024-01-04 20:47:01,811 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:01,811 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:01,896 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:01,896 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:02,370 - LOGGER - INFO - Client found: 0002156466A
+2024-01-04 20:47:02,370 - LOGGER - INFO - Client found: 0002156466A
+2024-01-04 20:47:03,689 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:03,689 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:03,785 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:03,785 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:04,874 - LOGGER - INFO - Client found: 710955272-15
+2024-01-04 20:47:04,874 - LOGGER - INFO - Client found: 710955272-15
+2024-01-04 20:47:04,874 - LOGGER - INFO - Consulting client with cpf: 710940402-15
+2024-01-04 20:47:04,874 - LOGGER - INFO - Consulting client with cpf: 710940402-15
+2024-01-04 20:47:06,343 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:06,343 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:06,424 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:06,424 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:08,179 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:08,179 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:08,275 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:08,275 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:09,514 - LOGGER - INFO - Client found: 710940402-15
+2024-01-04 20:47:09,514 - LOGGER - INFO - Client found: 710940402-15
+2024-01-04 20:47:09,515 - LOGGER - INFO - Consulting client with cpf: 710937962-00
+2024-01-04 20:47:09,515 - LOGGER - INFO - Consulting client with cpf: 710937962-00
+2024-01-04 20:47:10,539 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:10,539 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:10,648 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:10,648 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:11,177 - LOGGER - INFO - Client found: 710937962-00
+2024-01-04 20:47:11,177 - LOGGER - INFO - Client found: 710937962-00
+2024-01-04 20:47:11,178 - LOGGER - INFO - Consulting client with cpf: 710924982-49
+2024-01-04 20:47:11,178 - LOGGER - INFO - Consulting client with cpf: 710924982-49
+2024-01-04 20:47:11,817 - LOGGER - INFO - CPF not found: 710924982-49
+2024-01-04 20:47:11,817 - LOGGER - INFO - CPF not found: 710924982-49
+2024-01-04 20:47:11,817 - LOGGER - INFO - Consulting client with cpf: 710840701-97
+2024-01-04 20:47:11,817 - LOGGER - INFO - Consulting client with cpf: 710840701-97
+2024-01-04 20:47:12,817 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:12,817 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:12,918 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:12,918 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:13,446 - LOGGER - INFO - Client found: 710840701-97
+2024-01-04 20:47:13,446 - LOGGER - INFO - Client found: 710840701-97
+2024-01-04 20:47:13,446 - LOGGER - INFO - Consulting client with cpf: 710828322-00
+2024-01-04 20:47:13,446 - LOGGER - INFO - Consulting client with cpf: 710828322-00
+2024-01-04 20:47:14,863 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:14,863 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:14,944 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:14,944 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:16,224 - LOGGER - INFO - Consulting client with matricula: 0002115131C
+2024-01-04 20:47:16,224 - LOGGER - INFO - Consulting client with matricula: 0002115131C
+2024-01-04 20:47:17,353 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:17,353 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:17,429 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:17,429 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:17,871 - LOGGER - INFO - Client found: 0002115131C
+2024-01-04 20:47:17,871 - LOGGER - INFO - Client found: 0002115131C
+2024-01-04 20:47:19,240 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:19,240 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:19,331 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:19,331 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:20,659 - LOGGER - INFO - Client found: 710828322-00
+2024-01-04 20:47:20,659 - LOGGER - INFO - Client found: 710828322-00
+2024-01-04 20:47:20,661 - LOGGER - INFO - Consulting client with cpf: 710623352-87
+2024-01-04 20:47:20,661 - LOGGER - INFO - Consulting client with cpf: 710623352-87
+2024-01-04 20:47:21,652 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:21,652 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:21,714 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:21,714 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:22,072 - LOGGER - INFO - Client found: 710623352-87
+2024-01-04 20:47:22,072 - LOGGER - INFO - Client found: 710623352-87
+2024-01-04 20:47:22,073 - LOGGER - INFO - Consulting client with cpf: 710312512-00
+2024-01-04 20:47:22,073 - LOGGER - INFO - Consulting client with cpf: 710312512-00
+2024-01-04 20:47:22,792 - LOGGER - INFO - CPF not found: 710312512-00
+2024-01-04 20:47:22,792 - LOGGER - INFO - CPF not found: 710312512-00
+2024-01-04 20:47:22,792 - LOGGER - INFO - Consulting client with cpf: 710280052-53
+2024-01-04 20:47:22,792 - LOGGER - INFO - Consulting client with cpf: 710280052-53
+2024-01-04 20:47:23,757 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:23,757 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:23,847 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:23,847 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:24,357 - LOGGER - INFO - Client found: 710280052-53
+2024-01-04 20:47:24,357 - LOGGER - INFO - Client found: 710280052-53
+2024-01-04 20:47:24,358 - LOGGER - INFO - Consulting client with cpf: 710261772-00
+2024-01-04 20:47:24,358 - LOGGER - INFO - Consulting client with cpf: 710261772-00
+2024-01-04 20:47:25,761 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:25,761 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:25,859 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:25,859 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:27,196 - LOGGER - INFO - Consulting client with matricula: 0002111276C
+2024-01-04 20:47:27,196 - LOGGER - INFO - Consulting client with matricula: 0002111276C
+2024-01-04 20:47:28,221 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:28,221 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:28,308 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:28,308 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:28,802 - LOGGER - INFO - Client found: 0002111276C
+2024-01-04 20:47:28,802 - LOGGER - INFO - Client found: 0002111276C
+2024-01-04 20:47:30,111 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:30,111 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:30,210 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:30,210 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:31,311 - LOGGER - INFO - Client found: 710261772-00
+2024-01-04 20:47:31,311 - LOGGER - INFO - Client found: 710261772-00
+2024-01-04 20:47:31,312 - LOGGER - INFO - Consulting client with cpf: 710245902-59
+2024-01-04 20:47:31,312 - LOGGER - INFO - Consulting client with cpf: 710245902-59
+2024-01-04 20:47:32,772 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:32,772 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:32,860 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:32,860 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:35,444 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:35,444 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:35,528 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:35,528 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:36,639 - LOGGER - INFO - Client found: 710245902-59
+2024-01-04 20:47:36,639 - LOGGER - INFO - Client found: 710245902-59
+2024-01-04 20:47:36,640 - LOGGER - INFO - Consulting client with cpf: 710245142-34
+2024-01-04 20:47:36,640 - LOGGER - INFO - Consulting client with cpf: 710245142-34
+2024-01-04 20:47:37,637 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:37,637 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:37,735 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:37,735 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:38,218 - LOGGER - INFO - Client found: 710245142-34
+2024-01-04 20:47:38,218 - LOGGER - INFO - Client found: 710245142-34
+2024-01-04 20:47:38,219 - LOGGER - INFO - Consulting client with cpf: 710227752-00
+2024-01-04 20:47:38,219 - LOGGER - INFO - Consulting client with cpf: 710227752-00
+2024-01-04 20:47:39,125 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:39,125 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:39,210 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:39,210 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:39,726 - LOGGER - INFO - Client found: 710227752-00
+2024-01-04 20:47:39,726 - LOGGER - INFO - Client found: 710227752-00
+2024-01-04 20:47:39,727 - LOGGER - INFO - Consulting client with cpf: 709918637-04
+2024-01-04 20:47:39,727 - LOGGER - INFO - Consulting client with cpf: 709918637-04
+2024-01-04 20:47:40,724 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:40,724 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:40,826 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:40,826 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:41,279 - LOGGER - INFO - Client found: 709918637-04
+2024-01-04 20:47:41,279 - LOGGER - INFO - Client found: 709918637-04
+2024-01-04 20:47:41,279 - LOGGER - INFO - Consulting client with cpf: 709709809-06
+2024-01-04 20:47:41,279 - LOGGER - INFO - Consulting client with cpf: 709709809-06
+2024-01-04 20:47:42,242 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:42,242 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:42,345 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:42,345 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:42,891 - LOGGER - INFO - Client found: 709709809-06
+2024-01-04 20:47:42,891 - LOGGER - INFO - Client found: 709709809-06
+2024-01-04 20:47:42,892 - LOGGER - INFO - Consulting client with cpf: 709622192-15
+2024-01-04 20:47:42,892 - LOGGER - INFO - Consulting client with cpf: 709622192-15
+2024-01-04 20:47:43,871 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:43,871 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:43,968 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:43,968 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:44,554 - LOGGER - INFO - Client found: 709622192-15
+2024-01-04 20:47:44,554 - LOGGER - INFO - Client found: 709622192-15
+2024-01-04 20:47:44,555 - LOGGER - INFO - Consulting client with cpf: 709102601-25
+2024-01-04 20:47:44,555 - LOGGER - INFO - Consulting client with cpf: 709102601-25
+2024-01-04 20:47:46,023 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:46,023 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:46,114 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:46,114 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:48,090 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:48,090 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:48,170 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:48,170 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:49,401 - LOGGER - INFO - Client found: 709102601-25
+2024-01-04 20:47:49,401 - LOGGER - INFO - Client found: 709102601-25
+2024-01-04 20:47:49,402 - LOGGER - INFO - Consulting client with cpf: 708807009-04
+2024-01-04 20:47:49,402 - LOGGER - INFO - Consulting client with cpf: 708807009-04
+2024-01-04 20:47:50,361 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:50,361 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:50,455 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:50,455 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:50,998 - LOGGER - INFO - Client found: 708807009-04
+2024-01-04 20:47:50,998 - LOGGER - INFO - Client found: 708807009-04
+2024-01-04 20:47:50,999 - LOGGER - INFO - Consulting client with cpf: 708776292-34
+2024-01-04 20:47:50,999 - LOGGER - INFO - Consulting client with cpf: 708776292-34
+2024-01-04 20:47:52,294 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:52,294 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:52,474 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:52,474 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:54,320 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:54,320 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:54,442 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:54,442 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:55,823 - LOGGER - INFO - Client found: 708776292-34
+2024-01-04 20:47:55,823 - LOGGER - INFO - Client found: 708776292-34
+2024-01-04 20:47:55,824 - LOGGER - INFO - Consulting client with cpf: 708751622-15
+2024-01-04 20:47:55,824 - LOGGER - INFO - Consulting client with cpf: 708751622-15
+2024-01-04 20:47:56,795 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:56,795 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:56,911 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:56,911 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:57,504 - LOGGER - INFO - Client found: 708751622-15
+2024-01-04 20:47:57,504 - LOGGER - INFO - Client found: 708751622-15
+2024-01-04 20:47:57,504 - LOGGER - INFO - Consulting client with cpf: 708719142-04
+2024-01-04 20:47:57,504 - LOGGER - INFO - Consulting client with cpf: 708719142-04
+2024-01-04 20:47:58,524 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:58,524 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:47:58,594 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:58,594 - LOGGER - INFO - Getting margins
+2024-01-04 20:47:59,078 - LOGGER - INFO - Client found: 708719142-04
+2024-01-04 20:47:59,078 - LOGGER - INFO - Client found: 708719142-04
+2024-01-04 20:47:59,078 - LOGGER - INFO - Consulting client with cpf: 708718092-49
+2024-01-04 20:47:59,078 - LOGGER - INFO - Consulting client with cpf: 708718092-49
+2024-01-04 20:48:00,070 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:00,070 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:00,197 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:00,197 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:00,795 - LOGGER - INFO - Client found: 708718092-49
+2024-01-04 20:48:00,795 - LOGGER - INFO - Client found: 708718092-49
+2024-01-04 20:48:00,796 - LOGGER - INFO - Consulting client with cpf: 708710272-91
+2024-01-04 20:48:00,796 - LOGGER - INFO - Consulting client with cpf: 708710272-91
+2024-01-04 20:48:01,760 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:01,760 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:01,850 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:01,850 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:02,418 - LOGGER - INFO - Client found: 708710272-91
+2024-01-04 20:48:02,418 - LOGGER - INFO - Client found: 708710272-91
+2024-01-04 20:48:02,418 - LOGGER - INFO - Consulting client with cpf: 708683102-63
+2024-01-04 20:48:02,418 - LOGGER - INFO - Consulting client with cpf: 708683102-63
+2024-01-04 20:48:03,404 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:03,404 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:03,473 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:03,473 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:03,912 - LOGGER - INFO - Client found: 708683102-63
+2024-01-04 20:48:03,912 - LOGGER - INFO - Client found: 708683102-63
+2024-01-04 20:48:03,912 - LOGGER - INFO - Consulting client with cpf: 708635122-91
+2024-01-04 20:48:03,912 - LOGGER - INFO - Consulting client with cpf: 708635122-91
+2024-01-04 20:48:04,873 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:04,873 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:04,959 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:04,959 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:05,468 - LOGGER - INFO - Client found: 708635122-91
+2024-01-04 20:48:05,468 - LOGGER - INFO - Client found: 708635122-91
+2024-01-04 20:48:05,469 - LOGGER - INFO - Consulting client with cpf: 708624602-63
+2024-01-04 20:48:05,469 - LOGGER - INFO - Consulting client with cpf: 708624602-63
+2024-01-04 20:48:06,375 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:06,375 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:06,437 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:06,437 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:06,934 - LOGGER - INFO - Client found: 708624602-63
+2024-01-04 20:48:06,934 - LOGGER - INFO - Client found: 708624602-63
+2024-01-04 20:48:06,934 - LOGGER - INFO - Consulting client with cpf: 708617302-91
+2024-01-04 20:48:06,934 - LOGGER - INFO - Consulting client with cpf: 708617302-91
+2024-01-04 20:48:07,885 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:07,885 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:07,956 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:07,956 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:08,451 - LOGGER - INFO - Client found: 708617302-91
+2024-01-04 20:48:08,451 - LOGGER - INFO - Client found: 708617302-91
+2024-01-04 20:48:08,452 - LOGGER - INFO - Consulting client with cpf: 708594772-15
+2024-01-04 20:48:08,452 - LOGGER - INFO - Consulting client with cpf: 708594772-15
+2024-01-04 20:48:09,413 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:09,413 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:09,535 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:09,535 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:10,044 - LOGGER - INFO - Client found: 708594772-15
+2024-01-04 20:48:10,044 - LOGGER - INFO - Client found: 708594772-15
+2024-01-04 20:48:10,045 - LOGGER - INFO - Consulting client with cpf: 708569822-53
+2024-01-04 20:48:10,045 - LOGGER - INFO - Consulting client with cpf: 708569822-53
+2024-01-04 20:48:11,000 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:11,000 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:11,126 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:11,126 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:11,501 - LOGGER - INFO - Client found: 708569822-53
+2024-01-04 20:48:11,501 - LOGGER - INFO - Client found: 708569822-53
+2024-01-04 20:48:11,502 - LOGGER - INFO - Consulting client with cpf: 708565082-68
+2024-01-04 20:48:11,502 - LOGGER - INFO - Consulting client with cpf: 708565082-68
+2024-01-04 20:48:12,507 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:12,507 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:12,610 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:12,610 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:12,967 - LOGGER - INFO - Client found: 708565082-68
+2024-01-04 20:48:12,967 - LOGGER - INFO - Client found: 708565082-68
+2024-01-04 20:48:12,967 - LOGGER - INFO - Consulting client with cpf: 708563462-68
+2024-01-04 20:48:12,967 - LOGGER - INFO - Consulting client with cpf: 708563462-68
+2024-01-04 20:48:13,940 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:13,940 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:14,017 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:14,017 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:14,438 - LOGGER - INFO - Client found: 708563462-68
+2024-01-04 20:48:14,438 - LOGGER - INFO - Client found: 708563462-68
+2024-01-04 20:48:14,438 - LOGGER - INFO - Consulting client with cpf: 708553582-20
+2024-01-04 20:48:14,438 - LOGGER - INFO - Consulting client with cpf: 708553582-20
+2024-01-04 20:48:15,432 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:15,432 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:15,531 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:15,531 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:16,113 - LOGGER - INFO - Client found: 708553582-20
+2024-01-04 20:48:16,113 - LOGGER - INFO - Client found: 708553582-20
+2024-01-04 20:48:16,114 - LOGGER - INFO - Consulting client with cpf: 708550302-59
+2024-01-04 20:48:16,114 - LOGGER - INFO - Consulting client with cpf: 708550302-59
+2024-01-04 20:48:17,135 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:17,135 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:17,201 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:17,201 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:17,587 - LOGGER - INFO - Client found: 708550302-59
+2024-01-04 20:48:17,587 - LOGGER - INFO - Client found: 708550302-59
+2024-01-04 20:48:17,587 - LOGGER - INFO - Consulting client with cpf: 708280913-15
+2024-01-04 20:48:17,587 - LOGGER - INFO - Consulting client with cpf: 708280913-15
+2024-01-04 20:48:18,521 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:18,521 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:18,618 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:18,618 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:19,141 - LOGGER - INFO - Client found: 708280913-15
+2024-01-04 20:48:19,141 - LOGGER - INFO - Client found: 708280913-15
+2024-01-04 20:48:19,141 - LOGGER - INFO - Consulting client with cpf: 708179102-63
+2024-01-04 20:48:19,141 - LOGGER - INFO - Consulting client with cpf: 708179102-63
+2024-01-04 20:48:20,088 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:20,088 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:20,167 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:20,167 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:20,642 - LOGGER - INFO - Client found: 708179102-63
+2024-01-04 20:48:20,642 - LOGGER - INFO - Client found: 708179102-63
+2024-01-04 20:48:20,642 - LOGGER - INFO - Consulting client with cpf: 708138412-91
+2024-01-04 20:48:20,642 - LOGGER - INFO - Consulting client with cpf: 708138412-91
+2024-01-04 20:48:21,623 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:21,623 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:21,701 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:21,701 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:22,114 - LOGGER - INFO - Client found: 708138412-91
+2024-01-04 20:48:22,114 - LOGGER - INFO - Client found: 708138412-91
+2024-01-04 20:48:22,114 - LOGGER - INFO - Consulting client with cpf: 708131672-72
+2024-01-04 20:48:22,114 - LOGGER - INFO - Consulting client with cpf: 708131672-72
+2024-01-04 20:48:23,077 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:23,077 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:23,189 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:23,189 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:23,728 - LOGGER - INFO - Client found: 708131672-72
+2024-01-04 20:48:23,728 - LOGGER - INFO - Client found: 708131672-72
+2024-01-04 20:48:23,728 - LOGGER - INFO - Consulting client with cpf: 707976842-04
+2024-01-04 20:48:23,728 - LOGGER - INFO - Consulting client with cpf: 707976842-04
+2024-01-04 20:48:24,681 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:24,681 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:24,795 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:24,795 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:25,298 - LOGGER - INFO - Client found: 707976842-04
+2024-01-04 20:48:25,298 - LOGGER - INFO - Client found: 707976842-04
+2024-01-04 20:48:25,299 - LOGGER - INFO - Consulting client with cpf: 707963002-91
+2024-01-04 20:48:25,299 - LOGGER - INFO - Consulting client with cpf: 707963002-91
+2024-01-04 20:48:26,286 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:26,286 - LOGGER - INFO - Getting data from matricula
+2024-01-04 20:48:26,398 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:26,398 - LOGGER - INFO - Getting margins
+2024-01-04 20:48:26,914 - LOGGER - INFO - Client found: 707963002-91
+2024-01-04 20:48:26,914 - LOGGER - INFO - Client found: 707963002-91

@@ -1,0 +1,10 @@
+
+// Import the Element Plus theme variables
+@import "~element-plus/packages/theme-chalk/src/index";
+
+// Override the primary color variable to change the theme color
+$--color-primary: #C3B1E1; // Replace #ff0000 with your desired color
+
+// BEGIN: Add any additional customizations here
+
+// END: Add any additional customizations here

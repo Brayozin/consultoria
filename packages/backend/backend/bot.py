@@ -232,10 +232,9 @@ class bot:
         # chrome_options.add_argument("--no-sandbox")
         # chrome_options.add_argument("--disable-dev-shm-usage")
         # make window position(second monitor(1360++) on the second half(+1920/2) and size fixed (1920/2 x 1080))
-        chrome_options.add_argument("--timeout=10")
         chrome_options.add_argument("--window-position=3280,0")
         chrome_options.add_argument("--window-size=960,1080")
-        service = webdriver.chrome.service.Service( os.path.join(os.getcwd(), 'chromedriver'))
+        service = webdriver.chrome.service.Service(os.path.join(os.getcwd(), 'chromedriver'))
         self.bot = webdriver.Chrome(
             service=service,
             options=chrome_options

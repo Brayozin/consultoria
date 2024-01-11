@@ -1,0 +1,3721 @@
+[
+  {
+    "nome": "JOSE DEVANIR DA CUNHA ARAGAO",
+    "cpf": "71286110297",
+    "matriculas": [
+      {
+        "matricula": "0001996576A",
+        "nome": "JOSE DEVANIR DA CUNHA ARAGAO",
+        "cpf": "71286110297",
+        "margens": {
+          "emprestimo": {
+            "total": "2433,16",
+            "reservada": "49,00",
+            "disponivel": "2384,16          "
+          },
+          "cartao": {
+            "total": "347,59",
+            "reservada": "0,00",
+            "disponivel": "347,59          "
+          },
+          "saque": {
+            "total": "973,26",
+            "reservada": "0,00",
+            "disponivel": "973,26          "
+          },
+          "compra": {
+            "total": "1390,37",
+            "reservada": "0,00",
+            "disponivel": "1390,37          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ALAN PESSOA DA SILVA",
+    "cpf": "71269886215",
+    "matriculas": [
+      {
+        "matricula": "0001863614B",
+        "nome": "ALAN PESSOA DA SILVA",
+        "cpf": "71269886215",
+        "margens": {
+          "emprestimo": {
+            "total": "7717,70",
+            "reservada": "0,00",
+            "disponivel": "7717,70          "
+          },
+          "cartao": {
+            "total": "1102,53",
+            "reservada": "0,00",
+            "disponivel": "934,78          "
+          },
+          "saque": {
+            "total": "3087,08",
+            "reservada": "0,00",
+            "disponivel": "3087,08          "
+          },
+          "compra": {
+            "total": "4410,11",
+            "reservada": "0,00",
+            "disponivel": "4410,11          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001863614C",
+        "nome": "ALAN PESSOA DA SILVA",
+        "cpf": "71269886215",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0001863614D",
+        "nome": "ALAN PESSOA DA SILVA",
+        "cpf": "71269886215",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "VALDIZA RODRIGUES VIANA",
+    "cpf": "71268286249",
+    "matriculas": [
+      {
+        "matricula": "0002055619A",
+        "nome": "VALDIZA RODRIGUES VIANA",
+        "cpf": "71268286249",
+        "margens": {
+          "emprestimo": {
+            "total": "1054,96",
+            "reservada": "48,48",
+            "disponivel": "1006,48          "
+          },
+          "cartao": {
+            "total": "150,71",
+            "reservada": "0,00",
+            "disponivel": "37,84          "
+          },
+          "saque": {
+            "total": "421,98",
+            "reservada": "0,00",
+            "disponivel": "421,98          "
+          },
+          "compra": {
+            "total": "602,83",
+            "reservada": "0,00",
+            "disponivel": "602,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MARCELLA YANA CUNHA CASAS",
+    "cpf": "71265597200",
+    "matriculas": [
+      {
+        "matricula": "0001991000A",
+        "nome": "MARCELLA YANA CUNHA CASAS",
+        "cpf": "71265597200",
+        "margens": {
+          "emprestimo": {
+            "total": "2001,66",
+            "reservada": "1006,10",
+            "disponivel": "995,56          "
+          },
+          "cartao": {
+            "total": "285,95",
+            "reservada": "0,00",
+            "disponivel": "285,95          "
+          },
+          "saque": {
+            "total": "800,66",
+            "reservada": "0,00",
+            "disponivel": "800,66          "
+          },
+          "compra": {
+            "total": "1143,80",
+            "reservada": "0,00",
+            "disponivel": "1143,80          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001991000B",
+        "nome": "MARCELLA YANA CUNHA CASAS",
+        "cpf": "71265597200",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "1834,24",
+            "disponivel": "58,96          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "RICARDO ONOFRE DA SILVA ALVES",
+    "cpf": "71263543200",
+    "matriculas": [
+      {
+        "matricula": "0002268140A",
+        "nome": "RICARDO ONOFRE DA SILVA ALVES",
+        "cpf": "71263543200",
+        "margens": {
+          "emprestimo": {
+            "total": "2310,76",
+            "reservada": "2404,50",
+            "disponivel": " 93,74          "
+          },
+          "cartao": {
+            "total": "330,11",
+            "reservada": "55,00",
+            "disponivel": " 12,92          "
+          },
+          "saque": {
+            "total": "924,30",
+            "reservada": "0,00",
+            "disponivel": " 403,36          "
+          },
+          "compra": {
+            "total": "1320,43",
+            "reservada": "0,00",
+            "disponivel": " 7,23          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ROBSON DE CASTRO BARATA",
+    "cpf": "71240306253",
+    "matriculas": [
+      {
+        "matricula": "0002048019A",
+        "nome": "ROBSON DE CASTRO BARATA",
+        "cpf": "71240306253",
+        "margens": {
+          "emprestimo": {
+            "total": "1587,45",
+            "reservada": "1578,22",
+            "disponivel": "9,23          "
+          },
+          "cartao": {
+            "total": "226,78",
+            "reservada": "0,00",
+            "disponivel": "226,78          "
+          },
+          "saque": {
+            "total": "634,98",
+            "reservada": "0,00",
+            "disponivel": "634,98          "
+          },
+          "compra": {
+            "total": "907,11",
+            "reservada": "0,00",
+            "disponivel": "907,11          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MIRANILSON DA COSTA LOPES",
+    "cpf": "71239308272",
+    "matriculas": [
+      {
+        "matricula": "0001681486C",
+        "nome": "MIRANILSON DA COSTA LOPES",
+        "cpf": "71239308272",
+        "margens": {
+          "emprestimo": {
+            "total": "2559,40",
+            "reservada": "878,58",
+            "disponivel": "1680,82          "
+          },
+          "cartao": {
+            "total": "365,63",
+            "reservada": "0,00",
+            "disponivel": "126,07          "
+          },
+          "saque": {
+            "total": "1023,76",
+            "reservada": "0,00",
+            "disponivel": "1023,76          "
+          },
+          "compra": {
+            "total": "1462,51",
+            "reservada": "0,00",
+            "disponivel": "1462,51          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CARMEN DAS NEVES DE CASTRO",
+    "cpf": "71238719287",
+    "matriculas": [
+      {
+        "matricula": "0002362937A",
+        "nome": "CARMEN DAS NEVES DE CASTRO",
+        "cpf": "71238719287",
+        "margens": {
+          "emprestimo": {
+            "total": "1875,64",
+            "reservada": "0,00",
+            "disponivel": "1875,64          "
+          },
+          "cartao": {
+            "total": "267,95",
+            "reservada": "0,00",
+            "disponivel": "267,95          "
+          },
+          "saque": {
+            "total": "750,26",
+            "reservada": "0,00",
+            "disponivel": "750,26          "
+          },
+          "compra": {
+            "total": "1071,80",
+            "reservada": "0,00",
+            "disponivel": "1071,80          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "FRANCILANGE BARBOSA FERREIRA",
+    "cpf": "71210415291",
+    "matriculas": [
+      {
+        "matricula": "0002456508A",
+        "nome": "FRANCILANGE BARBOSA FERREIRA",
+        "cpf": "71210415291",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "1280,65",
+            "disponivel": "612,55          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "SMALLEM BARRETO DOS REIS",
+    "cpf": "71210113287",
+    "matriculas": [
+      {
+        "matricula": "0001997360A",
+        "nome": "SMALLEM BARRETO DOS REIS",
+        "cpf": "71210113287",
+        "margens": {
+          "emprestimo": {
+            "total": "1667,30",
+            "reservada": "88,37",
+            "disponivel": "1578,93          "
+          },
+          "cartao": {
+            "total": "238,19",
+            "reservada": "0,00",
+            "disponivel": "238,19          "
+          },
+          "saque": {
+            "total": "666,92",
+            "reservada": "0,00",
+            "disponivel": "666,92          "
+          },
+          "compra": {
+            "total": "952,74",
+            "reservada": "0,00",
+            "disponivel": "952,74          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DIEGO BOTELHO MUMBACA",
+    "cpf": "71208810278",
+    "matriculas": [
+      {
+        "matricula": "0001863746A",
+        "nome": "DIEGO BOTELHO MUMBACA",
+        "cpf": "71208810278",
+        "margens": {
+          "emprestimo": {
+            "total": "2053,64",
+            "reservada": "83,32",
+            "disponivel": "1970,32          "
+          },
+          "cartao": {
+            "total": "293,38",
+            "reservada": "0,00",
+            "disponivel": "293,38          "
+          },
+          "saque": {
+            "total": "821,46",
+            "reservada": "0,00",
+            "disponivel": "821,46          "
+          },
+          "compra": {
+            "total": "1173,51",
+            "reservada": "0,00",
+            "disponivel": "1173,51          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ELIANA PIMENTEL RODRIGUES",
+    "cpf": "71208267272",
+    "matriculas": [
+      {
+        "matricula": "0002336723A",
+        "nome": "ELIANA PIMENTEL RODRIGUES",
+        "cpf": "71208267272",
+        "margens": {
+          "emprestimo": {
+            "total": "771,94",
+            "reservada": "962,27",
+            "disponivel": " 190,33          "
+          },
+          "cartao": {
+            "total": "110,28",
+            "reservada": "72,65",
+            "disponivel": "37,63          "
+          },
+          "saque": {
+            "total": "308,78",
+            "reservada": "0,00",
+            "disponivel": " 298,04          "
+          },
+          "compra": {
+            "total": "441,11",
+            "reservada": "0,00",
+            "disponivel": " 298,04          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "JAQUELINE DE OLIVEIRA GONCALVES",
+    "cpf": "71203680287",
+    "matriculas": [
+      {
+        "matricula": "0002197952A",
+        "nome": "JAQUELINE DE OLIVEIRA GONCALVES",
+        "cpf": "71203680287",
+        "margens": {
+          "emprestimo": {
+            "total": "912,75",
+            "reservada": "0,00",
+            "disponivel": "912,75          "
+          },
+          "cartao": {
+            "total": "130,39",
+            "reservada": "0,00",
+            "disponivel": "130,39          "
+          },
+          "saque": {
+            "total": "365,10",
+            "reservada": "0,00",
+            "disponivel": "365,10          "
+          },
+          "compra": {
+            "total": "521,57",
+            "reservada": "0,00",
+            "disponivel": "521,57          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "THEOMARIO THEOTONIO AZEVEDO DA CRUZ",
+    "cpf": "71202021204",
+    "matriculas": [
+      {
+        "matricula": "0001794558C",
+        "nome": "THEOMARIO THEOTONIO AZEVEDO DA CRUZ",
+        "cpf": "71202021204",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0001794558B",
+        "nome": "THEOMARIO THEOTONIO AZEVEDO DA CRUZ",
+        "cpf": "71202021204",
+        "margens": {
+          "emprestimo": {
+            "total": "789,58",
+            "reservada": "0,00",
+            "disponivel": "789,58          "
+          },
+          "cartao": {
+            "total": "112,80",
+            "reservada": "0,00",
+            "disponivel": "112,80          "
+          },
+          "saque": {
+            "total": "315,83",
+            "reservada": "0,00",
+            "disponivel": "315,83          "
+          },
+          "compra": {
+            "total": "451,19",
+            "reservada": "0,00",
+            "disponivel": "451,19          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DIOGO PEREIRA FONSECA",
+    "cpf": "71201971268",
+    "matriculas": [
+      {
+        "matricula": "0002006715A",
+        "nome": "DIOGO PEREIRA FONSECA",
+        "cpf": "71201971268",
+        "margens": {
+          "emprestimo": {
+            "total": "717,24",
+            "reservada": "0,00",
+            "disponivel": "717,24          "
+          },
+          "cartao": {
+            "total": "102,46",
+            "reservada": "0,00",
+            "disponivel": "102,46          "
+          },
+          "saque": {
+            "total": "286,90",
+            "reservada": "0,00",
+            "disponivel": "286,90          "
+          },
+          "compra": {
+            "total": "409,86",
+            "reservada": "0,00",
+            "disponivel": "409,86          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "WALDERLENO DE ARAGAO MACIEL",
+    "cpf": "71199900206",
+    "matriculas": [
+      {
+        "matricula": "0001860216A",
+        "nome": "WALDERLENO DE ARAGAO MACIEL",
+        "cpf": "71199900206",
+        "margens": {
+          "emprestimo": {
+            "total": "3127,38",
+            "reservada": "0,00",
+            "disponivel": "3127,38          "
+          },
+          "cartao": {
+            "total": "446,77",
+            "reservada": "0,00",
+            "disponivel": "446,77          "
+          },
+          "saque": {
+            "total": "1250,95",
+            "reservada": "0,00",
+            "disponivel": "1250,95          "
+          },
+          "compra": {
+            "total": "1787,07",
+            "reservada": "0,00",
+            "disponivel": "1787,07          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "TEREZINHA DE JESUS OLIVEIRA DE LIMA",
+    "cpf": "71197516204",
+    "matriculas": [
+      {
+        "matricula": "0002348357A",
+        "nome": "TEREZINHA DE JESUS OLIVEIRA DE LIMA",
+        "cpf": "71197516204",
+        "margens": {
+          "emprestimo": {
+            "total": "1164,44",
+            "reservada": "0,00",
+            "disponivel": "1164,44          "
+          },
+          "cartao": {
+            "total": "166,35",
+            "reservada": "0,00",
+            "disponivel": "166,35          "
+          },
+          "saque": {
+            "total": "465,77",
+            "reservada": "0,00",
+            "disponivel": "465,77          "
+          },
+          "compra": {
+            "total": "665,39",
+            "reservada": "0,00",
+            "disponivel": "665,39          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ROSILANDIA DA SILVA NUNES",
+    "cpf": "71192883268",
+    "matriculas": [
+      {
+        "matricula": "0001902644A",
+        "nome": "ROSILANDIA DA SILVA NUNES",
+        "cpf": "71192883268",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0001902644B",
+        "nome": "ROSILANDIA DA SILVA NUNES",
+        "cpf": "71192883268",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "50,00",
+            "disponivel": "1843,20          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "RAFAEL IRENIO UGARTE GADELHA",
+    "cpf": "71188100297",
+    "matriculas": [
+      {
+        "matricula": "0001848054B",
+        "nome": "RAFAEL IRENIO UGARTE GADELHA",
+        "cpf": "71188100297",
+        "margens": {
+          "emprestimo": {
+            "total": "380,29",
+            "reservada": "0,00",
+            "disponivel": "380,29          "
+          },
+          "cartao": {
+            "total": "54,33",
+            "reservada": "0,00",
+            "disponivel": "54,33          "
+          },
+          "saque": {
+            "total": "152,12",
+            "reservada": "0,00",
+            "disponivel": "152,12          "
+          },
+          "compra": {
+            "total": "217,31",
+            "reservada": "0,00",
+            "disponivel": "217,31          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "PAULO SERGIO LIMA CAVALCANTE",
+    "cpf": "71187448249",
+    "matriculas": [
+      {
+        "matricula": "0002071819B",
+        "nome": "PAULO SERGIO LIMA CAVALCANTE",
+        "cpf": "71187448249",
+        "margens": {
+          "emprestimo": {
+            "total": "1076,73",
+            "reservada": "0,00",
+            "disponivel": "1076,73          "
+          },
+          "cartao": {
+            "total": "153,82",
+            "reservada": "0,00",
+            "disponivel": "153,82          "
+          },
+          "saque": {
+            "total": "430,69",
+            "reservada": "0,00",
+            "disponivel": "430,69          "
+          },
+          "compra": {
+            "total": "615,27",
+            "reservada": "0,00",
+            "disponivel": "615,27          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "NIZE MARIA LOPES COSTA",
+    "cpf": "71185712291",
+    "matriculas": [
+      {
+        "matricula": "0001786326C",
+        "nome": "NIZE MARIA LOPES COSTA",
+        "cpf": "71185712291",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM FINANCEIRO"
+      }
+    ]
+  },
+  {
+    "nome": "NICASSIO SANTANA DORIA",
+    "cpf": "71185410287",
+    "matriculas": [
+      {
+        "matricula": "0001984640A",
+        "nome": "NICASSIO SANTANA DORIA",
+        "cpf": "71185410287",
+        "margens": {
+          "emprestimo": {
+            "total": "716,47",
+            "reservada": "716,47",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "102,35",
+            "reservada": "97,00",
+            "disponivel": "5,35          "
+          },
+          "saque": {
+            "total": "286,59",
+            "reservada": "0,00",
+            "disponivel": " 433,90          "
+          },
+          "compra": {
+            "total": "409,41",
+            "reservada": "0,00",
+            "disponivel": " 433,90          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MOISES GEORGE DE SOUZA MELO",
+    "cpf": "71184295204",
+    "matriculas": [
+      {
+        "matricula": "0001990292A",
+        "nome": "MOISES GEORGE DE SOUZA MELO",
+        "cpf": "71184295204",
+        "margens": {
+          "emprestimo": {
+            "total": "623,08",
+            "reservada": "0,00",
+            "disponivel": "623,08          "
+          },
+          "cartao": {
+            "total": "89,01",
+            "reservada": "0,00",
+            "disponivel": "89,01          "
+          },
+          "saque": {
+            "total": "249,23",
+            "reservada": "0,00",
+            "disponivel": "249,23          "
+          },
+          "compra": {
+            "total": "356,04",
+            "reservada": "0,00",
+            "disponivel": "356,04          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MEYRE JANE DIAS DUARTE",
+    "cpf": "71183558287",
+    "matriculas": [
+      {
+        "matricula": "0002227606A",
+        "nome": "MEYRE JANE DIAS DUARTE",
+        "cpf": "71183558287",
+        "margens": {
+          "emprestimo": {
+            "total": "611,51",
+            "reservada": "790,57",
+            "disponivel": " 179,06          "
+          },
+          "cartao": {
+            "total": "87,36",
+            "reservada": "0,00",
+            "disponivel": "87,36          "
+          },
+          "saque": {
+            "total": "244,60",
+            "reservada": "0,00",
+            "disponivel": " 198,33          "
+          },
+          "compra": {
+            "total": "349,43",
+            "reservada": "0,00",
+            "disponivel": " 198,33          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MARCIFRAN BARROS DA SILVA",
+    "cpf": "71176420259",
+    "matriculas": [
+      {
+        "matricula": "0002384264A",
+        "nome": "MARCIFRAN BARROS DA SILVA",
+        "cpf": "71176420259",
+        "margens": {
+          "emprestimo": {
+            "total": "792,31",
+            "reservada": "0,00",
+            "disponivel": "792,31          "
+          },
+          "cartao": {
+            "total": "113,19",
+            "reservada": "0,00",
+            "disponivel": "113,19          "
+          },
+          "saque": {
+            "total": "316,92",
+            "reservada": "0,00",
+            "disponivel": "316,92          "
+          },
+          "compra": {
+            "total": "452,74",
+            "reservada": "0,00",
+            "disponivel": "452,74          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0002384264B",
+        "nome": "MARCIFRAN BARROS DA SILVA",
+        "cpf": "71176420259",
+        "margens": {
+          "emprestimo": {
+            "total": "2295,66",
+            "reservada": "0,00",
+            "disponivel": "2295,66          "
+          },
+          "cartao": {
+            "total": "327,95",
+            "reservada": "0,00",
+            "disponivel": "327,95          "
+          },
+          "saque": {
+            "total": "918,26",
+            "reservada": "0,00",
+            "disponivel": "918,26          "
+          },
+          "compra": {
+            "total": "1311,80",
+            "reservada": "0,00",
+            "disponivel": "1311,80          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MARCELO DE MAGALHAES BRASIL",
+    "cpf": "71175830291",
+    "matriculas": [
+      {
+        "matricula": "0001997050A",
+        "nome": "MARCELO DE MAGALHAES BRASIL",
+        "cpf": "71175830291",
+        "margens": {
+          "emprestimo": {
+            "total": "2547,88",
+            "reservada": "231,89",
+            "disponivel": "2315,99          "
+          },
+          "cartao": {
+            "total": "363,98",
+            "reservada": "0,00",
+            "disponivel": "363,98          "
+          },
+          "saque": {
+            "total": "1019,15",
+            "reservada": "0,00",
+            "disponivel": "1019,15          "
+          },
+          "compra": {
+            "total": "1455,93",
+            "reservada": "0,00",
+            "disponivel": "1455,93          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "LAURA GRACILIANA BERNARDES",
+    "cpf": "71170740278",
+    "matriculas": [
+      {
+        "matricula": "0001973533A",
+        "nome": "LAURA GRACILIANA BERNARDES",
+        "cpf": "71170740278",
+        "margens": {
+          "emprestimo": {
+            "total": "5681,62",
+            "reservada": "1589,69",
+            "disponivel": "4091,93          "
+          },
+          "cartao": {
+            "total": "811,66",
+            "reservada": "0,00",
+            "disponivel": "811,66          "
+          },
+          "saque": {
+            "total": "2272,65",
+            "reservada": "0,00",
+            "disponivel": "2272,65          "
+          },
+          "compra": {
+            "total": "3246,64",
+            "reservada": "0,00",
+            "disponivel": "3246,64          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - AFAST.TEMP.EXERC/MAN"
+      }
+    ]
+  },
+  {
+    "nome": "JUNIOR CARVALHO DE MATOS",
+    "cpf": "71169423272",
+    "matriculas": [
+      {
+        "matricula": "0002375761A",
+        "nome": "JUNIOR CARVALHO DE MATOS",
+        "cpf": "71169423272",
+        "margens": {
+          "emprestimo": {
+            "total": "623,08",
+            "reservada": "0,00",
+            "disponivel": "623,08          "
+          },
+          "cartao": {
+            "total": "89,01",
+            "reservada": "0,00",
+            "disponivel": "89,01          "
+          },
+          "saque": {
+            "total": "249,23",
+            "reservada": "0,00",
+            "disponivel": "249,23          "
+          },
+          "compra": {
+            "total": "356,04",
+            "reservada": "0,00",
+            "disponivel": "356,04          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "JOAO ALEXANDRE HOLANDA DE CARVALHO",
+    "cpf": "71165185253",
+    "matriculas": [
+      {
+        "matricula": "0002162911A",
+        "nome": "JOAO ALEXANDRE HOLANDA DE CARVALHO",
+        "cpf": "71165185253",
+        "margens": {
+          "emprestimo": {
+            "total": "1310,76",
+            "reservada": "49,00",
+            "disponivel": "1261,76          "
+          },
+          "cartao": {
+            "total": "187,25",
+            "reservada": "0,00",
+            "disponivel": "187,25          "
+          },
+          "saque": {
+            "total": "524,30",
+            "reservada": "0,00",
+            "disponivel": "524,30          "
+          },
+          "compra": {
+            "total": "749,00",
+            "reservada": "0,00",
+            "disponivel": "749,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "HUDSON DA SILVA PESSOA",
+    "cpf": "71161465200",
+    "matriculas": [
+      {
+        "matricula": "0002113279A",
+        "nome": "HUDSON DA SILVA PESSOA",
+        "cpf": "71161465200",
+        "margens": {
+          "emprestimo": {
+            "total": "4229,80",
+            "reservada": "4006,83",
+            "disponivel": "222,97          "
+          },
+          "cartao": {
+            "total": "604,26",
+            "reservada": "0,00",
+            "disponivel": "604,26          "
+          },
+          "saque": {
+            "total": "1691,92",
+            "reservada": "0,00",
+            "disponivel": "1691,92          "
+          },
+          "compra": {
+            "total": "2417,03",
+            "reservada": "0,00",
+            "disponivel": "2417,03          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "GLAUCIA PORTILHO FEITOSA",
+    "cpf": "71160230200",
+    "matriculas": [
+      {
+        "matricula": "0002112051A",
+        "nome": "GLAUCIA PORTILHO FEITOSA",
+        "cpf": "71160230200",
+        "margens": {
+          "emprestimo": {
+            "total": "3487,32",
+            "reservada": "4253,72",
+            "disponivel": " 766,40          "
+          },
+          "cartao": {
+            "total": "498,19",
+            "reservada": "0,00",
+            "disponivel": "498,19          "
+          },
+          "saque": {
+            "total": "1394,93",
+            "reservada": "0,00",
+            "disponivel": "1394,93          "
+          },
+          "compra": {
+            "total": "1992,76",
+            "reservada": "0,00",
+            "disponivel": "1992,76          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "FRANK NIXON LOPES",
+    "cpf": "71158553234",
+    "matriculas": [
+      {
+        "matricula": "0002136090A",
+        "nome": "FRANK NIXON LOPES",
+        "cpf": "71158553234",
+        "margens": {
+          "emprestimo": {
+            "total": "1062,03",
+            "reservada": "48,48",
+            "disponivel": "1013,55          "
+          },
+          "cartao": {
+            "total": "151,72",
+            "reservada": "0,00",
+            "disponivel": "151,72          "
+          },
+          "saque": {
+            "total": "424,81",
+            "reservada": "0,00",
+            "disponivel": "424,81          "
+          },
+          "compra": {
+            "total": "606,87",
+            "reservada": "0,00",
+            "disponivel": "606,87          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "FRANDERLEY SOARES DA SILVA",
+    "cpf": "71158510268",
+    "matriculas": [
+      {
+        "matricula": "0001636391A",
+        "nome": "FRANDERLEY SOARES DA SILVA",
+        "cpf": "71158510268",
+        "margens": {
+          "emprestimo": {
+            "total": "436,05",
+            "reservada": "129,81",
+            "disponivel": "306,24          "
+          },
+          "cartao": {
+            "total": "62,29",
+            "reservada": "0,00",
+            "disponivel": "62,29          "
+          },
+          "saque": {
+            "total": "174,42",
+            "reservada": "0,00",
+            "disponivel": "174,42          "
+          },
+          "compra": {
+            "total": "249,17",
+            "reservada": "0,00",
+            "disponivel": "249,17          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DAYANE FEITOSA LIMA",
+    "cpf": "71147829268",
+    "matriculas": [
+      {
+        "matricula": "0001660683C",
+        "nome": "DAYANE FEITOSA LIMA",
+        "cpf": "71147829268",
+        "margens": {
+          "emprestimo": {
+            "total": "7171,70",
+            "reservada": "8823,38",
+            "disponivel": " 1651,68          "
+          },
+          "cartao": {
+            "total": "1024,53",
+            "reservada": "92,00",
+            "disponivel": "62,14          "
+          },
+          "saque": {
+            "total": "2868,68",
+            "reservada": "0,00",
+            "disponivel": " 3766,23          "
+          },
+          "compra": {
+            "total": "4098,11",
+            "reservada": "0,00",
+            "disponivel": " 3766,23          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DAVI DE SOUZA DA SILVA",
+    "cpf": "71147675287",
+    "matriculas": [
+      {
+        "matricula": "0001863770A",
+        "nome": "DAVI DE SOUZA DA SILVA",
+        "cpf": "71147675287",
+        "margens": {
+          "emprestimo": {
+            "total": "2035,39",
+            "reservada": "2214,73",
+            "disponivel": " 179,34          "
+          },
+          "cartao": {
+            "total": "290,77",
+            "reservada": "0,00",
+            "disponivel": " 21,83          "
+          },
+          "saque": {
+            "total": "814,16",
+            "reservada": "0,00",
+            "disponivel": "9,24          "
+          },
+          "compra": {
+            "total": "1163,08",
+            "reservada": "0,00",
+            "disponivel": "13,20          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CRISTIANO LOPES DA SILVA",
+    "cpf": "71146601204",
+    "matriculas": [
+      {
+        "matricula": "0002002680A",
+        "nome": "CRISTIANO LOPES DA SILVA",
+        "cpf": "71146601204",
+        "margens": {
+          "emprestimo": {
+            "total": "2610,26",
+            "reservada": "1602,84",
+            "disponivel": "1007,42          "
+          },
+          "cartao": {
+            "total": "372,89",
+            "reservada": "0,00",
+            "disponivel": "372,89          "
+          },
+          "saque": {
+            "total": "1044,10",
+            "reservada": "0,00",
+            "disponivel": "1044,10          "
+          },
+          "compra": {
+            "total": "1491,57",
+            "reservada": "0,00",
+            "disponivel": "1491,57          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CLAUDIA RIBEIRO FERREIRA",
+    "cpf": "71145338291",
+    "matriculas": [
+      {
+        "matricula": "0001841092A",
+        "nome": "CLAUDIA RIBEIRO FERREIRA",
+        "cpf": "71145338291",
+        "margens": {
+          "emprestimo": {
+            "total": "892,46",
+            "reservada": "0,00",
+            "disponivel": "892,46          "
+          },
+          "cartao": {
+            "total": "127,49",
+            "reservada": "0,00",
+            "disponivel": "127,49          "
+          },
+          "saque": {
+            "total": "356,98",
+            "reservada": "0,00",
+            "disponivel": "356,98          "
+          },
+          "compra": {
+            "total": "509,97",
+            "reservada": "0,00",
+            "disponivel": "509,97          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CLAUDIA ARIADNE CAVALCANTE NOGUEIRA",
+    "cpf": "71145214215",
+    "matriculas": [
+      {
+        "matricula": "0001995251A",
+        "nome": "CLAUDIA ARIADNE CAVALCANTE NOGUEIRA",
+        "cpf": "71145214215",
+        "margens": {
+          "emprestimo": {
+            "total": "2111,85",
+            "reservada": "171,63",
+            "disponivel": "1940,22          "
+          },
+          "cartao": {
+            "total": "301,69",
+            "reservada": "0,00",
+            "disponivel": "301,69          "
+          },
+          "saque": {
+            "total": "844,74",
+            "reservada": "0,00",
+            "disponivel": "844,74          "
+          },
+          "compra": {
+            "total": "1206,77",
+            "reservada": "0,00",
+            "disponivel": "1206,77          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CIRO DIAS DE AZEVEDO",
+    "cpf": "71144951291",
+    "matriculas": [
+      {
+        "matricula": "0002230631A",
+        "nome": "CIRO DIAS DE AZEVEDO",
+        "cpf": "71144951291",
+        "margens": {
+          "emprestimo": {
+            "total": "1427,43",
+            "reservada": "371,70",
+            "disponivel": "1055,73          "
+          },
+          "cartao": {
+            "total": "203,92",
+            "reservada": "0,00",
+            "disponivel": "203,92          "
+          },
+          "saque": {
+            "total": "570,97",
+            "reservada": "0,00",
+            "disponivel": "570,97          "
+          },
+          "compra": {
+            "total": "815,67",
+            "reservada": "0,00",
+            "disponivel": "815,67          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ANDRE LUIZ NUNES ZOGAHIB",
+    "cpf": "71139575287",
+    "matriculas": [
+      {
+        "matricula": "0001903365D",
+        "nome": "ANDRE LUIZ NUNES ZOGAHIB",
+        "cpf": "71139575287",
+        "margens": {
+          "emprestimo": {
+            "total": "9029,14",
+            "reservada": "153,70",
+            "disponivel": "8875,44          "
+          },
+          "cartao": {
+            "total": "1289,88",
+            "reservada": "0,00",
+            "disponivel": "1289,88          "
+          },
+          "saque": {
+            "total": "3611,66",
+            "reservada": "0,00",
+            "disponivel": "3611,66          "
+          },
+          "compra": {
+            "total": "5159,51",
+            "reservada": "0,00",
+            "disponivel": "5159,51          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001903365F",
+        "nome": "ANDRE LUIZ NUNES ZOGAHIB",
+        "cpf": "71139575287",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      }
+    ]
+  },
+  {
+    "nome": "ANA CRISTINA MAIA ALFAIA",
+    "cpf": "71138471291",
+    "matriculas": [
+      {
+        "matricula": "0001990942F",
+        "nome": "ANA CRISTINA MAIA ALFAIA",
+        "cpf": "71138471291",
+        "margens": {
+          "emprestimo": {
+            "total": "1811,92",
+            "reservada": "847,41",
+            "disponivel": "964,51          "
+          },
+          "cartao": {
+            "total": "258,85",
+            "reservada": "0,00",
+            "disponivel": "258,85          "
+          },
+          "saque": {
+            "total": "724,77",
+            "reservada": "0,00",
+            "disponivel": " 30,14          "
+          },
+          "compra": {
+            "total": "1035,39",
+            "reservada": "0,00",
+            "disponivel": " 30,14          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ALESSANDRA TAVARES DE BRITO",
+    "cpf": "71136991204",
+    "matriculas": [
+      {
+        "matricula": "0002175037A",
+        "nome": "ALESSANDRA TAVARES DE BRITO",
+        "cpf": "71136991204",
+        "margens": {
+          "emprestimo": {
+            "total": "1878,98",
+            "reservada": "848,24",
+            "disponivel": "1030,74          "
+          },
+          "cartao": {
+            "total": "268,43",
+            "reservada": "0,00",
+            "disponivel": "268,43          "
+          },
+          "saque": {
+            "total": "751,59",
+            "reservada": "0,00",
+            "disponivel": " 281,98          "
+          },
+          "compra": {
+            "total": "1073,70",
+            "reservada": "0,00",
+            "disponivel": " 281,98          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ADEILTON MOREIRA GUEDES",
+    "cpf": "71135030200",
+    "matriculas": [
+      {
+        "matricula": "0001795813A",
+        "nome": "ADEILTON MOREIRA GUEDES",
+        "cpf": "71135030200",
+        "margens": {
+          "emprestimo": {
+            "total": "2750,23",
+            "reservada": "39,37",
+            "disponivel": "2710,86          "
+          },
+          "cartao": {
+            "total": "392,89",
+            "reservada": "0,00",
+            "disponivel": "392,89          "
+          },
+          "saque": {
+            "total": "1100,09",
+            "reservada": "0,00",
+            "disponivel": "1100,09          "
+          },
+          "compra": {
+            "total": "1571,56",
+            "reservada": "0,00",
+            "disponivel": "1571,56          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "EVERALDO DE PAULA FERREIRA",
+    "cpf": "71132511291",
+    "matriculas": [
+      {
+        "matricula": "0002186250A",
+        "nome": "EVERALDO DE PAULA FERREIRA",
+        "cpf": "71132511291",
+        "margens": {
+          "emprestimo": {
+            "total": "1605,08",
+            "reservada": "1605,08",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "229,30",
+            "reservada": "0,00",
+            "disponivel": "46,58          "
+          },
+          "saque": {
+            "total": "642,03",
+            "reservada": "0,00",
+            "disponivel": " 1647,79          "
+          },
+          "compra": {
+            "total": "917,19",
+            "reservada": "0,00",
+            "disponivel": " 1647,79          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ANDREA COSTA DE ANDRADE",
+    "cpf": "71130519449",
+    "matriculas": [
+      {
+        "matricula": "0002362996A",
+        "nome": "ANDREA COSTA DE ANDRADE",
+        "cpf": "71130519449",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "0,00",
+            "disponivel": "1893,20          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - LICENCA PARA INTERES"
+      }
+    ]
+  },
+  {
+    "nome": "MARIA DO SOCORRO VIEIRA DE ALMEIDA",
+    "cpf": "71119191220",
+    "matriculas": [
+      {
+        "matricula": "0002064367A",
+        "nome": "MARIA DO SOCORRO VIEIRA DE ALMEIDA",
+        "cpf": "71119191220",
+        "margens": {
+          "emprestimo": {
+            "total": "1047,10",
+            "reservada": "48,48",
+            "disponivel": "998,62          "
+          },
+          "cartao": {
+            "total": "149,59",
+            "reservada": "0,00",
+            "disponivel": "149,59          "
+          },
+          "saque": {
+            "total": "418,84",
+            "reservada": "0,00",
+            "disponivel": "56,30          "
+          },
+          "compra": {
+            "total": "598,34",
+            "reservada": "0,00",
+            "disponivel": "56,30          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MARCELO DA SILVA PAZ",
+    "cpf": "71117040291",
+    "matriculas": [
+      {
+        "matricula": "0002162865A",
+        "nome": "MARCELO DA SILVA PAZ",
+        "cpf": "71117040291",
+        "margens": {
+          "emprestimo": {
+            "total": "1509,72",
+            "reservada": "1503,86",
+            "disponivel": "5,86          "
+          },
+          "cartao": {
+            "total": "215,67",
+            "reservada": "0,00",
+            "disponivel": " 61,33          "
+          },
+          "saque": {
+            "total": "603,89",
+            "reservada": "0,00",
+            "disponivel": " 943,24          "
+          },
+          "compra": {
+            "total": "862,70",
+            "reservada": "0,00",
+            "disponivel": " 943,24          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "LENI PIRES DA SILVA",
+    "cpf": "71114750204",
+    "matriculas": [
+      {
+        "matricula": "0000276707D",
+        "nome": "LENI PIRES DA SILVA",
+        "cpf": "71114750204",
+        "margens": {
+          "emprestimo": {
+            "total": "759,44",
+            "reservada": "0,00",
+            "disponivel": "759,44          "
+          },
+          "cartao": {
+            "total": "108,49",
+            "reservada": "0,00",
+            "disponivel": "108,49          "
+          },
+          "saque": {
+            "total": "303,78",
+            "reservada": "0,00",
+            "disponivel": "303,78          "
+          },
+          "compra": {
+            "total": "433,97",
+            "reservada": "0,00",
+            "disponivel": "433,97          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - AGUARDANDO APOSENTAD"
+      }
+    ]
+  },
+  {
+    "nome": "JULIANA RAMOS BARROS",
+    "cpf": "71113703253",
+    "matriculas": [
+      {
+        "matricula": "0002334062A",
+        "nome": "JULIANA RAMOS BARROS",
+        "cpf": "71113703253",
+        "margens": {
+          "emprestimo": {
+            "total": "858,47",
+            "reservada": "0,00",
+            "disponivel": "858,47          "
+          },
+          "cartao": {
+            "total": "122,64",
+            "reservada": "0,00",
+            "disponivel": "122,64          "
+          },
+          "saque": {
+            "total": "343,39",
+            "reservada": "0,00",
+            "disponivel": "343,39          "
+          },
+          "compra": {
+            "total": "490,56",
+            "reservada": "0,00",
+            "disponivel": "490,56          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "JOSE CARLOS LIMA DE SA",
+    "cpf": "71112502220",
+    "matriculas": [
+      {
+        "matricula": "0001909320A",
+        "nome": "JOSE CARLOS LIMA DE SA",
+        "cpf": "71112502220",
+        "margens": {
+          "emprestimo": {
+            "total": "614,94",
+            "reservada": "31,13",
+            "disponivel": "583,81          "
+          },
+          "cartao": {
+            "total": "87,85",
+            "reservada": "0,00",
+            "disponivel": " 18,93          "
+          },
+          "saque": {
+            "total": "245,98",
+            "reservada": "0,00",
+            "disponivel": "245,98          "
+          },
+          "compra": {
+            "total": "351,40",
+            "reservada": "0,00",
+            "disponivel": "351,40          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DULCICLEIA PEREIRA DA SILVA",
+    "cpf": "71102744204",
+    "matriculas": [
+      {
+        "matricula": "0002056011A",
+        "nome": "DULCICLEIA PEREIRA DA SILVA",
+        "cpf": "71102744204",
+        "margens": {
+          "emprestimo": {
+            "total": "1047,10",
+            "reservada": "0,00",
+            "disponivel": "1047,10          "
+          },
+          "cartao": {
+            "total": "149,59",
+            "reservada": "0,00",
+            "disponivel": "149,59          "
+          },
+          "saque": {
+            "total": "418,84",
+            "reservada": "0,00",
+            "disponivel": "418,84          "
+          },
+          "compra": {
+            "total": "598,34",
+            "reservada": "0,00",
+            "disponivel": "598,34          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CRISTINEY COITINHO DA SILVA",
+    "cpf": "71101357215",
+    "matriculas": [
+      {
+        "matricula": "0002065738A",
+        "nome": "CRISTINEY COITINHO DA SILVA",
+        "cpf": "71101357215",
+        "margens": {
+          "emprestimo": {
+            "total": "848,42",
+            "reservada": "48,48",
+            "disponivel": "799,94          "
+          },
+          "cartao": {
+            "total": "121,20",
+            "reservada": "0,00",
+            "disponivel": "121,20          "
+          },
+          "saque": {
+            "total": "339,37",
+            "reservada": "0,00",
+            "disponivel": "339,37          "
+          },
+          "compra": {
+            "total": "484,81",
+            "reservada": "0,00",
+            "disponivel": "484,81          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CRISTIANY LIMA VERDE DE ALMEIDA",
+    "cpf": "71101250259",
+    "matriculas": [
+      {
+        "matricula": "0001787365B",
+        "nome": "CRISTIANY LIMA VERDE DE ALMEIDA",
+        "cpf": "71101250259",
+        "margens": {
+          "emprestimo": {
+            "total": "2400,01",
+            "reservada": "2016,38",
+            "disponivel": "383,63          "
+          },
+          "cartao": {
+            "total": "342,86",
+            "reservada": "0,00",
+            "disponivel": "342,86          "
+          },
+          "saque": {
+            "total": "960,00",
+            "reservada": "0,00",
+            "disponivel": "960,00          "
+          },
+          "compra": {
+            "total": "1371,43",
+            "reservada": "0,00",
+            "disponivel": "1371,43          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ANDRE CANDIDO DOS SANTOS",
+    "cpf": "71097660206",
+    "matriculas": [
+      {
+        "matricula": "0001696181A",
+        "nome": "ANDRE CANDIDO DOS SANTOS",
+        "cpf": "71097660206",
+        "margens": {
+          "emprestimo": {
+            "total": "2225,35",
+            "reservada": "386,70",
+            "disponivel": "1838,65          "
+          },
+          "cartao": {
+            "total": "317,91",
+            "reservada": "0,00",
+            "disponivel": "317,91          "
+          },
+          "saque": {
+            "total": "890,14",
+            "reservada": "0,00",
+            "disponivel": "890,14          "
+          },
+          "compra": {
+            "total": "1271,63",
+            "reservada": "0,00",
+            "disponivel": "1271,63          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ALDEIDA SANTOS DA PAZ",
+    "cpf": "71096191253",
+    "matriculas": [
+      {
+        "matricula": "0002079593A",
+        "nome": "ALDEIDA SANTOS DA PAZ",
+        "cpf": "71096191253",
+        "margens": {
+          "emprestimo": {
+            "total": "1047,10",
+            "reservada": "1100,00",
+            "disponivel": " 52,90          "
+          },
+          "cartao": {
+            "total": "149,59",
+            "reservada": "0,00",
+            "disponivel": "149,59          "
+          },
+          "saque": {
+            "total": "418,84",
+            "reservada": "0,00",
+            "disponivel": "418,84          "
+          },
+          "compra": {
+            "total": "598,34",
+            "reservada": "0,00",
+            "disponivel": "598,34          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ALAN DA SILVA SANTOS",
+    "cpf": "71095896253",
+    "matriculas": [
+      {
+        "matricula": "0001658425A",
+        "nome": "ALAN DA SILVA SANTOS",
+        "cpf": "71095896253",
+        "margens": {
+          "emprestimo": {
+            "total": "577,51",
+            "reservada": "0,00",
+            "disponivel": "577,51          "
+          },
+          "cartao": {
+            "total": "82,50",
+            "reservada": "0,00",
+            "disponivel": "82,50          "
+          },
+          "saque": {
+            "total": "231,01",
+            "reservada": "0,00",
+            "disponivel": "4,62          "
+          },
+          "compra": {
+            "total": "330,01",
+            "reservada": "0,00",
+            "disponivel": "4,62          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ADRIANO DA ROCHA FELIPE",
+    "cpf": "71095527215",
+    "matriculas": [
+      {
+        "matricula": "0002156466A",
+        "nome": "ADRIANO DA ROCHA FELIPE",
+        "cpf": "71095527215",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0002156466B",
+        "nome": "ADRIANO DA ROCHA FELIPE",
+        "cpf": "71095527215",
+        "margens": {
+          "emprestimo": {
+            "total": "4037,44",
+            "reservada": "0,00",
+            "disponivel": "4037,44          "
+          },
+          "cartao": {
+            "total": "576,78",
+            "reservada": "0,00",
+            "disponivel": "576,78          "
+          },
+          "saque": {
+            "total": "1614,98",
+            "reservada": "0,00",
+            "disponivel": "1614,98          "
+          },
+          "compra": {
+            "total": "2307,11",
+            "reservada": "0,00",
+            "disponivel": "2307,11          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ANDREA CRISTINA CARVALHO DE SOUZA",
+    "cpf": "71094040215",
+    "matriculas": [
+      {
+        "matricula": "0001603485C",
+        "nome": "ANDREA CRISTINA CARVALHO DE SOUZA",
+        "cpf": "71094040215",
+        "margens": {
+          "emprestimo": {
+            "total": "830,41",
+            "reservada": "0,00",
+            "disponivel": "830,41          "
+          },
+          "cartao": {
+            "total": "118,63",
+            "reservada": "0,00",
+            "disponivel": " 47,87          "
+          },
+          "saque": {
+            "total": "332,17",
+            "reservada": "0,00",
+            "disponivel": "332,17          "
+          },
+          "compra": {
+            "total": "474,53",
+            "reservada": "0,00",
+            "disponivel": "474,53          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001603485D",
+        "nome": "ANDREA CRISTINA CARVALHO DE SOUZA",
+        "cpf": "71094040215",
+        "margens": {
+          "emprestimo": {
+            "total": "791,88",
+            "reservada": "0,00",
+            "disponivel": "791,88          "
+          },
+          "cartao": {
+            "total": "113,13",
+            "reservada": "0,00",
+            "disponivel": "113,13          "
+          },
+          "saque": {
+            "total": "316,75",
+            "reservada": "0,00",
+            "disponivel": "316,75          "
+          },
+          "compra": {
+            "total": "452,50",
+            "reservada": "0,00",
+            "disponivel": "452,50          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ELTON FARIAS ASSUNCAO",
+    "cpf": "71093796200",
+    "matriculas": [
+      {
+        "matricula": "0002084830B",
+        "nome": "ELTON FARIAS ASSUNCAO",
+        "cpf": "71093796200",
+        "margens": {
+          "emprestimo": {
+            "total": "858,47",
+            "reservada": "578,39",
+            "disponivel": "280,08          "
+          },
+          "cartao": {
+            "total": "122,64",
+            "reservada": "0,00",
+            "disponivel": "122,64          "
+          },
+          "saque": {
+            "total": "343,39",
+            "reservada": "0,00",
+            "disponivel": "343,39          "
+          },
+          "compra": {
+            "total": "490,56",
+            "reservada": "0,00",
+            "disponivel": "490,56          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "EDUARDO PAIXAO CAETANO",
+    "cpf": "71084070197",
+    "matriculas": [
+      {
+        "matricula": "0002111012A",
+        "nome": "EDUARDO PAIXAO CAETANO",
+        "cpf": "71084070197",
+        "margens": {
+          "emprestimo": {
+            "total": "8531,05",
+            "reservada": "931,67",
+            "disponivel": "7599,38          "
+          },
+          "cartao": {
+            "total": "1218,72",
+            "reservada": "0,00",
+            "disponivel": "1218,72          "
+          },
+          "saque": {
+            "total": "3412,42",
+            "reservada": "0,00",
+            "disponivel": "3412,42          "
+          },
+          "compra": {
+            "total": "4874,89",
+            "reservada": "0,00",
+            "disponivel": "4874,89          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "RODRIGO DE SA BARBOSA",
+    "cpf": "71082832200",
+    "matriculas": [
+      {
+        "matricula": "0002115131A",
+        "nome": "RODRIGO DE SA BARBOSA",
+        "cpf": "71082832200",
+        "margens": {
+          "emprestimo": {
+            "total": "6517,71",
+            "reservada": "6514,56",
+            "disponivel": "3,15          "
+          },
+          "cartao": {
+            "total": "931,10",
+            "reservada": "0,00",
+            "disponivel": " 257,59          "
+          },
+          "saque": {
+            "total": "2607,08",
+            "reservada": "0,00",
+            "disponivel": "2607,08          "
+          },
+          "compra": {
+            "total": "3724,40",
+            "reservada": "0,00",
+            "disponivel": "3724,40          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0002115131C",
+        "nome": "RODRIGO DE SA BARBOSA",
+        "cpf": "71082832200",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0002115131D",
+        "nome": "RODRIGO DE SA BARBOSA",
+        "cpf": "71082832200",
+        "margens": {
+          "emprestimo": {
+            "total": "2081,30",
+            "reservada": "0,00",
+            "disponivel": "2081,30          "
+          },
+          "cartao": {
+            "total": "297,33",
+            "reservada": "0,00",
+            "disponivel": "297,33          "
+          },
+          "saque": {
+            "total": "832,52",
+            "reservada": "0,00",
+            "disponivel": "832,52          "
+          },
+          "compra": {
+            "total": "1189,31",
+            "reservada": "0,00",
+            "disponivel": "1189,31          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MARCOS ANTONIO MESQUITA DE SOUSA",
+    "cpf": "71062335287",
+    "matriculas": [
+      {
+        "matricula": "0001926110C",
+        "nome": "MARCOS ANTONIO MESQUITA DE SOUSA",
+        "cpf": "71062335287",
+        "margens": {
+          "emprestimo": {
+            "total": "610,68",
+            "reservada": "767,87",
+            "disponivel": " 157,19          "
+          },
+          "cartao": {
+            "total": "87,24",
+            "reservada": "0,00",
+            "disponivel": " 227,60          "
+          },
+          "saque": {
+            "total": "244,27",
+            "reservada": "0,00",
+            "disponivel": " 195,34          "
+          },
+          "compra": {
+            "total": "348,96",
+            "reservada": "0,00",
+            "disponivel": " 195,34          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MOISES DIAS DE ARAUJO",
+    "cpf": "71028005253",
+    "matriculas": [
+      {
+        "matricula": "0002029022D",
+        "nome": "MOISES DIAS DE ARAUJO",
+        "cpf": "71028005253",
+        "margens": {
+          "emprestimo": {
+            "total": "1231,97",
+            "reservada": "0,00",
+            "disponivel": "1231,97          "
+          },
+          "cartao": {
+            "total": "176,00",
+            "reservada": "0,00",
+            "disponivel": "176,00          "
+          },
+          "saque": {
+            "total": "492,79",
+            "reservada": "0,00",
+            "disponivel": "492,79          "
+          },
+          "compra": {
+            "total": "703,98",
+            "reservada": "0,00",
+            "disponivel": "703,98          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ANDRE SENA PEREIRA",
+    "cpf": "71026177200",
+    "matriculas": [
+      {
+        "matricula": "0002111276A",
+        "nome": "ANDRE SENA PEREIRA",
+        "cpf": "71026177200",
+        "margens": {
+          "emprestimo": {
+            "total": "7437,50",
+            "reservada": "6307,94",
+            "disponivel": "1129,56          "
+          },
+          "cartao": {
+            "total": "1062,50",
+            "reservada": "0,00",
+            "disponivel": "1062,50          "
+          },
+          "saque": {
+            "total": "2975,00",
+            "reservada": "0,00",
+            "disponivel": "2975,00          "
+          },
+          "compra": {
+            "total": "4250,00",
+            "reservada": "0,00",
+            "disponivel": "4250,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0002111276C",
+        "nome": "ANDRE SENA PEREIRA",
+        "cpf": "71026177200",
+        "margens": {
+          "emprestimo": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "saque": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          },
+          "compra": {
+            "total": "0,00",
+            "reservada": "0,00",
+            "disponivel": "0,00          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Suspenso - SEM MARGEM MES ATUAL"
+      },
+      {
+        "matricula": "0002111276D",
+        "nome": "ANDRE SENA PEREIRA",
+        "cpf": "71026177200",
+        "margens": {
+          "emprestimo": {
+            "total": "1493,31",
+            "reservada": "0,00",
+            "disponivel": "1493,31          "
+          },
+          "cartao": {
+            "total": "213,33",
+            "reservada": "0,00",
+            "disponivel": "213,33          "
+          },
+          "saque": {
+            "total": "597,33",
+            "reservada": "0,00",
+            "disponivel": "597,33          "
+          },
+          "compra": {
+            "total": "853,33",
+            "reservada": "0,00",
+            "disponivel": "853,33          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "LARISSA DAMASCENO E SILVA",
+    "cpf": "71024590259",
+    "matriculas": [
+      {
+        "matricula": "0002438186A",
+        "nome": "LARISSA DAMASCENO E SILVA",
+        "cpf": "71024590259",
+        "margens": {
+          "emprestimo": {
+            "total": "5858,50",
+            "reservada": "0,00",
+            "disponivel": "5858,50          "
+          },
+          "cartao": {
+            "total": "836,93",
+            "reservada": "0,00",
+            "disponivel": "836,93          "
+          },
+          "saque": {
+            "total": "2343,40",
+            "reservada": "0,00",
+            "disponivel": "2343,40          "
+          },
+          "compra": {
+            "total": "3347,71",
+            "reservada": "0,00",
+            "disponivel": "3347,71          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0002438186B",
+        "nome": "LARISSA DAMASCENO E SILVA",
+        "cpf": "71024590259",
+        "margens": {
+          "emprestimo": {
+            "total": "2095,97",
+            "reservada": "0,00",
+            "disponivel": "2095,97          "
+          },
+          "cartao": {
+            "total": "299,42",
+            "reservada": "0,00",
+            "disponivel": "299,42          "
+          },
+          "saque": {
+            "total": "838,39",
+            "reservada": "0,00",
+            "disponivel": "838,39          "
+          },
+          "compra": {
+            "total": "1197,70",
+            "reservada": "0,00",
+            "disponivel": "1197,70          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "EDIVANE SOBRAUINA GONCALVES FONSECA",
+    "cpf": "71024514234",
+    "matriculas": [
+      {
+        "matricula": "0001820710B",
+        "nome": "EDIVANE SOBRAUINA GONCALVES FONSECA",
+        "cpf": "71024514234",
+        "margens": {
+          "emprestimo": {
+            "total": "1424,61",
+            "reservada": "0,00",
+            "disponivel": "1424,61          "
+          },
+          "cartao": {
+            "total": "203,52",
+            "reservada": "0,00",
+            "disponivel": "203,52          "
+          },
+          "saque": {
+            "total": "569,84",
+            "reservada": "0,00",
+            "disponivel": "569,84          "
+          },
+          "compra": {
+            "total": "814,06",
+            "reservada": "0,00",
+            "disponivel": "814,06          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "BERLANDO FRANCO MARTINS",
+    "cpf": "71022775200",
+    "matriculas": [
+      {
+        "matricula": "0002126877B",
+        "nome": "BERLANDO FRANCO MARTINS",
+        "cpf": "71022775200",
+        "margens": {
+          "emprestimo": {
+            "total": "1555,66",
+            "reservada": "566,91",
+            "disponivel": "988,75          "
+          },
+          "cartao": {
+            "total": "222,24",
+            "reservada": "0,00",
+            "disponivel": "222,24          "
+          },
+          "saque": {
+            "total": "622,26",
+            "reservada": "0,00",
+            "disponivel": "622,26          "
+          },
+          "compra": {
+            "total": "888,94",
+            "reservada": "0,00",
+            "disponivel": "888,94          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "LUIZ DANIEL VALENTE DA SILVA",
+    "cpf": "70991863704",
+    "matriculas": [
+      {
+        "matricula": "0002335115A",
+        "nome": "LUIZ DANIEL VALENTE DA SILVA",
+        "cpf": "70991863704",
+        "margens": {
+          "emprestimo": {
+            "total": "1620,00",
+            "reservada": "686,49",
+            "disponivel": "933,51          "
+          },
+          "cartao": {
+            "total": "231,43",
+            "reservada": "0,00",
+            "disponivel": "231,43          "
+          },
+          "saque": {
+            "total": "648,00",
+            "reservada": "0,00",
+            "disponivel": "648,00          "
+          },
+          "compra": {
+            "total": "925,71",
+            "reservada": "0,00",
+            "disponivel": "925,71          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "HENRI HORSTMANN",
+    "cpf": "70970980906",
+    "matriculas": [
+      {
+        "matricula": "0001892886A",
+        "nome": "HENRI HORSTMANN",
+        "cpf": "70970980906",
+        "margens": {
+          "emprestimo": {
+            "total": "2405,28",
+            "reservada": "0,00",
+            "disponivel": "2405,28          "
+          },
+          "cartao": {
+            "total": "343,61",
+            "reservada": "0,00",
+            "disponivel": "343,61          "
+          },
+          "saque": {
+            "total": "962,11",
+            "reservada": "0,00",
+            "disponivel": "962,11          "
+          },
+          "compra": {
+            "total": "1374,44",
+            "reservada": "0,00",
+            "disponivel": "1374,44          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DALYANE DA SILVA PORTELA",
+    "cpf": "70962219215",
+    "matriculas": [
+      {
+        "matricula": "0002404621A",
+        "nome": "DALYANE DA SILVA PORTELA",
+        "cpf": "70962219215",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "0,00",
+            "disponivel": "1893,20          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "GRACIELA MARLENY RIVERA CHAVEZ",
+    "cpf": "70910260125",
+    "matriculas": [
+      {
+        "matricula": "0001601741E",
+        "nome": "GRACIELA MARLENY RIVERA CHAVEZ",
+        "cpf": "70910260125",
+        "margens": {
+          "emprestimo": {
+            "total": "3070,06",
+            "reservada": "35,09",
+            "disponivel": "3034,97          "
+          },
+          "cartao": {
+            "total": "438,58",
+            "reservada": "0,00",
+            "disponivel": "438,58          "
+          },
+          "saque": {
+            "total": "1228,02",
+            "reservada": "0,00",
+            "disponivel": "1228,02          "
+          },
+          "compra": {
+            "total": "1754,32",
+            "reservada": "0,00",
+            "disponivel": "1754,32          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001601741F",
+        "nome": "GRACIELA MARLENY RIVERA CHAVEZ",
+        "cpf": "70910260125",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "0,00",
+            "disponivel": "1893,20          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "AIRTON JOSE SCHNEIDER",
+    "cpf": "70880700904",
+    "matriculas": [
+      {
+        "matricula": "0001535544F",
+        "nome": "AIRTON JOSE SCHNEIDER",
+        "cpf": "70880700904",
+        "margens": {
+          "emprestimo": {
+            "total": "3398,21",
+            "reservada": "0,00",
+            "disponivel": "3398,21          "
+          },
+          "cartao": {
+            "total": "485,46",
+            "reservada": "0,00",
+            "disponivel": "485,46          "
+          },
+          "saque": {
+            "total": "1359,29",
+            "reservada": "0,00",
+            "disponivel": "1359,29          "
+          },
+          "compra": {
+            "total": "1941,84",
+            "reservada": "0,00",
+            "disponivel": "1941,84          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "GISELE HOSSOKAWA EGUCHI",
+    "cpf": "70877629234",
+    "matriculas": [
+      {
+        "matricula": "0001972944A",
+        "nome": "GISELE HOSSOKAWA EGUCHI",
+        "cpf": "70877629234",
+        "margens": {
+          "emprestimo": {
+            "total": "2038,42",
+            "reservada": "0,00",
+            "disponivel": "2038,42          "
+          },
+          "cartao": {
+            "total": "291,20",
+            "reservada": "0,00",
+            "disponivel": "291,20          "
+          },
+          "saque": {
+            "total": "815,37",
+            "reservada": "0,00",
+            "disponivel": "815,37          "
+          },
+          "compra": {
+            "total": "1164,81",
+            "reservada": "0,00",
+            "disponivel": "1164,81          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      },
+      {
+        "matricula": "0001972944B",
+        "nome": "GISELE HOSSOKAWA EGUCHI",
+        "cpf": "70877629234",
+        "margens": {
+          "emprestimo": {
+            "total": "1893,20",
+            "reservada": "0,00",
+            "disponivel": "1893,20          "
+          },
+          "cartao": {
+            "total": "270,46",
+            "reservada": "0,00",
+            "disponivel": "270,46          "
+          },
+          "saque": {
+            "total": "757,28",
+            "reservada": "0,00",
+            "disponivel": "757,28          "
+          },
+          "compra": {
+            "total": "1081,83",
+            "reservada": "0,00",
+            "disponivel": "1081,83          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "DAYANE BEZERRA DE SOUZA",
+    "cpf": "70875162215",
+    "matriculas": [
+      {
+        "matricula": "0001903608A",
+        "nome": "DAYANE BEZERRA DE SOUZA",
+        "cpf": "70875162215",
+        "margens": {
+          "emprestimo": {
+            "total": "8512,81",
+            "reservada": "225,54",
+            "disponivel": "8287,27          "
+          },
+          "cartao": {
+            "total": "1216,12",
+            "reservada": "0,00",
+            "disponivel": "1216,12          "
+          },
+          "saque": {
+            "total": "3405,12",
+            "reservada": "0,00",
+            "disponivel": "3405,12          "
+          },
+          "compra": {
+            "total": "4864,46",
+            "reservada": "0,00",
+            "disponivel": "4864,46          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "JOAO CARLOS PAULA DE ANDRADE",
+    "cpf": "70871914204",
+    "matriculas": [
+      {
+        "matricula": "0002004240A",
+        "nome": "JOAO CARLOS PAULA DE ANDRADE",
+        "cpf": "70871914204",
+        "margens": {
+          "emprestimo": {
+            "total": "1798,84",
+            "reservada": "447,41",
+            "disponivel": "1351,43          "
+          },
+          "cartao": {
+            "total": "256,98",
+            "reservada": "0,00",
+            "disponivel": "256,98          "
+          },
+          "saque": {
+            "total": "719,54",
+            "reservada": "0,00",
+            "disponivel": "719,54          "
+          },
+          "compra": {
+            "total": "1027,91",
+            "reservada": "0,00",
+            "disponivel": "1027,91          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "JAMES DA SILVA MORAES",
+    "cpf": "70871809249",
+    "matriculas": [
+      {
+        "matricula": "0001796690A",
+        "nome": "JAMES DA SILVA MORAES",
+        "cpf": "70871809249",
+        "margens": {
+          "emprestimo": {
+            "total": "2500,14",
+            "reservada": "2055,72",
+            "disponivel": "444,42          "
+          },
+          "cartao": {
+            "total": "357,16",
+            "reservada": "0,00",
+            "disponivel": "357,16          "
+          },
+          "saque": {
+            "total": "1000,06",
+            "reservada": "0,00",
+            "disponivel": "1000,06          "
+          },
+          "compra": {
+            "total": "1428,66",
+            "reservada": "0,00",
+            "disponivel": "1428,66          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "HELEM SIMONE SOUZA DA SILVA",
+    "cpf": "70871027291",
+    "matriculas": [
+      {
+        "matricula": "0001600478B",
+        "nome": "HELEM SIMONE SOUZA DA SILVA",
+        "cpf": "70871027291",
+        "margens": {
+          "emprestimo": {
+            "total": "543,78",
+            "reservada": "608,38",
+            "disponivel": " 64,60          "
+          },
+          "cartao": {
+            "total": "77,68",
+            "reservada": "0,00",
+            "disponivel": "0,61          "
+          },
+          "saque": {
+            "total": "217,51",
+            "reservada": "0,00",
+            "disponivel": " 102,35          "
+          },
+          "compra": {
+            "total": "310,73",
+            "reservada": "0,00",
+            "disponivel": " 9,13          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "OSIAS PEREIRA DE SENA",
+    "cpf": "70868310263",
+    "matriculas": [
+      {
+        "matricula": "0002052458G",
+        "nome": "OSIAS PEREIRA DE SENA",
+        "cpf": "70868310263",
+        "margens": {
+          "emprestimo": {
+            "total": "999,54",
+            "reservada": "1391,39",
+            "disponivel": " 391,85          "
+          },
+          "cartao": {
+            "total": "142,79",
+            "reservada": "0,00",
+            "disponivel": "142,79          "
+          },
+          "saque": {
+            "total": "399,82",
+            "reservada": "0,00",
+            "disponivel": "399,82          "
+          },
+          "compra": {
+            "total": "571,17",
+            "reservada": "0,00",
+            "disponivel": "571,17          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CIANIR MENDONCA DOS SANTOS",
+    "cpf": "70863512291",
+    "matriculas": [
+      {
+        "matricula": "0002031981B",
+        "nome": "CIANIR MENDONCA DOS SANTOS",
+        "cpf": "70863512291",
+        "margens": {
+          "emprestimo": {
+            "total": "1588,44",
+            "reservada": "1588,00",
+            "disponivel": "0,44          "
+          },
+          "cartao": {
+            "total": "226,92",
+            "reservada": "0,00",
+            "disponivel": "226,92          "
+          },
+          "saque": {
+            "total": "635,37",
+            "reservada": "0,00",
+            "disponivel": "635,37          "
+          },
+          "compra": {
+            "total": "907,67",
+            "reservada": "0,00",
+            "disponivel": "907,67          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "GARDENE TAVARES DA SILVA",
+    "cpf": "70862460263",
+    "matriculas": [
+      {
+        "matricula": "0002437325A",
+        "nome": "GARDENE TAVARES DA SILVA",
+        "cpf": "70862460263",
+        "margens": {
+          "emprestimo": {
+            "total": "996,17",
+            "reservada": "0,00",
+            "disponivel": "996,17          "
+          },
+          "cartao": {
+            "total": "142,31",
+            "reservada": "0,00",
+            "disponivel": "142,31          "
+          },
+          "saque": {
+            "total": "398,47",
+            "reservada": "0,00",
+            "disponivel": "398,47          "
+          },
+          "compra": {
+            "total": "569,24",
+            "reservada": "0,00",
+            "disponivel": "569,24          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ERICKSON FROTA DA CUNHA",
+    "cpf": "70861730291",
+    "matriculas": [
+      {
+        "matricula": "0002394235A",
+        "nome": "ERICKSON FROTA DA CUNHA",
+        "cpf": "70861730291",
+        "margens": {
+          "emprestimo": {
+            "total": "1071,83",
+            "reservada": "0,00",
+            "disponivel": "1071,83          "
+          },
+          "cartao": {
+            "total": "153,12",
+            "reservada": "0,00",
+            "disponivel": "153,12          "
+          },
+          "saque": {
+            "total": "428,73",
+            "reservada": "0,00",
+            "disponivel": "428,73          "
+          },
+          "compra": {
+            "total": "612,47",
+            "reservada": "0,00",
+            "disponivel": "612,47          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "KARLENE MARIA SILVA GOMES",
+    "cpf": "70859477215",
+    "matriculas": [
+      {
+        "matricula": "0002488396A",
+        "nome": "KARLENE MARIA SILVA GOMES",
+        "cpf": "70859477215",
+        "margens": {
+          "emprestimo": {
+            "total": "2376,97",
+            "reservada": "2371,08",
+            "disponivel": "5,89          "
+          },
+          "cartao": {
+            "total": "339,57",
+            "reservada": "253,99",
+            "disponivel": "85,58          "
+          },
+          "saque": {
+            "total": "950,79",
+            "reservada": "0,00",
+            "disponivel": "54,70          "
+          },
+          "compra": {
+            "total": "1358,27",
+            "reservada": "0,00",
+            "disponivel": "54,70          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "MIRIAM ALVES CRUZ",
+    "cpf": "70856982253",
+    "matriculas": [
+      {
+        "matricula": "0002406357A",
+        "nome": "MIRIAM ALVES CRUZ",
+        "cpf": "70856982253",
+        "margens": {
+          "emprestimo": {
+            "total": "792,31",
+            "reservada": "0,00",
+            "disponivel": "792,31          "
+          },
+          "cartao": {
+            "total": "113,19",
+            "reservada": "0,00",
+            "disponivel": "113,19          "
+          },
+          "saque": {
+            "total": "316,92",
+            "reservada": "0,00",
+            "disponivel": "316,92          "
+          },
+          "compra": {
+            "total": "452,74",
+            "reservada": "0,00",
+            "disponivel": "452,74          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ELVYS DA SILVA BENAYON",
+    "cpf": "70856508268",
+    "matriculas": [
+      {
+        "matricula": "0001903780A",
+        "nome": "ELVYS DA SILVA BENAYON",
+        "cpf": "70856508268",
+        "margens": {
+          "emprestimo": {
+            "total": "4903,60",
+            "reservada": "153,73",
+            "disponivel": "4749,87          "
+          },
+          "cartao": {
+            "total": "700,51",
+            "reservada": "0,00",
+            "disponivel": "700,51          "
+          },
+          "saque": {
+            "total": "1961,44",
+            "reservada": "0,00",
+            "disponivel": "1961,44          "
+          },
+          "compra": {
+            "total": "2802,06",
+            "reservada": "0,00",
+            "disponivel": "2802,06          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ELIZANGELA GOMES DE SANTANA",
+    "cpf": "70856346268",
+    "matriculas": [
+      {
+        "matricula": "0002184710A",
+        "nome": "ELIZANGELA GOMES DE SANTANA",
+        "cpf": "70856346268",
+        "margens": {
+          "emprestimo": {
+            "total": "1859,86",
+            "reservada": "1859,86",
+            "disponivel": "0,00          "
+          },
+          "cartao": {
+            "total": "265,69",
+            "reservada": "0,00",
+            "disponivel": " 19,60          "
+          },
+          "saque": {
+            "total": "743,94",
+            "reservada": "0,00",
+            "disponivel": " 1392,59          "
+          },
+          "compra": {
+            "total": "1062,77",
+            "reservada": "0,00",
+            "disponivel": " 1392,59          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "RODOLFO PINTO BENTES",
+    "cpf": "70855358220",
+    "matriculas": [
+      {
+        "matricula": "0001904795A",
+        "nome": "RODOLFO PINTO BENTES",
+        "cpf": "70855358220",
+        "margens": {
+          "emprestimo": {
+            "total": "8531,05",
+            "reservada": "0,00",
+            "disponivel": "8531,05          "
+          },
+          "cartao": {
+            "total": "1218,72",
+            "reservada": "0,00",
+            "disponivel": "1218,72          "
+          },
+          "saque": {
+            "total": "3412,42",
+            "reservada": "0,00",
+            "disponivel": "3412,42          "
+          },
+          "compra": {
+            "total": "4874,89",
+            "reservada": "0,00",
+            "disponivel": "4874,89          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "CLEUCHENIA SALINS DE SOUZA",
+    "cpf": "70855030259",
+    "matriculas": [
+      {
+        "matricula": "0001642871B",
+        "nome": "CLEUCHENIA SALINS DE SOUZA",
+        "cpf": "70855030259",
+        "margens": {
+          "emprestimo": {
+            "total": "792,31",
+            "reservada": "0,00",
+            "disponivel": "792,31          "
+          },
+          "cartao": {
+            "total": "113,19",
+            "reservada": "0,00",
+            "disponivel": "113,19          "
+          },
+          "saque": {
+            "total": "316,92",
+            "reservada": "0,00",
+            "disponivel": "316,92          "
+          },
+          "compra": {
+            "total": "452,74",
+            "reservada": "0,00",
+            "disponivel": "452,74          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "ALBA ANDRADE LOIOLA",
+    "cpf": "70828091315",
+    "matriculas": [
+      {
+        "matricula": "0001716840A",
+        "nome": "ALBA ANDRADE LOIOLA",
+        "cpf": "70828091315",
+        "margens": {
+          "emprestimo": {
+            "total": "4363,46",
+            "reservada": "290,24",
+            "disponivel": "4073,22          "
+          },
+          "cartao": {
+            "total": "623,35",
+            "reservada": "0,00",
+            "disponivel": "623,35          "
+          },
+          "saque": {
+            "total": "1745,38",
+            "reservada": "0,00",
+            "disponivel": "1745,38          "
+          },
+          "compra": {
+            "total": "2493,40",
+            "reservada": "0,00",
+            "disponivel": "2493,40          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "LEANDRO RONAN AZEVEDO DE OLIVEIRA",
+    "cpf": "70817910263",
+    "matriculas": [
+      {
+        "matricula": "0001724240A",
+        "nome": "LEANDRO RONAN AZEVEDO DE OLIVEIRA",
+        "cpf": "70817910263",
+        "margens": {
+          "emprestimo": {
+            "total": "4658,32",
+            "reservada": "718,48",
+            "disponivel": "3939,84          "
+          },
+          "cartao": {
+            "total": "665,47",
+            "reservada": "0,00",
+            "disponivel": "665,47          "
+          },
+          "saque": {
+            "total": "1863,33",
+            "reservada": "0,00",
+            "disponivel": "1863,33          "
+          },
+          "compra": {
+            "total": "2661,90",
+            "reservada": "0,00",
+            "disponivel": "2661,90          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "WANDERLEY CORREA LIMA",
+    "cpf": "70813841291",
+    "matriculas": [
+      {
+        "matricula": "0002029120D",
+        "nome": "WANDERLEY CORREA LIMA",
+        "cpf": "70813841291",
+        "margens": {
+          "emprestimo": {
+            "total": "1477,48",
+            "reservada": "0,00",
+            "disponivel": "1477,48          "
+          },
+          "cartao": {
+            "total": "211,07",
+            "reservada": "0,00",
+            "disponivel": "211,07          "
+          },
+          "saque": {
+            "total": "590,99",
+            "reservada": "0,00",
+            "disponivel": "409,42          "
+          },
+          "compra": {
+            "total": "844,27",
+            "reservada": "0,00",
+            "disponivel": "409,42          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "VIVIANE DILMA FIGUEIREDO PEREIRA",
+    "cpf": "70813167272",
+    "matriculas": [
+      {
+        "matricula": "0001862472A",
+        "nome": "VIVIANE DILMA FIGUEIREDO PEREIRA",
+        "cpf": "70813167272",
+        "margens": {
+          "emprestimo": {
+            "total": "819,19",
+            "reservada": "0,00",
+            "disponivel": "819,19          "
+          },
+          "cartao": {
+            "total": "117,03",
+            "reservada": "0,00",
+            "disponivel": "117,03          "
+          },
+          "saque": {
+            "total": "327,68",
+            "reservada": "0,00",
+            "disponivel": "327,68          "
+          },
+          "compra": {
+            "total": "468,11",
+            "reservada": "0,00",
+            "disponivel": "468,11          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "REGIANE MOTA SOARES",
+    "cpf": "70797684204",
+    "matriculas": [
+      {
+        "matricula": "0002157837A",
+        "nome": "REGIANE MOTA SOARES",
+        "cpf": "70797684204",
+        "margens": {
+          "emprestimo": {
+            "total": "7097,82",
+            "reservada": "6100,15",
+            "disponivel": "997,67          "
+          },
+          "cartao": {
+            "total": "1013,97",
+            "reservada": "0,00",
+            "disponivel": "1013,97          "
+          },
+          "saque": {
+            "total": "2839,13",
+            "reservada": "0,00",
+            "disponivel": "2839,13          "
+          },
+          "compra": {
+            "total": "4055,90",
+            "reservada": "0,00",
+            "disponivel": "4055,90          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  },
+  {
+    "nome": "RAIMUNDO MOREIRA PINTO",
+    "cpf": "70796300291",
+    "matriculas": [
+      {
+        "matricula": "0001894692A",
+        "nome": "RAIMUNDO MOREIRA PINTO",
+        "cpf": "70796300291",
+        "margens": {
+          "emprestimo": {
+            "total": "2134,95",
+            "reservada": "49,00",
+            "disponivel": "2085,95          "
+          },
+          "cartao": {
+            "total": "304,99",
+            "reservada": "0,00",
+            "disponivel": "304,99          "
+          },
+          "saque": {
+            "total": "853,98",
+            "reservada": "0,00",
+            "disponivel": "853,98          "
+          },
+          "compra": {
+            "total": "1219,97",
+            "reservada": "0,00",
+            "disponivel": "1219,97          "
+          }
+        },
+        "tipo": "ESTATUTARIO",
+        "situacao": "Ativo - EXERCICIO REGULAR"
+      }
+    ]
+  }
+]
