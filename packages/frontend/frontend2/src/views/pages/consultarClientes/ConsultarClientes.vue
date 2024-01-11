@@ -68,8 +68,11 @@ const onPasteCPF = (e: ClipboardEvent) => {
     if (pastedCPF?.length && pastedCPF?.length > 14) {
         let cpfListPasted = pastedCPF.split('\n');
         cpfListPasted.forEach((cpf) => {
-            if (validateCPF(cpf) && !cpfList.value.includes(cpf))
-                cpfList.value.push(addMask(cpf));
+            if (validateCPF(cpf) && !cpfList.value.includes(cpf)) {
+                // remove non numeric characters
+                let cpfNoMask = cpf.replace(/[.,-]/g, '');
+                cpfList.value.push(addMask(cpfNoMask));
+            }
         });
     }   
 };
