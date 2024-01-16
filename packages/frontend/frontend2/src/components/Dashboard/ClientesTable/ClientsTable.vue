@@ -62,11 +62,11 @@
                         <!-- activate/deactivate columns -->
                         <Button type="button" icon="pi pi-cog" class="p-button-rounded p-button-secondary p-button-outlined" @click="showDialogColumns()" />
                         <Dialog v-model:visible="showDialog" header="Colunas" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
-                            <div class="grid flex flex-row gap-0">
-                                <div v-for="column in columns" :key="column.field" class="col-4 p-0 m-0 mt-5">
-                                    <Button :label="column.header" class="p-button  p-2 m-2 w-4/5 h-14" :class="column.active ? 'bg-primary-500 text-white' : 'bg-primary-200 text-white'" @click="column.active = !column.active">
-                                        {{ column.header }} <i class="pi pi-check" v-if="column.active"></i> <i class="pi pi-times float-right" v-else></i>
-                                    </Button>
+                            <div class="grid flex-row gap-0">
+                                <div v-for="column in columns" :key="column.field" class="col-4 p-0 m-0 border-1 border-primary">
+                                   <!-- checkbox -->
+                                   <span>teste</span>
+                                    
                                 </div>
                             </div>
                         </Dialog>

@@ -1,0 +1,192 @@
+{
+    "clientes": [
+        {
+            "id": "b86f1fcd-d35d-4538-8fa2-c95022848680",
+            "nome": "FRANCILANGE BARBOSA FERREIRA",
+            "cpf": "71210415291",
+            "ultimaConsulta": "2024-01-11T23:36:42.106Z",
+            "matriculas": [
+                {
+                    "id": "406d2148-5152-4710-90b2-07cd4aecc4f1",
+                    "matricula": "0002456508A",
+                    "cpf": "71210415291",
+                    "nome": "FRANCILANGE BARBOSA FERREIRA",
+                    "tipo": "ESTATUTARIO",
+                    "situacao": "Ativo - EXERCICIO REGULAR",
+                    "ownerId": "b86f1fcd-d35d-4538-8fa2-c95022848680",
+                    "margens": [
+                        {
+                            "id": 1,
+                            "categoria": "emprestimo",
+                            "total": 1946,
+                            "disponivel": 665,
+                            "matriculaId": "406d2148-5152-4710-90b2-07cd4aecc4f1"
+                        },
+                        {
+                            "id": 2,
+                            "categoria": "cartao",
+                            "total": 278,
+                            "disponivel": 278,
+                            "matriculaId": "406d2148-5152-4710-90b2-07cd4aecc4f1"
+                        },
+                        {
+                            "id": 3,
+                            "categoria": "saque",
+                            "total": 778,
+                            "disponivel": 778,
+                            "matriculaId": "406d2148-5152-4710-90b2-07cd4aecc4f1"
+                        },
+                        {
+                            "id": 4,
+                            "categoria": "compra",
+                            "total": 1112,
+                            "disponivel": 1112,
+                            "matriculaId": "406d2148-5152-4710-90b2-07cd4aecc4f1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "0d773650-fa52-413e-944a-6fe864d247f0",
+            "nome": "SMALLEM BARRETO DOS REIS",
+            "cpf": "71210113287",
+            "ultimaConsulta": "2024-01-11T23:36:45.357Z",
+            "matriculas": [
+                {
+                    "id": "a4e85765-a563-4d64-a810-19e1d3b5ee8a",
+                    "matricula": "0001997360A",
+                    "cpf": "71210113287",
+                    "nome": "SMALLEM BARRETO DOS REIS",
+                    "tipo": "ESTATUTARIO",
+                    "situacao": "Ativo - EXERCICIO REGULAR",
+                    "ownerId": "0d773650-fa52-413e-944a-6fe864d247f0",
+                    "margens": [
+                        {
+                            "id": 5,
+                            "categoria": "emprestimo",
+                            "total": 1918,
+                            "disponivel": 1829,
+                            "matriculaId": "a4e85765-a563-4d64-a810-19e1d3b5ee8a"
+                        },
+                        {
+                            "id": 6,
+                            "categoria": "cartao",
+                            "total": 274,
+                            "disponivel": 274,
+                            "matriculaId": "a4e85765-a563-4d64-a810-19e1d3b5ee8a"
+                        },
+                        {
+                            "id": 7,
+                            "categoria": "saque",
+                            "total": 767,
+                            "disponivel": 767,
+                            "matriculaId": "a4e85765-a563-4d64-a810-19e1d3b5ee8a"
+                        },
+                        {
+                            "id": 8,
+                            "categoria": "compra",
+                            "total": 1096,
+                            "disponivel": 1096,
+                            "matriculaId": "a4e85765-a563-4d64-a810-19e1d3b5ee8a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2265f2e9-d99a-4411-8408-f3e3f7c7c1b2",
+            "nome": "DIEGO BOTELHO MUMBACA",
+            "cpf": "71208810278",
+            "ultimaConsulta": "2024-01-11T23:36:48.341Z",
+            "matriculas": [
+                {
+                    "id": "116a2045-8ede-4249-9c0f-3efb1f6c42ff",
+                    "matricula": "0001863746A",
+                    "cpf": "71208810278",
+                    "nome": "DIEGO BOTELHO MUMBACA",
+                    "tipo": "ESTATUTARIO",
+                    "situacao": "Ativo - EXERCICIO REGULAR",
+                    "ownerId": "2265f2e9-d99a-4411-8408-f3e3f7c7c1b2",
+                    "margens": [
+                        {
+                            "id": 9,
+                            "categoria": "emprestimo",
+                            "total": 2092,
+                            "disponivel": 2008,
+                            "matriculaId": "116a2045-8ede-4249-9c0f-3efb1f6c42ff"
+                        },
+                        {
+                            "id": 10,
+                            "categoria": "cartao",
+                            "total": 298,
+                            "disponivel": 298,
+                            "matriculaId": "116a2045-8ede-4249-9c0f-3efb1f6c42ff"
+                        },
+                        {
+                            "id": 11,
+                            "categoria": "saque",
+                            "total": 836,
+                            "disponivel": 836,
+                            "matriculaId": "116a2045-8ede-4249-9c0f-3efb1f6c42ff"
+                        },
+                        {
+                            "id": 12,
+                            "categoria": "compra",
+                            "total": 1195,
+                            "disponivel": 1195,
+                            "matriculaId": "116a2045-8ede-4249-9c0f-3efb1f6c42ff"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "dc48c21c-d630-4abb-a4d8-66ff40468f75",
+            "nome": "ELIANA PIMENTEL RODRIGUES",
+            "cpf": "71208267272",
+            "ultimaConsulta": "2024-01-11T23:36:51.335Z",
+            "matriculas": [
+                {
+                    "id": "c982172f-850d-4623-8459-08714e90e714",
+                    "matricula": "0002336723A",
+                    "cpf": "71208267272",
+                    "nome": "ELIANA PIMENTEL RODRIGUES",
+                    "tipo": "ESTATUTARIO",
+                    "situacao": "Ativo - EXERCICIO REGULAR",
+                    "ownerId": "dc48c21c-d630-4abb-a4d8-66ff40468f75",
+                    "margens": [
+                        {
+                            "id": 13,
+                            "categoria": "emprestimo",
+                            "total": 771,
+                            "disponivel": 190,
+                            "matriculaId": "c982172f-850d-4623-8459-08714e90e714"
+                        },
+                        {
+                            "id": 14,
+                            "categoria": "cartao",
+                            "total": 110,
+                            "disponivel": 37,
+                            "matriculaId": "c982172f-850d-4623-8459-08714e90e714"
+                        },
+                        {
+                            "id": 15,
+                            "categoria": "saque",
+                            "total": 308,
+                            "disponivel": 298,
+                            "matriculaId": "c982172f-850d-4623-8459-08714e90e714"
+                        },
+                        {
+                            "id": 16,
+                            "categoria": "compra",
+                            "total": 441,
+                            "disponivel": 298,
+                            "matriculaId": "c982172f-850d-4623-8459-08714e90e714"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

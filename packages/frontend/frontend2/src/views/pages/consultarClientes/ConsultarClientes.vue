@@ -4,11 +4,72 @@ import { watch } from 'vue';
 import axios from 'axios';
 import DetailClientes from './DetailClientes.vue';
 
-
-
 const cpf = ref<string>('');
 const cpfList = ref([]);
 const cpfInput = ref();
+
+class Margem {
+    total: string;
+    disponivel: string;
+    categoria: string;
+
+    constructor(total: string, disponivel: string, categoria: string) {
+        this.total = total;
+        this.disponivel = disponivel;
+        this.categoria = categoria;
+    }
+}
+class Margens {
+    emprestimo: Margem;
+    cartao: Margem;
+    saque: Margem;
+    compra: Margem;
+
+    constructor(emprestimo: Margem, cartao: Margem, saque: Margem, compra: Margem) {
+        this.emprestimo = emprestimo;
+        this.cartao = cartao;
+        this.saque = saque;
+        this.compra = compra;
+    }
+}
+
+class matricula {
+    matricula: string;
+    cpf: string;
+    nome: string;
+    tipo: string;
+    situacao: string;
+    margens: Margens;
+
+    constructor(matricula: string, nome: string, cpf: string, tipo: string, situacao: string, margens: Margens) {
+        this.matricula = matricula;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.tipo = tipo;
+        this.situacao = situacao;
+        let emprestimo = new Margem(margens['emprestimo']['total'], margens['emprestimo']['disponivel'], 'emprestimo');
+        let cartao = new Margem(margens['cartao']['total'], margens['cartao']['disponivel'], 'cartao');
+
+        let saque = new Margem(margens['saque']['total'], margens['saque']['disponivel'], 'saque');
+        let compra = new Margem(margens['compra']['total'], margens['compra']['disponivel'], 'compra');
+        this.margens = new Margens(emprestimo, cartao, saque, compra);
+    }
+}
+
+class Cliente {
+    cpf: string;
+    nome: string;
+    matriculas: matricula[];
+
+    constructor(cpf: string, nome: string, matriculas: [matricula]) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.matriculas = new Array<matricula>();
+        for (let i = 0; i < matriculas.length; i++) {
+            this.matriculas.push(new matricula(matriculas[i].matricula, matriculas[i].nome, matriculas[i].cpf, matriculas[i].tipo, matriculas[i].situacao, matriculas[i].margens));
+        }
+    }
+}
 
 const validateCPF = (cpf: string) => {
     let sum = 0;
@@ -74,7 +135,7 @@ const onPasteCPF = (e: ClipboardEvent) => {
                 cpfList.value.push(addMask(cpfNoMask));
             }
         });
-    }   
+    }
 };
 
 const cpfRules = computed(() => {
@@ -84,16 +145,22 @@ const cpfRules = computed(() => {
 // Table
 
 const columns = ref([
-    { field: 'nome', header: 'Nome', sortable: true, filter: true, active: true },
+    { field: 'cliente.cpf', header: 'CPF', sortable: true, filter: true, active: true },
+    { field: 'cliente.nome', header: 'Nome', sortable: true, filter: true, active: true },
+    { field: 'matriculaSelecionada', header: 'Matricula', active: true },
     { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: false },
-    { field: 'cpf', header: 'CPF', sortable: true, filter: true, active: true },
-    { field: 'matricula', header: 'Matricula', sortable: true, filter: true, active: false },
     { field: 'situac', header: 'Situação', sortable: true, filter: true, active: false },
-    { field: 'margemEmpDisp', header: 'Empréstimo Disponível', sortable: true, filter: true, active: true },
-    { field: 'margemCartDisp', header: 'Cartão Disponível', sortable: true, filter: true, active: true },
-    { field: 'margemBenefSaqueDisp', header: 'Benefício Saque Disponível', sortable: true, filter: true, active: true },
-    { field: 'margemCompDisp', header: 'Compra Disponível', sortable: true, filter: true, active: true }
+    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: true },
+    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: true }
 ]);
+
+const margensOptions = [
+    { label: 'Empréstimo', value: 'emprestimo' },
+    { label: 'Cartão', value: 'cartao' },
+    { label: 'Benefício Saque', value: 'saque' },
+    { label: 'Benefício Compra', value: 'compra' }
+];
+const margemSelecionada = ref('emprestimo');
 
 const showDialog = ref(false);
 
@@ -212,7 +279,7 @@ const clientes = ref([
         margemCart: 'R$ 600,00',
         margemBenefSaque: 'R$ 850,00',
         margemComp: 'R$ 650,00'
-    },
+    }
 ]);
 
 // File Reading and Parsing
@@ -237,7 +304,7 @@ const readFile = (file: File) => {
 // 111.212.999-12;
 const parseCSV = (csv: string) => {
     return csv.split('\n');
-};   
+};
 
 const onFileUpload = async (e: any) => {
     console.log('file uploaded');
@@ -250,7 +317,6 @@ const onFileUpload = async (e: any) => {
     // load 3 sec
 };
 
-
 // Search Clients
 
 const searchClients = async () => {
@@ -258,9 +324,9 @@ const searchClients = async () => {
     console.log(cpfList.value);
     loading.value = true;
     //remove nulls
-    cpfList.value = cpfList.value.filter((cpf) => cpf !== null); 
-    // remove - . and , 
-    let cpfs = cpfList.value.map((cpf:any) => cpf.replace(/[.-]/g, ''));
+    cpfList.value = cpfList.value.filter((cpf) => cpf !== null);
+    // remove - . and ,
+    let cpfs = cpfList.value.map((cpf: any) => cpf.replace(/[.-]/g, ''));
     let cpflistString = cpfs.join(',');
     let request = {
         params: {
@@ -268,29 +334,23 @@ const searchClients = async () => {
         }
     };
 
-
     try {
-
+        
         let response:any = await axios.get('https://api.idealfinanceira.com/searchandupdate', request);
         let clientes = response.data.clientes;
-        console.log("clientes", clientes);
+        console.log('clientes', clientes);
         let matriculas: any = [];
         for (let i = 0; i < clientes.length; i++) {
-            let cliente = clientes[i];
-            cliente.matriculas.forEach((matricula: any) => {
-                matriculas.push({
-                    cpf: cliente.cpf,
-                    nome: cliente.nome,
-                    matricula: matricula.matricula,
-                    situac: matricula.situacao,
-                    tipo: matricula.tipo,
-                    margemEmpDisp: matricula.margens[0].disponivel,
-                    margemCartDisp: matricula.margens[1].disponivel,
-                    margemBenefSaqueDisp: matricula.margens[2].disponivel,
-                    margemCompDisp: matricula.margens[3].disponivel
-                })
+            let cliente = new Cliente(clientes[i].cpf, clientes[i].nome, clientes[i].matriculas);
+            matriculas.push({
+                cliente: cliente,
+                matriculaSelecionada: cliente.matriculas[0].matricula,
+                matriculasOptions: cliente.matriculas.map((matricula) => {
+                    return { label: matricula.matricula, value: matricula.matricula };
+                }),
+                margemSelecionada: cliente.matriculas[0].margens.emprestimo.categoria,
+                margem: cliente.matriculas[0].margens.emprestimo
             });
- 
         }
         clientResponse.value = matriculas;
         loading.value = false;
@@ -302,15 +362,13 @@ const searchClients = async () => {
 };
 
 const consultaCliente = ref(false);
-
 </script>
 
 <template>
     <div>
-
         <!-- modal -->
         <Dialog v-model:visible="consultaCliente" header="Detalhes do Cliente" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
-                    <DetailClientes />
+            <DetailClientes />
         </Dialog>
 
         <div class="card">
@@ -321,24 +379,28 @@ const consultaCliente = ref(false);
                     <div class="grid flex flex-row gap-0 mt-2">
                         <!-- upload file button -->
                         <div class="flex flex-col align-bottom justify-end p-0 mr-2">
-                            <FileUpload name="demo[]" mode="basic" chooseLabel="arquivo"  class="h-12" label="Upload" :auto="true" @upload="onFileUpload" url="https://www.filestackapi.com/api/store/S3?key=APmFG7UofSSml24EoVumCz"
-                            > </FileUpload>
+                            <FileUpload name="demo[]" mode="basic" chooseLabel="arquivo" class="h-12" label="Upload" :auto="true" @upload="onFileUpload" url="https://www.filestackapi.com/api/store/S3?key=APmFG7UofSSml24EoVumCz"> </FileUpload>
                         </div>
-                        <div class="col-3 flex flex-col p-0">
+                        <div class="col-3 flex flex-col p-0 inputWithBorder">
                             <label for="cpf" class="text-blue-200 text-md font-bold">Consultar CPF</label>
                             <InputMask ref="cpfInput" mask="999.999.999-99" v-model="cpf" id="cpf" class="h-12 w-full text-lg" @keydown.enter.native="onEnterCPF" @paste="onPasteCPF" autofocus />
                         </div>
                         <div class="flex flex-col align-bottom justify-end p-0 ml-2">
-                            <Button label="Buscar" class="p-button p-2 h-12 bg-primary-500 font-normal text-white " icon="pi pi-search" @click="searchClients" />
+                            <Button label="Buscar" class="p-button p-2 h-12 bg-primary-500 font-normal text-white" icon="pi pi-search" @click="searchClients" />
                         </div>
                     </div>
                     <!-- cpf list  -->
-                    <div class="grid flex flex-row gap-1 mt-2">
-                        <span class="bg-blue-300 text-white p-2 rounded-md col-1 " style="width: 30px;" v-if="cpfList.length != 0" @click="cpfList = []">
+                    <div class="grid flex flex-row gap-1 mt-2 items-center">
+                        <span
+                            class="bg-transparent border-primary text-primary font-medium border-2 p-2 rounded-md m-2rounded-md col-1 mb-1 flex items-center justify-center"
+                            style="width: 39px; height: 39px"
+                            v-if="cpfList.length != 0"
+                            @click="cpfList = []"
+                        >
                             <i class="pi pi-times"></i>
                         </span>
-                        <span class="bg-blue-500 text-white p-2 rounded-md" v-for="(cpf, index) in cpfList" :key="index">
-                            {{ cpf }}
+                        <span class="bg-transparent border-primary text-primary font-medium border-2 p-2 rounded-md mb-1 col-2 flex justify-between items-center" v-for="(cpf, index) in cpfList" :key="index">
+                            <span class="text-md w-full">{{ cpf }}</span>
                             <i class="pi pi-times" @click="cpfList.splice(index, 1)"></i>
                         </span>
                     </div>
@@ -346,37 +408,105 @@ const consultaCliente = ref(false);
             </div>
 
             <!-- Table of Client Data  -->
-
-            <div class="card" >
-                <DataTable :value="clientResponse" tableStyle="min-width: 50rem" selectionMode="multiple" selection="selectedProduct">
+            <div class="progressBarCustom">
+            <ProgressBar mode="indeterminate" style="height: 6px" v-show="loading" class=""
+            ></ProgressBar>
+            </div>
+            <div class="card p-1" id="clientTable">
+                <DataTable :value="clientResponse" tableStyle="min-width: 50rem" stripedRows paginator :rows="5" :rowsPerPageOptions="[5, 10, 15]">
                     <template #header>
-                        <div class="flex flex-row gap-2">
-                            <!-- <span class="p-input-icon-right">
-                                <i class="pi pi-search" ></i>
-                                <InputText type="search" placeholder="Pesquisar" class="p-2" style="width: 25rem" :value="valuePesquisar" />
-                            </span> -->
-
-                            <!-- activate/deactivate columns -->
-                            <Button type="button" icon="pi pi-cog" class="p-button-rounded p-button-secondary p-button-outlined" @click="showDialogColumns()" />
-                            <Dialog v-model:visible="showDialog" header="Colunas" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
-                                <div class="grid flex flex-row gap-0">
-                                    <div v-for="column in columns" :key="column.field" class="col-4 p-0 m-0 mt-5">
-                                        <Button :label="column.header" class="p-button p-2 m-2 w-4/5 h-14" :class="column.active ? 'bg-primary-500 text-white' : 'bg-primary-200 text-white'" @click="column.active = !column.active">
-                                            {{ column.header }} <i class="pi pi-check" v-if="column.active"></i> <i class="pi pi-times float-right" v-else></i>
-                                        </Button>
+                        <div class="flex flex-row gap-2 justify-between">
+                            <div class="col-2">
+                                <Button type="button" icon="pi pi-cog" class="p-button-rounded p-button-secondary p-button-outlined" @click="showDialogColumns()" />
+                                <Dialog id="dialogColunas" header="Colunas" v-model:visible="showDialog" :modal="true" :baseZIndex="10000" :style="{ width: '50%' }" :breakpoints="{ '1199px': '75vw', '575px': '90vw' }" class="border-2 border-primary">
+                                    <div class="grid flex flex-row gap-0 h-1/2 p-3 my-2">
+                                        <div v-for="column in columns" :key="column.field" class="col-3 py-2 px-1 h-12 flex justify-start items-center gap-1">
+                                            <Checkbox v-model="column.active" :input-id="column.field" binary="true" :value="column.active" class="" />
+                                            <span class="flex flex-row justify-start items-end">
+                                                <label :for="column.field" class="text-blue-200 text-md font-bold">{{ column.header }}</label>
+                                            </span>
+                                        </div>
                                     </div>
+
+                                    <template #paginatorstart>
+                                        <div class="flex flex-row justify-end items-center gap-2">
+                                            <Button label="Cancelar" class="p-button p-2 h-12 bg-primary-500 font-normal text-white" icon="pi pi-times" @click="showDialog = false" />
+                                            <Button label="Salvar" class="p-button p-2 h-12 bg-primary-500 font-normal text-white" icon="pi pi-check" @click="showDialog = false" />
+                                        </div>
+                                    </template>
+                                </Dialog>
+                            </div>
+                            <div class="col-4 margemDrop">
+                                <div class="p-float-label">
+                                    <Dropdown v-model="margemSelecionada" :options="margensOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm" input-id="margemSelecionada">
+                                        <template #value="{ value, placeholder }">
+                                            <span v-if="value" class="flex flex-row justify-start items-center gap-1">
+                                                <!-- label -->
+                                                <span class="text-xl">{{ margensOptions.find((option) => option.value === value)?.label ?? placeholder }}</span>
+                                            </span>
+                                            <span v-else class="flex flex-row justify-start items-center gap-1">
+                                                <span class="text-xl">{{ placeholder }}</span>
+                                            </span>
+                                        </template>
+                                    </Dropdown>
+                                    <label for="margemSelecionada" class="text-primary-500 text-sm font-bold mb-2">Margem</label>
                                 </div>
-                            </Dialog>
+                            </div>
                         </div>
                     </template>
                     <!-- Checkbox to select -->
-                    <Column selectionMode="multiple" style="width: 3rem" selection="selectedProduct"></Column>
-                    <Column  v-for="column in columns" :key="column.field" :field="column.field" :header="column.header" :sortable="column.sortable" :filter="column.filter" :style="{ display: column.active ? 'table-cell' : 'none' }"></Column>
+                    <!-- <Column selectionMode="multiple" style="width: 3rem" selection="selectedProduct"></Column> -->
 
-                    <!-- whatsapp redict column -->
-                    <Column header="Whatsapp" class="text-center">
-                        <template #body="slotProps">
-                            <a @click="consultaCliente = true" class="pi pi-whatsapp"> </a>
+                    <Column
+                        v-for="column in columns"
+                        :key="column.field"
+                        :field="column.field"
+                        :header="column.header"
+                        :sortable="column.sortable"
+                        :filter="column.filter"
+                        :style="{ display: column.active ? 'table-cell' : 'none', width: column.field === 'matriculaSelecionada' ? '8rem' : column.field === 'situac' ? '3rem' : column.field.includes('margem') ? '6rem' : 'auto' }"
+                    >
+                        <template v-if="column.field === 'matriculaSelecionada'" #body="slotProps">
+                            <!-- select matricula -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full columnMatricula">
+                                <Dropdown dropdown v-model="slotProps.data.matriculaSelecionada" :options="slotProps.data.matriculasOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm">
+                                    <template #value="{ value, placeholder }">
+                                        <span v-if="value" class="flex flex-row justify-start items-center gap-1">
+                                            <span class="text-sm">{{ value }}</span>
+                                        </span>
+                                        <span v-else class="flex flex-row justify-start items-center gap-1">
+                                            <span class="text-sm">{{ placeholder }}</span>
+                                        </span>
+                                    </template>
+                                </Dropdown>
+                            </div>
+                        </template>
+                        <template v-if="column.field === 'margemDisponivel'" #body="slotProps">
+                            <!-- shows margem of margemSelecionada -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].disponivel }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'margemTotal'" #body="slotProps">
+                            <!-- shows margem of margemSelecionada -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'tipo'" #body="slotProps">
+                            <!-- shows tipo of matriculaSelecionada -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).tipo }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'situac'" #body="slotProps">
+                            <!-- shows situac of matriculaSelecionada -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm"> {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).situacao.includes('Ativo') ? 'Ativo' : 'Inativo' }}</span>
+                            </div>
                         </template>
                     </Column>
                 </DataTable>
@@ -385,6 +515,77 @@ const consultaCliente = ref(false);
     </div>
 </template>
 
-<style scoped>
+<style>
+#dialogColunas > .p-dialog-header {
+}
+
+#clientTable .p-paginator .p-paginator-rpp-options .p-dropdown-label {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border: none !important;
+}
+
+#clientTable .columnMatricula .p-dropdown .p-dropdown-label {
+    border: none !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#clientTable .columnMatricula .p-dropdown .p-inputtext {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#clientTable .columnMatricula .p-dropdown .p-dropdown-trigger {
+    color: var(--primary-300);
+}
+
+#clientTable .margemDrop .p-dropdown .p-dropdown-label {
+    border: 2px solid var(--primary-500) !important;
+    border-radius: 0.3rem 0 0 0.3rem !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0px 0px 1px 1px var(--primary-100) !important;
+}
+
+#clientTable .margemDrop .p-dropdown .p-dropdown-trigger {
+    background-color: var(--primary-500);
+    color: var(--primary-100) !important;
+}
+
+#clientTable .margemDrop .p-dropdown .p-dropdown-trigger:hover {
+    background-color: var(--primary-600);
+}
+
+.inputWithBorder .p-inputtext {
+    border: 2px solid var(--primary-600) !important;
+}
+
+.progressBarCustom {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.progressBarCustom .p-progressbar {
+    width: 99%;
+    height: 5px !important;
+    border-radius: 0 !important;
+    background-color: white !important;
+}
+
+.progressBarCustom .p-progressbar .p-progressbar-value{
+    color: white !important;
+    background-color: white !important;
+    box-shadow: 5px 5px 3px 3px var(--primary-600) !important;
+    height: 100%;
+}
+
+
 /* Your component styles go here */
 </style>
