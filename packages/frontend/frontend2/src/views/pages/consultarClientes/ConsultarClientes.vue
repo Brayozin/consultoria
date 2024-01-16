@@ -336,7 +336,7 @@ const searchClients = async () => {
 
     try {
         
-        let response:any = await axios.get('https://api.idealfinanceira.com/searchandupdate', request);
+        let response:any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
         let clientes = response.data.clientes;
         console.log('clientes', clientes);
         let matriculas: any = [];
