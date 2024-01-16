@@ -228,17 +228,22 @@ class bot:
         self.password = password
 
         chrome_options = Options()
-        # chrome_options.add_argument("--headless") # Runs chrome without opening window.
-        # chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless") # Runs chrome without opening window.
+        chrome_options.add_argument("--no-sandbox")
         # chrome_options.add_argument("--disable-dev-shm-usage")
         # make window position(second monitor(1360++) on the second half(+1920/2) and size fixed (1920/2 x 1080))
-        chrome_options.add_argument("--window-position=3280,0")
-        chrome_options.add_argument("--window-size=960,1080")
-        service = webdriver.chrome.service.Service(os.path.join(os.getcwd(), 'chromedriver'))
+        # chrome_options.add_argument("--timeout=10")
+        # chrome_options.add_argument("--window-position=3280,0")
+        # chrome_options.add_argument("--window-size=960,1080")
+        logger.info("aaaaa")
+        print("aaaaAAA")
+        service = webdriver.chrome.service.Service('/root/consultoria/packages/backend/backend/chromedriver')
+        print(service)
         self.bot = webdriver.Chrome(
             service=service,
             options=chrome_options
         )
+        print("aaaaAAA")
 
     def login(self):
         print('Logging in...')

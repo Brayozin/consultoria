@@ -8,14 +8,24 @@ const app = express();
 const PORT = 3000;
 import { spawn, ChildProcess } from "child_process";
 
+
+const allowedOrigin = 'https://frontend-app-eyu8p.ondigitalocean.app';
+
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: allowedOrigin,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 200,
 };
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 // run python script
 let pythonProcess: ChildProcess | null = null;
 let pythonProcessRunning = false;
