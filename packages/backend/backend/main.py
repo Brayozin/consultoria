@@ -23,7 +23,7 @@ print("Credentials: ", credentials)
 bot = bot.bot(credentials['user'], credentials['password'])
 bot.login()
 print("--------------------------------------------------")
-print("Logged in", flush=True)
+print("info: Logged in", flush=True)
 
 # keep program running until it receives an command to make some action
 
@@ -46,12 +46,12 @@ while True:
         cliente = bot.ConsultaClienteCPF(cpf)
         cliente_json = cliente.cliente_to_json()
         logger.info("Cliente: " + cliente_json.__str__())
-        print(cliente_json,flush=True)
+        print("data:",cliente_json,flush=True)
     elif command == "consulta_matricula":
         matricula = sys.stdin.readline().strip()
         cliente = bot.ConsultaClienteMatricula(matricula)
         cliente_json = cliente.cliente_to_json()
-        print(cliente_json)
+        print("data:",cliente_json)
     elif command == "consulta_lista_cpfs":
         cpfsString = sys.stdin.readline().strip()
         cpfs = cpfsString.split(",")
@@ -60,7 +60,7 @@ while True:
             cliente_json = cliente.cliente_to_json()
             print(cliente_json, flush=True)
         time.sleep(1)
-        print("finished", flush=True)
+        print("finished:", flush=True)
     elif command == "consulta_cpfs_file":
         cpfs_file = sys.stdin.readline().strip()
         cpfs = []

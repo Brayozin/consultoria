@@ -18,11 +18,11 @@ app.use(cors(corsOptions));
 
 // run python script
 let pythonProcess: ChildProcess | null = null;
-
+let pythonProcessRunning = false;
 function startPythonProcess() {
   console.log("Starting Python process...");
   pythonProcess = spawn("python", ["main.py"]);
-
+  pythonProcessRunning = true;
   // Check if pythonProcess is null or undefined
   if (pythonProcess && pythonProcess.stdout) {
     // Event listener for data from Python script
@@ -31,17 +31,38 @@ function startPythonProcess() {
     });
   } else {
     console.error("Error starting Python process or accessing stdout");
+    pythonProcessRunning = false;
   }
   // Event listener when python process closes
   pythonProcess.on("close", (code) => {
     console.log(`Python process closed with code ${code}`);
-    startPythonProcess();
+    pythonProcessRunning = false;
   });
 
   // Event listener when python process exits
   pythonProcess.on("exit", (code) => {
     console.log(`Python process exited with code ${code}`);
+    pythonProcessRunning = false;
   });
+
+  // Event listener when python process disconnects
+  pythonProcess.on("disconnect", () => {
+    console.log("Python process disconnected");
+    pythonProcessRunning = false;
+  });
+
+  // Event listener when python process is spawned
+  pythonProcess.on("spawn", () => {
+    console.log("Python process spawned");
+    pythonProcessRunning = true;
+  });
+
+  // Event listener when python process is killed
+  pythonProcess.on("kill", () => {
+    console.log("Python process killed");
+    pythonProcessRunning = false;
+  });
+
 }
 startPythonProcess();
 
@@ -64,20 +85,22 @@ app.get("/populateClientes", async (req: Request, res: Response) => {
       .replace(/\s/g, "");
     console.log("clientsString:", clientsString);
     let retornoJson: string | null = null;
-    let pythonReturn: string | null 
-     = await sendCommandToPython(
+    let pythonReturn: string | null = await sendCommandToPython(
       "consulta_lista_cpfs",
       clientsString
     );
     let clientes: any[] = [];
-    while (pythonReturn?.toString().includes("finished") == false && pythonReturn != null ) {
+    while (
+      pythonReturn?.toString().includes("finished") == false &&
+      pythonReturn != null
+    ) {
       console.log("pythonReturn:", pythonReturn);
       retornoJson = pythonReturn?.toString().replace(/'/g, '"') ?? null;
       if (retornoJson) {
         console.log("returnJson:", retornoJson);
         clientes.push(JSON.parse(retornoJson));
       }
-    } 
+    }
     console.log("clientes:", clientes);
     res.status(200).json({
       clientes: clientes,
@@ -93,54 +116,59 @@ app.get("/populateClientes", async (req: Request, res: Response) => {
   }
 });
 
-
-app.post("/get-clientes-from-file", async (req: Request, res: Response) => {
-  const cpfFile: File = req.body.cpfFile;
-  console.log("cpfFile", cpfFile);
-  if (!cpfFile) {
-    console.error("Invalid file");
-    res.status(400).send("Arquivo inválido");
-    return;
-  }
-  try {
-    // renmove \n and " and whiteSpaces from string
-    let clientsString = cpfFile
-      .toString()
-      .replace(/"/g, "")
-      .replace(/\n/g, "")
-      .replace(/\s/g, "");
-    console.log("clientsString:", clientsString);
-    let retornoJson: string | null = null;
-    let pythonReturn: string | null 
-     = await sendCommandToPython(
-      "consulta_lista_cpfs",
-      clientsString
-    );
-    let clientes: any[] = [];
-    while (pythonReturn?.toString().includes("finished") == false && pythonReturn != null ) {
-      console.log("pythonReturn:", pythonReturn);
-      retornoJson = pythonReturn?.toString().replace(/'/g, '"') ?? null;
-      if (retornoJson) {
-        console.log("returnJson:", retornoJson);
-        clientes.push(JSON.parse(retornoJson));
-      }
-    } 
-    console.log("clientes:", clientes);
-    res.status(200).json({
-      clientes: clientes,
-    });
-
-    if (!clientes) {
-      res.status(204).send({ response: [] });
+app.post(
+  "/get-clientes-from-file",
+  async (req: Request, res: Response) => {
+    const cpfFile: File = req.body.cpfFile;
+    console.log("cpfFile", cpfFile);
+    if (!cpfFile) {
+      console.error("Invalid file");
+      res.status(400).send("Arquivo inválido");
       return;
     }
-    
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Error:" + error);
-  }
-});
+    try {
+      // renmove \n and " and whiteSpaces from string
+      let clientsString = cpfFile
+        .toString()
+        .replace(/"/g, "")
+        .replace(/\n/g, "")
+        .replace(/\s/g, "");
+      console.log("clientsString:", clientsString);
+      let retornoJson: string | null = null;
+      let pythonReturn: string | null = await sendCommandToPython(
+        "consulta_lista_cpfs",
+        clientsString
+      );
+      let clientes: any[] = [];
+      while (
+        pythonReturn?.toString().includes("finished") == false &&
+        pythonReturn != null
+      ) {
+        console.log("pythonReturn:", pythonReturn);
+        retornoJson = pythonReturn?.toString().replace(/'/g, '"') ?? null;
+        if (retornoJson) {
+          console.log("returnJson:", retornoJson);
+          clientes.push(JSON.parse(retornoJson));
+        } else {
+          console.log("returnJson:", retornoJson);
+        }
+      }
+      console.log("pythonReturn:", pythonReturn);
+      console.log("clientes:", clientes);
+      res.status(200).json({
+        clientes: clientes,
+      });
 
+      if (!clientes) {
+        res.status(204).send({ response: [] });
+        return;
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error:" + error);
+    }
+  }
+);
 
 class margem {
   total: string;
@@ -155,7 +183,7 @@ class margem {
 }
 
 // --------------------------------------
-// Client Json: 
+// Client Json:
 //  {
 //    "nome": "JOSE DEVANIR DA CUNHA ARAGAO",
 //  "cpf": "71286110297",
@@ -208,7 +236,6 @@ class Margens {
   }
 }
 
-
 class matricula {
   matricula: string;
   cpf: string;
@@ -255,7 +282,6 @@ class matricula {
   }
 }
 
-
 class cliente {
   cpf: string;
   nome: string;
@@ -278,8 +304,6 @@ class cliente {
       );
     }
   }
-
-  
 }
 
 const JSONCliente = {
@@ -346,8 +370,18 @@ const JSONCliente = {
     },
   ],
 };
-        
 
+function getClientesArray(listJson: any) {
+  const clientsString = listJson
+    .toString()
+    .replace(/"/g, "")
+    .replace(/\n/g, "")
+    .replace(/\s/g, "");
+
+  let clientsArray = clientsString.split(",");
+  console.log("clientsArray:", clientsArray);
+  return clientsArray;
+}
 
 async function putClienteDB(cliente: cliente) {
   console.log("putClienteDB:", cliente);
@@ -373,12 +407,16 @@ async function putClienteDB(cliente: cliente) {
               {
                 categoria: "emprestimo",
                 total: parseFloat(matricula.margens.emprestimo.total),
-                disponivel: parseFloat(matricula.margens.emprestimo.disponivel),
+                disponivel: parseFloat(
+                  matricula.margens.emprestimo.disponivel
+                ),
               },
               {
                 categoria: "cartao",
                 total: parseFloat(matricula.margens.cartao.total),
-                disponivel: parseFloat(matricula.margens.cartao.disponivel),
+                disponivel: parseFloat(
+                  matricula.margens.cartao.disponivel
+                ),
               },
               {
                 categoria: "saque",
@@ -388,11 +426,13 @@ async function putClienteDB(cliente: cliente) {
               {
                 categoria: "compra",
                 total: parseFloat(matricula.margens.compra.total),
-                disponivel: parseFloat(matricula.margens.compra.disponivel),
+                disponivel: parseFloat(
+                  matricula.margens.compra.disponivel
+                ),
               },
             ],
           },
-         
+
           owner: {
             connect: { cpf: cliente.cpf },
           },
@@ -411,8 +451,10 @@ async function putClienteDB(cliente: cliente) {
       },
     });
   } catch (error: any) {
-    if (error && error.code === 'P2002') {
-      console.error('The Cliente already exists. returning cliente from DB');
+    if (error && error.code === "P2002") {
+      console.error(
+        "The Cliente already exists. returning cliente from DB"
+      );
       const clienteDB = await prisma.cliente.update({
         where: { cpf: cliente.cpf },
         data: {
@@ -421,37 +463,43 @@ async function putClienteDB(cliente: cliente) {
         include: {
           matriculas: {
             include: {
-              margens: true
-            }
-          }
+              margens: true,
+            },
+          },
         },
       });
       return clienteDB;
     }
-
   }
 }
 
 app.get("/searchandupdate", async (req: Request, res: Response) => {
   const cpfList = req.query.cpfList;
-  console.log(req.params)
+  console.log(req.params);
   if (!cpfList) {
     console.error("Invalid command parameter");
     res.status(400).send("Please provide a valid parameter");
     return;
   }
   try {
-    const clientsString = cpfList.toString().replace(/"/g, "").replace(/\n/g, "").replace(/\s/g, "");
+    const clientsString = cpfList
+      .toString()
+      .replace(/"/g, "")
+      .replace(/\n/g, "")
+      .replace(/\s/g, "");
     console.log("clientsString:", clientsString);
     let retornoJson: string | null = null;
     let clientsArray = clientsString.split(",");
     console.log("clientsArray:", clientsArray);
     let clientes: any[] = [];
+    console.log("clientsArray:", clientsArray.length);
     for (let i = 0; i < clientsArray.length; i++) {
-      let pythonReturn = await sendCommandToPython("consulta_cpf", clientsArray[i]);
+      let pythonReturn = await sendCommandToPython(
+        "consulta_cpf",
+        clientsArray[i]
+      );
       let returnJson = pythonReturn?.toString().replace(/'/g, '"');
       if (returnJson) {
-        console.log("returnJson:", returnJson);
         let clienteJSON: any = JSON.parse(returnJson);
         let clienteClass = new cliente(
           clienteJSON["cpf"],
@@ -463,20 +511,15 @@ app.get("/searchandupdate", async (req: Request, res: Response) => {
         clientes.push(clienteDB);
       }
     }
-    console.log("terminou")
+    console.log("terminou");
     res.status(200).json({
       clientes: clientes,
     });
-
-
   } catch (error) {
     console.error(error);
     res.status(500).send("Error sending command to Python" + error);
   }
-
 });
-
-
 
 app.get("/getclientes", async (req: Request, res: Response) => {
   const clientList = req.query.cpfList;
@@ -487,36 +530,36 @@ app.get("/getclientes", async (req: Request, res: Response) => {
     return;
   }
   try {
-    // renmove \n and " and whiteSpaces from string
-    let clientsString = clientList
-      .toString()
-      .replace(/"/g, "")
-      .replace(/\n/g, "")
-      .replace(/\s/g, "");
-    console.log("clientsString:", clientsString);
-    let clientsArray = clientsString.split(",");
-    console.log("clientsArray:", clientsArray);
-
+    let clientsArray = getClientesArray(clientList);
     let clientes: any[] = [];
+
+
+    console.log("clientsArray:", clientsArray.length);
     for (let i = 0; i < clientsArray.length; i++) {
-      let pythonReturn = await sendCommandToPython(
-        "consulta_cpf",
-        clientsArray[i]
-      );
-      let returnJson = pythonReturn?.toString().replace(/'/g, '"');
-      if (returnJson) {
-        console.log("returnJson:", returnJson);
-        clientes.push(JSON.parse(returnJson));
-        pythonReturn = await sendCommandToPython(
+      try {
+        let pythonReturn = await sendCommandToPython(
           "consulta_cpf",
-          clientsString
+          clientsArray[i]
         );
+        let returnJson = pythonReturn?.toString().replace(/'/g, '"');
+        if (returnJson) {
+          let clienteJSON: any = JSON.parse(returnJson);
+          let clienteClass = new cliente(
+            clienteJSON["cpf"],
+            clienteJSON["nome"],
+            clienteJSON["matriculas"]
+          );
+          clientes.push(clienteClass);
+        }
+      } catch (error) {
+        console.error("erro cliente", error);
       }
     }
     console.log("clientes:", clientes);
     res.status(200).json({
       clientes: clientes,
     });
+    console.log("terminou");
 
     if (!clientes) {
       res.status(204).send({ response: [] });
@@ -527,7 +570,6 @@ app.get("/getclientes", async (req: Request, res: Response) => {
     res.status(500).send("Error sending command to Python" + error);
   }
 });
-
 
 // get one client
 app.get("/getcliente/:param", async (req: Request, res: Response) => {
@@ -561,21 +603,48 @@ function sendCommandToPython(
   command: string,
   data: any
 ): Promise<string | null> {
+  console.log("Sending command to Python:", pythonProcess);
+  // check if pythonProcess is running
+  if (!pythonProcessRunning) {
+    console.log("Python process is not running. Starting it...");
+    startPythonProcess();
+  }
+
   return new Promise((resolve, reject) => {
-    if (pythonProcess && pythonProcess.stdin) {
-      pythonProcess.stdin.write(command + "\n");
-      pythonProcess.stdin.write(data + "\n");
+    try {
+      if (pythonProcess && pythonProcess.stdin) {
+        pythonProcess.stdin.write(command + "\n");
+        pythonProcess.stdin.write(data + "\n");
 
-      const onData = (data: Buffer) => {
-        const dataString = data.toString();
-        console.log(`Received dataString from Python: ${dataString}`);
-        resolve(dataString);
-        pythonProcess?.stdout?.off("data", onData);
-      };
+        const onData = (data: Buffer) => {
+          const dataString = data.toString();
+          console.log(`Received dataString from Python: ${dataString}`);
+          if (dataString.includes("data:")) {
+            // remove data: from beggining of string (there is more than one data: in the string)
+            const dataStringClean =  dataString.slice(5);
+            resolve(dataStringClean);
+            pythonProcess?.stdout?.off("data", onData);
+          } else if (dataString.includes("info:")) {
+            console.info(dataString);
+          } else if (dataString.includes("error:")) {
+            console.error(dataString);
+            reject(null);
+            pythonProcess?.stdout?.off("data", onData);
+          } else if (dataString.includes("finished:")) {
+            console.log("finished");
+            resolve("finished");
+            pythonProcess?.stdout?.off("data", onData);
+          }
+          // remove listener
+        };
 
-      pythonProcess.stdout?.on("data", onData);
-    } else {
-      console.error("Python process or stdin is not available");
+        pythonProcess.stdout?.on("data", onData);
+      } else {
+        console.error("Python process or stdin is not available");
+        reject(null);
+      }
+    } catch (error) {
+      console.error(error);
       reject(null);
     }
   });

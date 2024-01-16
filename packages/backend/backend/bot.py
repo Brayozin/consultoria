@@ -349,7 +349,12 @@ class bot:
                 "body_ucAjaxModalPopup1_lblMensagemPopup")
             if (textModal.text == "CPF/Matrícula não encontrado."):
                 logger.info('CPF not found: ' + cpf)
-                return None
+                # create a client with all "0" and type "CPF not found"
+                matriculas = []
+                margens = self.margens(
+                    self.margem("0", "0", "0"), self.margem("0", "0", "0"), self.margem("0", "0", "0"), self.margem("0", "0", "0"))
+                matricula = self.matricula(cpf=cpf, nome="CPF não encontrado/Suspenso", matricula="0", margens=margens, tipo="CPF não encontrado/Suspenso", situacao="CPF  não encontrado/Suspenso")
+                return self.cliente("CPF não encontrado/Suspenso", cpf, [matricula])
             else:
                 pass
         except:
