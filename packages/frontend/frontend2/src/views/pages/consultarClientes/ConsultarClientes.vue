@@ -60,14 +60,16 @@ class Cliente {
     cpf: string;
     nome: string;
     matriculas: matricula[];
+    ultimaConsulta: Date;
 
-    constructor(cpf: string, nome: string, matriculas: [matricula]) {
+    constructor(cpf: string, nome: string, matriculas: [matricula], ultimaConsulta?: Date) {
         this.cpf = cpf;
         this.nome = nome;
         this.matriculas = new Array<matricula>();
         for (let i = 0; i < matriculas.length; i++) {
             this.matriculas.push(new matricula(matriculas[i].matricula, matriculas[i].nome, matriculas[i].cpf, matriculas[i].tipo, matriculas[i].situacao, matriculas[i].margens));
         }
+        this.ultimaConsulta = ultimaConsulta ? ultimaConsulta : new Date();
     }
 }
 
@@ -145,20 +147,20 @@ const cpfRules = computed(() => {
 // Table
 
 const columns = ref([
-    { field: 'cliente.cpf', header: 'CPF', sortable: true, filter: true, active: true },
-    { field: 'cliente.nome', header: 'Nome', sortable: true, filter: true, active: true },
-    { field: 'matriculaSelecionada', header: 'Matricula', active: true },
-    { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: false },
-    { field: 'situac', header: 'Situação', sortable: true, filter: true, active: false },
-    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: true },
-    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: true }
+    { field: 'cliente.cpf', header: 'CPF', sortable: true, filter: true, active: true, width: '8rem' },
+    { field: 'cliente.nome', header: 'Nome', sortable: true, filter: true, active: true, width: '10rem' },
+    { field: 'matriculaSelecionada', header: 'Matricula', active: true, width: '8rem' },
+    { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: true, width: '6rem' },
+    { field: 'situac', header: 'Situação', sortable: true, filter: true, active: true, width: '5rem' },
+    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: true, width: '5rem' },
+    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: true, width: '5rem' }
 ]);
 
 const margensOptions = [
     { label: 'Empréstimo', value: 'emprestimo' },
     { label: 'Cartão', value: 'cartao' },
-    { label: 'Benefício Saque', value: 'saque' },
-    { label: 'Benefício Compra', value: 'compra' }
+    { label: 'Saque', value: 'saque' },
+    { label: 'Compra', value: 'compra' }
 ];
 const margemSelecionada = ref('emprestimo');
 
@@ -167,122 +169,6 @@ const showDialog = ref(false);
 const showDialogColumns = () => {
     showDialog.value = true;
 };
-
-// Table Data
-const clientes = ref([
-    {
-        name: 'Gabriel Oliveira',
-        tipo: 'Estatutário',
-        cpf: '180.810.222-36',
-        matricula: 'A123',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.200,00',
-        margemCart: 'R$ 500,00',
-        margemBenefSaque: 'R$ 800,00',
-        margemComp: 'R$ 600,00'
-    },
-    {
-        name: 'Amanda Silva',
-        tipo: 'Comissionados',
-        cpf: '986.834.992-35',
-        matricula: 'B456',
-        situac: 'Inativo',
-        margemEmp: 'R$ 1.500,00',
-        margemCart: 'R$ 700,00',
-        margemBenefSaque: 'R$ 900,00',
-        margemComp: 'R$ 700,00'
-    },
-    {
-        name: 'Lucas Santos',
-        tipo: 'Temporários',
-        cpf: '059.755.392-00',
-        matricula: 'C789',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.000,00',
-        margemCart: 'R$ 400,00',
-        margemBenefSaque: 'R$ 700,00',
-        margemComp: 'R$ 500,00'
-    },
-    {
-        name: 'Juliana Souza',
-        tipo: 'Contratados',
-        cpf: '485.577.422-74',
-        matricula: 'D012',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.300,00',
-        margemCart: 'R$ 600,00',
-        margemBenefSaque: 'R$ 850,00',
-        margemComp: 'R$ 650,00'
-    },
-    {
-        name: 'Matheus Pereira',
-        tipo: 'Terceirizados',
-        cpf: '892.158.992-94',
-        matricula: 'E345',
-        situac: 'Inativo',
-        margemEmp: 'R$ 800,00',
-        margemCart: 'R$ 300,00',
-        margemBenefSaque: 'R$ 600,00',
-        margemComp: 'R$ 400,00'
-    },
-    {
-        name: 'Marina Lima',
-        tipo: 'Cargo Efetivo ou Estatutário',
-        cpf: '847.589.902-12',
-        matricula: 'F678',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.100,00',
-        margemCart: 'R$ 450,00',
-        margemBenefSaque: 'R$ 750,00',
-        margemComp: 'R$ 550,00'
-    },
-    {
-        name: 'Rafaela Rodrigues',
-        tipo: 'Comissionados',
-        cpf: '948.356.372-08',
-        matricula: 'G901',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.250,00',
-        margemCart: 'R$ 550,00',
-        margemBenefSaque: 'R$ 900,00',
-        margemComp: 'R$ 700,00'
-    },
-    {
-        name: 'Pedro Almeida',
-        tipo: 'Temporários',
-        cpf: '525.988.452-34',
-        matricula: 'H234',
-        situac: 'Inativo',
-        margemEmp: 'R$ 1.050,00',
-        margemCart: 'R$ 500,00',
-        margemBenefSaque: 'R$ 800,00',
-        margemComp: 'R$ 650,00'
-    },
-    {
-        name: 'Camila Fernandes',
-        tipo: 'Terceirizados',
-        cpf: '276.936.722-65',
-        matricula: 'I567',
-        situac: 'Ativo',
-        margemEmp: 'R$ 900,00',
-        margemCart: 'R$ 350,00',
-        margemBenefSaque: 'R$ 700,00',
-        margemComp: 'R$ 450,00'
-    },
-    {
-        name: 'Diego Oliveira',
-        tipo: 'Terceirizados',
-        cpf: '276.936.722-65',
-        matricula: 'J890',
-        situac: 'Ativo',
-        margemEmp: 'R$ 1.150,00',
-        margemCart: 'R$ 600,00',
-        margemBenefSaque: 'R$ 850,00',
-        margemComp: 'R$ 650,00'
-    }
-]);
-
-// File Reading and Parsing
 
 const loading = ref(false);
 const clientResponse = ref([]);
@@ -335,8 +221,7 @@ const searchClients = async () => {
     };
 
     try {
-        
-        let response:any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
+        let response: any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
         let clientes = response.data.clientes;
         console.log('clientes', clientes);
         let matriculas: any = [];
@@ -352,6 +237,20 @@ const searchClients = async () => {
                 margem: cliente.matriculas[0].margens.emprestimo
             });
         }
+        // let matriculas: any = [];
+
+        // let clienteParse = JSON.parse(JSON.stringify(clienteExemploJson));
+        // let cliente = new Cliente(clienteParse.cpf, clienteParse.nome, clienteParse.matriculas);
+        // matriculas.push({
+        //     cliente: cliente,
+        //     matriculaSelecionada: cliente.matriculas[0].matricula,
+        //     matriculasOptions: cliente.matriculas.map((matricula) => {
+        //         return { label: matricula.matricula, value: matricula.matricula };
+        //     }),
+        //     margemSelecionada: cliente.matriculas[0].margens.emprestimo.categoria,
+        //     margem: cliente.matriculas[0].margens.emprestimo
+        // });
+
         clientResponse.value = matriculas;
         loading.value = false;
     } catch (error) {
@@ -362,13 +261,70 @@ const searchClients = async () => {
 };
 
 const consultaCliente = ref(false);
+
+// watch ClienteSelecionado
+
+const clienteExemploJson: any = {
+    nome: 'ALAN PESSOA DA SILVA',
+    cpf: '71269886215',
+    matriculas: [
+        {
+            matricula: '0001863614B',
+            nome: 'ALAN PESSOA DA SILVA',
+            cpf: '71269886215',
+            margens: {
+                emprestimo: { total: '7938,25', reservada: '0,00', disponivel: '7938,25          ' },
+                cartao: { total: '1134,04', reservada: '0,00', disponivel: '966,29          ' },
+                saque: { total: '3175,30', reservada: '0,00', disponivel: '3175,30          ' },
+                compra: { total: '4536,14', reservada: '0,00', disponivel: '4536,14          ' }
+            },
+            tipo: 'ESTATUTARIO',
+            situacao: 'Ativo - EXERCICIO REGULAR'
+        },
+        {
+            matricula: '0001863614C',
+            nome: 'ALAN PESSOA DA SILVA',
+            cpf: '71269886215',
+            margens: {
+                emprestimo: { total: '0,00', reservada: '0,00', disponivel: '0,00          ' },
+                cartao: { total: '0,00', reservada: '0,00', disponivel: '0,00          ' },
+                saque: { total: '0,00', reservada: '0,00', disponivel: '0,00          ' },
+                compra: { total: '0,00', reservada: '0,00', disponivel: '0,00          ' }
+            },
+            tipo: 'ESTATUTARIO',
+            situacao: 'Suspenso - SEM MARGEM MES ATUAL'
+        },
+        {
+            matricula: '0001863614D',
+            nome: 'ALAN PESSOA DA SILVA',
+            cpf: '71269886215',
+            margens: {
+                emprestimo: { total: ' 190,67', reservada: '0,00', disponivel: ' 190,67          ' },
+                cartao: { total: ' 27,24', reservada: '0,00', disponivel: ' 27,24          ' },
+                saque: { total: ' 76,27', reservada: '0,00', disponivel: ' 76,27          ' },
+                compra: { total: ' 108,96', reservada: '0,00', disponivel: ' 108,96          ' }
+            },
+            tipo: 'ESTATUTARIO',
+            situacao: 'Ativo - EXERCICIO REGULAR'
+        }
+    ]
+};
+
+const clienteSelecionado = ref();
+
+const onRowSelect = (event: any) => {
+    console.log('row selected');
+    console.log(event);
+    clienteSelecionado.value = event.data.cliente;
+    consultaCliente.value = true;
+};
 </script>
 
 <template>
     <div>
         <!-- modal -->
         <Dialog v-model:visible="consultaCliente" header="Detalhes do Cliente" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
-            <DetailClientes />
+            <DetailClientes :clienteRow="clienteSelecionado" />
         </Dialog>
 
         <div class="card">
@@ -382,7 +338,7 @@ const consultaCliente = ref(false);
                             <FileUpload name="demo[]" mode="basic" chooseLabel="arquivo" class="h-12" label="Upload" :auto="true" @upload="onFileUpload" url="https://www.filestackapi.com/api/store/S3?key=APmFG7UofSSml24EoVumCz"> </FileUpload>
                         </div>
                         <div class="col-3 flex flex-col p-0 inputWithBorder">
-                            <label for="cpf" class="text-blue-200 text-md font-bold">Consultar CPF</label>
+                            <label for="cpf" class="text-blue-200 text-md font-bold">Consultar CPFs</label>
                             <InputMask ref="cpfInput" mask="999.999.999-99" v-model="cpf" id="cpf" class="h-12 w-full text-lg" @keydown.enter.native="onEnterCPF" @paste="onPasteCPF" autofocus />
                         </div>
                         <div class="flex flex-col align-bottom justify-end p-0 ml-2">
@@ -399,7 +355,7 @@ const consultaCliente = ref(false);
                         >
                             <i class="pi pi-times"></i>
                         </span>
-                        <span class="bg-transparent border-primary text-primary font-medium border-2 p-2 rounded-md mb-1 col-2 flex justify-between items-center" v-for="(cpf, index) in cpfList" :key="index">
+                        <span class="bg-transparent border-primary text-primary font-medium border-2 p-2 rounded-md mb-1 max-w-11rem col-2 flex justify-between items-center" v-for="(cpf, index) in cpfList" :key="index">
                             <span class="text-md w-full">{{ cpf }}</span>
                             <i class="pi pi-times" @click="cpfList.splice(index, 1)"></i>
                         </span>
@@ -408,12 +364,27 @@ const consultaCliente = ref(false);
             </div>
 
             <!-- Table of Client Data  -->
-            <div class="progressBarCustom">
-            <ProgressBar mode="indeterminate" style="height: 6px" v-show="loading" class=""
-            ></ProgressBar>
+            <div class="flex justify-center">
+                <div class="progress-bar" v-if="loading">
+                    <div class="progress-bar-value"></div>
+                </div>
+                <div class="mt-4" v-else></div>
             </div>
             <div class="card p-1" id="clientTable">
-                <DataTable :value="clientResponse" tableStyle="min-width: 50rem" stripedRows paginator :rows="5" :rowsPerPageOptions="[5, 10, 15]">
+                <DataTable
+                    :value="clientResponse"
+                    tableStyle="min-width: 50rem"
+                    stripedRows
+                    paginator
+                    :rows="5"
+                    :rowsPerPageOptions="[5, 10, 15]"
+                    selectionMode="single"
+                    dataKey="cpf"
+                    v-model:selectedRowKeys="clienteSelecionado"
+                    metaKeySelection="false"
+                    size="small"
+                    @rowSelect="onRowSelect"
+                >
                     <template #header>
                         <div class="flex flex-row gap-2 justify-between">
                             <div class="col-2">
@@ -436,26 +407,27 @@ const consultaCliente = ref(false);
                                     </template>
                                 </Dialog>
                             </div>
-                            <div class="col-4 margemDrop">
-                                <div class="p-float-label">
-                                    <Dropdown v-model="margemSelecionada" :options="margensOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm" input-id="margemSelecionada">
-                                        <template #value="{ value, placeholder }">
-                                            <span v-if="value" class="flex flex-row justify-start items-center gap-1">
-                                                <!-- label -->
-                                                <span class="text-xl">{{ margensOptions.find((option) => option.value === value)?.label ?? placeholder }}</span>
-                                            </span>
-                                            <span v-else class="flex flex-row justify-start items-center gap-1">
-                                                <span class="text-xl">{{ placeholder }}</span>
-                                            </span>
+                            <div class="col-8 flex flex-row gap-2 justify-end margemDrop">
+                                <div class="flex flex-row justify-start items-center col-2 p-0" v-for="option in margensOptions">
+                                    <Button
+                                        type="button"
+                                        :label="option.label"
+                                        class="justify-center p-button w-full h-11"
+                                        @click="margemSelecionada = option.value"
+                                        :class="{ 'bg-primary text-white inner-border': margemSelecionada === option.value, 'text-primary bg-white border-primary border-2': margemSelecionada !== option.value }"
+                                    >
+                                        <template #default>
+                                            <span class="text-sm text-center align-content-center align-items-center justify-center">{{ option.label }}</span>
                                         </template>
-                                    </Dropdown>
-                                    <label for="margemSelecionada" class="text-primary-500 text-sm font-bold mb-2">Margem</label>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
                     </template>
                     <!-- Checkbox to select -->
                     <!-- <Column selectionMode="multiple" style="width: 3rem" selection="selectedProduct"></Column> -->
+
+                    <!-- Column visualizar -->
 
                     <Column
                         v-for="column in columns"
@@ -464,8 +436,21 @@ const consultaCliente = ref(false);
                         :header="column.header"
                         :sortable="column.sortable"
                         :filter="column.filter"
-                        :style="{ display: column.active ? 'table-cell' : 'none', width: column.field === 'matriculaSelecionada' ? '8rem' : column.field === 'situac' ? '3rem' : column.field.includes('margem') ? '6rem' : 'auto' }"
+                        :style="{ display: column.active ? 'table-cell' : 'none', width: column.width }"
                     >
+                        <template v-if="column.field === 'cliente.cpf'" #body="slotProps">
+                            <!-- shows cpf of cliente -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm">{{ slotProps.data.cliente.cpf }}</span>
+                            </div>
+                        </template>
+                        <template v-if="column.field === 'cliente.nome'" #body="slotProps">
+                            <!-- shows nome of cliente -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm">{{ slotProps.data.cliente.nome }}</span>
+                            </div>
+                        </template>
+
                         <template v-if="column.field === 'matriculaSelecionada'" #body="slotProps">
                             <!-- select matricula -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full columnMatricula">
@@ -484,21 +469,21 @@ const consultaCliente = ref(false);
                         <template v-if="column.field === 'margemDisponivel'" #body="slotProps">
                             <!-- shows margem of margemSelecionada -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
-                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].disponivel }}</span>
+                                <span class="text-sm">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].disponivel }}</span>
                             </div>
                         </template>
 
                         <template v-if="column.field === 'margemTotal'" #body="slotProps">
                             <!-- shows margem of margemSelecionada -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
-                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].total }}</span>
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].total }}</span>
                             </div>
                         </template>
 
                         <template v-if="column.field === 'tipo'" #body="slotProps">
                             <!-- shows tipo of matriculaSelecionada -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
-                                <span class="text-sm">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).tipo }}</span>
+                                <span class="text-sm whitespace-nowrap">{{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).tipo }}</span>
                             </div>
                         </template>
 
@@ -566,26 +551,68 @@ const consultaCliente = ref(false);
     border: 2px solid var(--primary-600) !important;
 }
 
-.progressBarCustom {
-    width: 100%;
+.progress-bar {
+    height: 21px;
+    background-color: transparent;
+    width: 97%;
     justify-content: center;
     display: flex;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px 5px var(--primary-400);
+    top: 22px;
+    position: relative;
+    filter: blur(8px);
 }
 
-.progressBarCustom .p-progressbar {
-    width: 99%;
-    height: 5px !important;
-    border-radius: 0 !important;
-    background-color: white !important;
-}
-
-.progressBarCustom .p-progressbar .p-progressbar-value{
-    color: white !important;
-    background-color: white !important;
-    box-shadow: 5px 5px 3px 3px var(--primary-600) !important;
+.progress-bar-value {
+    position: relative;
+    width: 100%;
     height: 100%;
+    background-color: var(--primary-400);
+    animation: indeterminateAnimation 1s infinite linear;
+    transform-origin: 0% 50%;
 }
 
+@keyframes indeterminateAnimation {
+    0% {
+        transform: translateX(0) scaleX(0);
+    }
+    50% {
+        transform: translateX(0) scaleX(0.4);
+    }
+    100% {
+        transform: translateX(100%) scaleX(0.5);
+    }
+}
+
+/* progressbar inset that is an box shadow on top of component */
+
+#clientTable {
+    position: relative;
+}
+
+/* @keyframes boxShadowInderminate {
+  0% {
+  content:"";
+  position: absolute;
+  inset: -5px;
+  transform: translate(0px,0px);
+  z-index: 0;
+  background: conic-gradient(from 90deg at 40% 50%, rgba(5, 5, 181, 0) 50%, rgb(40, 40, 225) 55%, rgba(255, 0, 251, 0) 100%);
+  filter: blur(10px);
+  }
+    100% {
+  content:"";
+  position: absolute;
+  inset: -5px;
+  transform: translate(100px,0px);
+  z-index: 0;
+  background: conic-gradient(from 90deg at 40% 50%, rgba(5, 5, 181, 0) 50%, rgb(40, 40, 225) 55%, rgba(255, 0, 251, 0) 100%);
+  filter: blur(10px);
+    }
+        
+
+} */
 
 /* Your component styles go here */
 </style>
