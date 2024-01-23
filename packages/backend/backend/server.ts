@@ -673,7 +673,7 @@ async function putClienteDB(cliente: Cliente) {
       });
     });
     console.log("Matriculas added:", clienteDB);
-    let clientDB = prisma.cliente.findUnique({
+    let clientDB = await prisma.cliente.findUnique({
       where: { cpf: cliente.cpf },
       include: {
         matriculas: {
