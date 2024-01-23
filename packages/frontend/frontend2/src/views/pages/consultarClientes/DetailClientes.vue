@@ -16,7 +16,7 @@
                 <div class="col-6 p-0 row flex-col py-2 gap-2 justify-end">
                     <div class="col-12 gap-4 flex p-0 flex-row">
                         <div class="col-10 p-0 p-inputgroup h-10 input-group-telefone">
-                            <span class="p-inputgroup-addon p-input-start"><a class="pi pi-whatsapp text-2xl text-green-200" :href="'https://api.whatsapp.com/send?phone=55' + telefone" target="_blank" /> </span>
+                            <span class="p-inputgroup-addon p-input-start"><a class="pi pi-whatsapp text-2xl text-green-200" @click="sendMessageWpp(telefone)" target="_blank" /> </span>
                             <InputMask id="basic" v-model="telefone" mask="(99)99999-9999" placeholder="(99)99999-9999" class="w-3/4">
                                 <template #input>
                                     <input type="text" class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-primary text-sm" />
@@ -164,6 +164,13 @@ export default defineComponent({
                     }, 3000);
                 }
             });
+        },
+        sendMessageWpp(telefone: string) {
+            //remove mask from telefone (99)99999-9999
+            let wpp = telefone.replace(/\D/g, '');
+            let texto = `Olá, ${this.cliente.nome}!`;
+            let textoURI = encodeURIComponent(texto);
+            window.open(`https://api.whatsapp.com/send?phone=${wpp}&text=${textoURI}&app_absent=1`);
         }
     },
     setup(props, data) {
