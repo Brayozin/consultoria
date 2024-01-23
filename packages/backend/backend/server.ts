@@ -683,8 +683,6 @@ async function putClienteDB(cliente: Cliente) {
         },
       },
     });
-    console.log("clientDBput =", clientDB);
-    console.log("clientDB matriculas = :", clientDB["matriculas"]);
     return clienteDbToCliente(clientDB);
   } catch (error: any) {
     if (error && error.code === "P2002") {
