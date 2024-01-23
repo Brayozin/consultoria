@@ -87,8 +87,8 @@ const columns = ref([
     { field: 'matriculaSelecionada', header: 'Matricula', active: true, width: '8rem' },
     { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: false, width: '6rem' },
     { field: 'situac', header: 'Situação', sortable: true, filter: true, active: false, width: '5rem' },
-    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: false, width: '5rem' },
-    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: false, width: '5rem' },
+    // { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: false, width: '5rem' },
+    // { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: false, width: '5rem' },
     { field: 'cartaoTotal', header: 'Total - Cartão', sortable: true, filter: true, active: false, width: '5rem' },
     { field: 'cartaoDisponivel', header: 'Disp - Cartão', sortable: true, filter: true, active: true, width: '5rem' },
     { field: 'emprestimoTotal', header: 'Total - Empréstimo', sortable: true, filter: true, active: false, width: '5rem' },
@@ -349,7 +349,7 @@ const onRowSelect = (event: any) => {
                                     </template>
                                 </Dialog>
                             </div>
-                            <div class="col-8 flex flex-row gap-2 justify-end margemDrop">
+                            <!-- <div class="col-8 flex flex-row gap-2 justify-end margemDrop">
                                 <div class="flex flex-row justify-start items-center col-2 p-0" v-for="option in margensOptions">
                                     <Button
                                         type="button"
@@ -363,7 +363,7 @@ const onRowSelect = (event: any) => {
                                         </template>
                                     </Button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </template>
                     <!-- Checkbox to select -->
