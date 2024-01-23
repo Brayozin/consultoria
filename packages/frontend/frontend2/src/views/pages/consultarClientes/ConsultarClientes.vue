@@ -3,75 +3,10 @@ import { ref, computed, onMounted } from 'vue';
 import { watch } from 'vue';
 import axios from 'axios';
 import DetailClientes from './DetailClientes.vue';
-
+import { Cliente, Margens, Margem, Matricula } from '../../../models/Cliente';
 const cpf = ref<string>('');
 const cpfList = ref([]);
 const cpfInput = ref();
-
-class Margem {
-    total: string;
-    disponivel: string;
-    categoria: string;
-
-    constructor(total: string, disponivel: string, categoria: string) {
-        this.total = total;
-        this.disponivel = disponivel;
-        this.categoria = categoria;
-    }
-}
-class Margens {
-    emprestimo: Margem;
-    cartao: Margem;
-    saque: Margem;
-    compra: Margem;
-
-    constructor(emprestimo: Margem, cartao: Margem, saque: Margem, compra: Margem) {
-        this.emprestimo = emprestimo;
-        this.cartao = cartao;
-        this.saque = saque;
-        this.compra = compra;
-    }
-}
-
-class matricula {
-    matricula: string;
-    cpf: string;
-    nome: string;
-    tipo: string;
-    situacao: string;
-    margens: Margens;
-
-    constructor(matricula: string, nome: string, cpf: string, tipo: string, situacao: string, margens: Margens) {
-        this.matricula = matricula;
-        this.cpf = cpf;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.situacao = situacao;
-        let emprestimo = new Margem(margens['emprestimo']['total'], margens['emprestimo']['disponivel'], 'emprestimo');
-        let cartao = new Margem(margens['cartao']['total'], margens['cartao']['disponivel'], 'cartao');
-
-        let saque = new Margem(margens['saque']['total'], margens['saque']['disponivel'], 'saque');
-        let compra = new Margem(margens['compra']['total'], margens['compra']['disponivel'], 'compra');
-        this.margens = new Margens(emprestimo, cartao, saque, compra);
-    }
-}
-
-class Cliente {
-    cpf: string;
-    nome: string;
-    matriculas: matricula[];
-    ultimaConsulta: Date;
-
-    constructor(cpf: string, nome: string, matriculas: [matricula], ultimaConsulta?: Date) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.matriculas = new Array<matricula>();
-        for (let i = 0; i < matriculas.length; i++) {
-            this.matriculas.push(new matricula(matriculas[i].matricula, matriculas[i].nome, matriculas[i].cpf, matriculas[i].tipo, matriculas[i].situacao, matriculas[i].margens));
-        }
-        this.ultimaConsulta = ultimaConsulta ? ultimaConsulta : new Date();
-    }
-}
 
 const validateCPF = (cpf: string) => {
     let sum = 0;
@@ -147,13 +82,21 @@ const cpfRules = computed(() => {
 // Table
 
 const columns = ref([
-    { field: 'cliente.cpf', header: 'CPF', sortable: true, filter: true, active: true, width: '8rem' },
+    { field: 'cliente.cpf', header: 'CPF', sortable: true, filter: true, active: false, width: '8rem' },
     { field: 'cliente.nome', header: 'Nome', sortable: true, filter: true, active: true, width: '10rem' },
     { field: 'matriculaSelecionada', header: 'Matricula', active: true, width: '8rem' },
-    { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: true, width: '6rem' },
-    { field: 'situac', header: 'Situação', sortable: true, filter: true, active: true, width: '5rem' },
-    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: true, width: '5rem' },
-    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: true, width: '5rem' }
+    { field: 'tipo', header: 'Tipo', sortable: true, filter: true, active: false, width: '6rem' },
+    { field: 'situac', header: 'Situação', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'margemTotal', header: 'Total', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'margemDisponivel', header: 'Disponível', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'cartaoTotal', header: 'Total - Cartão', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'cartaoDisponivel', header: 'Disp - Cartão', sortable: true, filter: true, active: true, width: '5rem' },
+    { field: 'emprestimoTotal', header: 'Total - Empréstimo', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'emprestimoDisponivel', header: 'Disp - Empréstimo', sortable: true, filter: true, active: true, width: '5rem' },
+    { field: 'saqueTotal', header: 'Total - Saque', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'saqueDisponivel', header: 'Disp - Saque', sortable: true, filter: true, active: true, width: '5rem' },
+    { field: 'compraTotal', header: 'Total - Compra', sortable: true, filter: true, active: false, width: '5rem' },
+    { field: 'compraDisponivel', header: 'Disp - Compra', sortable: true, filter: true, active: true, width: '5rem' }
 ]);
 
 const margensOptions = [
@@ -221,12 +164,12 @@ const searchClients = async () => {
     };
 
     try {
-        let response: any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
+        let response: any = await axios.get('http://localhost:3000/getclientes', request);
         let clientes = response.data.clientes;
         console.log('clientes', clientes);
         let matriculas: any = [];
         for (let i = 0; i < clientes.length; i++) {
-            let cliente = new Cliente(clientes[i].cpf, clientes[i].nome, clientes[i].matriculas);
+            let cliente = new Cliente(clientes[i].cpf, clientes[i].nome, clientes[i].matriculas, clientes[i].telefone, clientes[i].ultimaConsulta);
             matriculas.push({
                 cliente: cliente,
                 matriculaSelecionada: cliente.matriculas[0].matricula,
@@ -383,7 +326,6 @@ const onRowSelect = (event: any) => {
                     v-model:selectedRowKeys="clienteSelecionado"
                     metaKeySelection="false"
                     size="small"
-                    @rowSelect="onRowSelect"
                 >
                     <template #header>
                         <div class="flex flex-row gap-2 justify-between">
@@ -428,6 +370,11 @@ const onRowSelect = (event: any) => {
                     <!-- <Column selectionMode="multiple" style="width: 3rem" selection="selectedProduct"></Column> -->
 
                     <!-- Column visualizar -->
+                    <Column style="width: 3rem">
+                        <template #body="slotProps">
+                            <Button type="button" icon="pi pi-eye" class="p-button-rounded p-button-secondary p-button-outlined" @click="onRowSelect(slotProps)" />
+                        </template>
+                    </Column>
 
                     <Column
                         v-for="column in columns"
@@ -451,7 +398,7 @@ const onRowSelect = (event: any) => {
                             </div>
                         </template>
 
-                        <template v-if="column.field === 'matriculaSelecionada'" #body="slotProps">
+                        <template onclick="event.stopPropagation();" v-if="column.field === 'matriculaSelecionada'" #body="slotProps">
                             <!-- select matricula -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full columnMatricula">
                                 <Dropdown dropdown v-model="slotProps.data.matriculaSelecionada" :options="slotProps.data.matriculasOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm">
@@ -467,16 +414,70 @@ const onRowSelect = (event: any) => {
                             </div>
                         </template>
                         <template v-if="column.field === 'margemDisponivel'" #body="slotProps">
-                            <!-- shows margem of margemSelecionada -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
                                 <span class="text-sm">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].disponivel }}</span>
                             </div>
                         </template>
 
                         <template v-if="column.field === 'margemTotal'" #body="slotProps">
-                            <!-- shows margem of margemSelecionada -->
                             <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
                                 <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens[margemSelecionada].total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'cartaoTotal'" #body="slotProps">
+                            <!-- shows total of cartao -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.cartao.total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'cartaoDisponivel'" #body="slotProps">
+                            <!-- shows disponivel of cartao -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.cartao.disponivel }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'emprestimoTotal'" #body="slotProps">
+                            <!-- shows total of emprestimo -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.emprestimo.total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'emprestimoDisponivel'" #body="slotProps">
+                            <!-- shows disponivel of emprestimo -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.emprestimo.disponivel }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'saqueTotal'" #body="slotProps">
+                            <!-- shows total of saque -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.saque.total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'saqueDisponivel'" #body="slotProps">
+                            <!-- shows disponivel of saque -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.saque.disponivel }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'compraTotal'" #body="slotProps">
+                            <!-- shows total of compra -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.compra.total }}</span>
+                            </div>
+                        </template>
+
+                        <template v-if="column.field === 'compraDisponivel'" #body="slotProps">
+                            <!-- shows disponivel of compra -->
+                            <div class="flex flex-row justify-start text-sm items-center gap-2 w-full">
+                                <span class="text-sm whitespace-nowrap">R$ {{ slotProps.data.cliente.matriculas.find((matricula) => matricula.matricula === slotProps.data.matriculaSelecionada).margens.compra.disponivel }}</span>
                             </div>
                         </template>
 

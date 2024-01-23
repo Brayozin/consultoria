@@ -51,14 +51,16 @@ class Cliente {
     nome: string;
     matriculas: Matricula[];
     ultimaConsulta: Date;
+    telefone: string;
 
-    constructor(cpf: string, nome: string, matriculas: [Matricula], ultimaConsulta?: Date) {
+    constructor(cpf: string, nome: string, matriculas: [Matricula], telefone?: string, ultimaConsulta?: Date) {
         this.cpf = cpf;
         this.nome = nome;
         this.matriculas = new Array<Matricula>();
         for (let i = 0; i < matriculas.length; i++) {
             this.matriculas.push(new Matricula(matriculas[i].matricula, matriculas[i].nome, matriculas[i].cpf, matriculas[i].tipo, matriculas[i].situacao, matriculas[i].margens));
         }
+        this.telefone = telefone ? telefone : '';
         this.ultimaConsulta = ultimaConsulta ? ultimaConsulta : new Date();
     }
 }

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="card grid my-2 flex-col gap-4">
+        <div class="card my-2 flex-row gap-4">
+            <!-- message telegone updated -->
             <span class="row flex p-0 gap-0">
                 <div class="col-8 flex-col p-0">
                     <h1 class="text-3xl font-semibold text-primary-500">{{ cliente.nome }}</h1>
@@ -11,10 +12,28 @@
                     <span class="text-sm font-semibold text-primary-300 p-0 justify-end flex"> {{ new Date(cliente.ultimaConsulta).toLocaleString('pt-BR', { timeZone: 'UTC' }) }} </span>
                 </div>
             </span>
-
+            <div class="flex-row flex row col-12 p-0 gap-0 py-2">
+                <div class="col-6 p-0 row flex-col py-2 gap-2 justify-end">
+                    <div class="col-12 gap-4 flex p-0 flex-row">
+                        <div class="col-10 p-0 p-inputgroup h-10 input-group-telefone">
+                            <span class="p-inputgroup-addon p-input-start"><a class="pi pi-whatsapp text-2xl text-green-200" :href="'https://api.whatsapp.com/send?phone=55' + telefone" target="_blank" /> </span>
+                            <InputMask id="basic" v-model="telefone" mask="(99)99999-9999" placeholder="(99)99999-9999" class="w-3/4">
+                                <template #input>
+                                    <input type="text" class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-primary text-sm" />
+                                </template>
+                            </InputMask>
+                        </div>
+                        <div class="col-3 p-0 flex justify-end align-baseline">
+                            <Button class="h-10 w-full font-semibold px-6 rounded-md bg-primary text-sm flex justify-center" @click="salvaTelefone"> Alterar </Button>
+                        </div>
+                    </div>
+                    <Message severity="success" v-if="telefoneAtualizado"> <span>Telefone atualizado com sucesso!</span> </Message>
+                </div>
+                <!-- button save phone -->
+            </div>
             <!-- card with margens -->
-            <div class="row flex p-0 gap-0">
-                <div class="col-5 flex-col p-0 gap-0 justify-end">
+            <div class="row flex justify-between p-0 gap-0 py-2">
+                <div class="col-5 flex-row p-0 gap-0 justify-end">
                     <div class="drop-down-matricula mt-2">
                         <div class="float-label">
                             <label class="text-primary-300 text-xl font-bold">Matricula</label>
@@ -32,19 +51,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row flex p-0 justify-between">
-                <div class="col-5 flex-col p-0 gap-0 justify-between">
-                    <h1 class="text-xl p-0 font-semibold text-primary-300">Tipo:</h1>
-                    <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.tipo" />
+                <div class="col-5 flex p-0 justify-end">
+                    <div class="mt-1">
+                        <h1 class="text-xl p-0 font-semibold text-primary-300">Tipo:</h1>
+                        <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.tipo" />
+                    </div>
                 </div>
+            </div>
+            <div class="row flex col-12 p-0 py-2 justify-between">
                 <div class="col-5 flex-col p-0 gap-0 justify-start">
                     <h1 class="text-xl p-0 font-semibold text-primary-300">Situação:</h1>
                     <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.situacao.split(' ')[0]" />
                 </div>
+                <!-- phone with wpp logo to redirect to wpp -->
             </div>
             <!-- Table Margens -->
-            <div class="card flex-row col-12 p-0">
+            <div class="card flex-row col-12 p-0 py-2">
                 <DataTable :value="margensArray" tableStyle="min-width: 50rem" selectionMode="multiple" selection="selectedProduct">
                     <Column field="tipo" header="Tipo" sortable></Column>
                     <Column field="total" header="Total" sortable></Column>
@@ -57,8 +79,11 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { Cliente }  from '../../../models/Cliente';
+import { Cliente } from '../../../models/Cliente';
 import { Matricula } from '../../../models/Cliente';
+import axios from 'axios';
+import Message from 'primevue/message';
+
 export default defineComponent({
     name: 'DetailClientes',
     props: {
@@ -77,6 +102,7 @@ export default defineComponent({
                 });
                 this.matriculaValue = this.matriculasOptions[0].value;
                 this.matriculaSelecionada = this.clienteRow.matriculas[0];
+                this.telefone = this.clienteRow.telefone;
             },
             immediate: true
         },
@@ -106,7 +132,9 @@ export default defineComponent({
             matriculaSelecionada: {},
             matriculasOptions: [],
             matriculaValue: '',
-            margensArray: []
+            margensArray: [],
+            telefone: '',
+            telefoneAtualizado: false
         };
     },
     methods: {
@@ -115,6 +143,27 @@ export default defineComponent({
             let cliente = await response.json();
             cliente = JSON.parse(cliente);
             this.cliente = new Cliente(cliente.cpf, cliente.nome, cliente.matriculas, cliente.ultimaConsulta);
+        },
+
+        async salvaTelefone() {
+            // remove mask
+            this.cliente.telefone = this.telefone.replace(/\D/g, '');
+            console.log(this.cliente.telefone);
+            let request = {
+                params: {
+                    cpf: this.cliente.cpf,
+                    cliente: JSON.stringify(this.cliente)
+                }
+            };
+            await axios.get('https://api.idealfinanceira.com/updateCliente', request).then((response) => {
+                console.log(response);
+                if (response.status === 200) {
+                    this.telefoneAtualizado = true;
+                    setTimeout(() => {
+                        this.telefoneAtualizado = false;
+                    }, 3000);
+                }
+            });
         }
     },
     setup(props, data) {
@@ -125,11 +174,16 @@ export default defineComponent({
         const matriculaSelecionada = ref({} as Matricula);
         // any array
         const margensArray = ref<{ tipo: string; total: number; disponivel: number }[]>([]);
+        const telefone = ref('');
+        const telefoneAtualizado = ref(false);
         return {
             cliente,
             matriculasOptions,
             matriculaValue,
-            matriculaSelecionada
+            matriculaSelecionada,
+            margensArray,
+            telefone,
+            telefoneAtualizado
         };
     }
 });
@@ -148,5 +202,13 @@ export default defineComponent({
 .drop-down-matricula .p-dropdown-label {
     border-radius: 0.375rem 0 0 0.375rem !important;
     background-color: var(--primary-50) !important;
+}
+
+.input-group-telefone .p-inputgroup-addon {
+    background-color: rgb(241 245 249);
+}
+.input-group-telefone .p-inputtext {
+    font-size: xx-small !important;
+    background-color: rgb(241 245 249);
 }
 </style>
