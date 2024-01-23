@@ -4,38 +4,38 @@ import { ref } from 'vue';
 import AppMenuItem from './AppMenuItem.vue';
 
 const model = ref([
-    {
-        label: 'Home',
-        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
-    },
+    // {
+    //     label: 'Home',
+    //     items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+    // },
 
     {
         label: 'Vendedores',
         items: [
-            {
-                label: 'Clientes',
-                icon: 'pi pi-fw pi-money-bill',
-                to: '/pages/clientes'
-            },
-            {
-                label: 'Submenu 2',
-                icon: 'pi pi-fw pi-bookmark',
-                items: [
-                    {
-                        label: 'Submenu 2.1',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                            { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' }
-                        ]
-                    },
-                    {
-                        label: 'Submenu 2.2',
-                        icon: 'pi pi-fw pi-bookmark',
-                        items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
-                    }
-                ]
-            },
+            // {
+            //     label: 'Clientes',
+            //     icon: 'pi pi-fw pi-money-bill',
+            //     to: '/pages/clientes'
+            // },
+            // {
+            //     label: 'Submenu 2',
+            //     icon: 'pi pi-fw pi-bookmark',
+            //     items: [
+            //         {
+            //             label: 'Submenu 2.1',
+            //             icon: 'pi pi-fw pi-bookmark',
+            //             items: [
+            //                 { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
+            //                 { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' }
+            //             ]
+            //         },
+            //         {
+            //             label: 'Submenu 2.2',
+            //             icon: 'pi pi-fw pi-bookmark',
+            //             items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
+            //         }
+            //     ]
+            // },
             {
                 label: 'Consultar Cliente',
                 icon: 'pi pi-fw pi-search',
