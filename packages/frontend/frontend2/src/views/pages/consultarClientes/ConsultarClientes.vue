@@ -259,16 +259,63 @@ const onRowSelect = (event: any) => {
     console.log('row selected');
     console.log(event);
     clienteSelecionado.value = event.data.cliente;
+    consultaCliente.value = false;
     consultaCliente.value = true;
+    console.log(clienteSelecionado.value);
+    console.log(consultaCliente.value);
 };
+
+const onRowUnselect = (event: any) => {
+    console.log('row unselected');
+    console.log(event);
+    consultaCliente.value = event;
+};
+
+const exportExcel = () => {
+    console.log('exporting table to excel');
+    console.log(clientResponse.value);
+    //Per matricula: NOME, CPF, MATRÍCULA, MARGEM EMP, CARTÃO, BEN. SAQUE, BEN. COMPRA, VÍNCULO
+
+    let allMatriculas:any = [];
+    clientResponse.value.forEach((cliente: any) => {
+        cliente.cliente.matriculas.forEach((matricula: Matricula) => {
+            let matriculaExport = {
+                nome: cliente.cliente.nome,
+                cpf: cliente.cliente.cpf,
+                matricula: matricula.matricula,
+                margemEmprestimo: matricula.margens.emprestimo.disponivel,
+                margemCartao: matricula.margens.cartao.disponivel,
+                margemSaque: matricula.margens.saque.disponivel,
+                margemCompra: matricula.margens.compra.disponivel,
+                vinculo: matricula.tipo
+            };
+            allMatriculas.push(matriculaExport);
+        });
+    });
+    console.log(allMatriculas);
+    let csv = 'NOME;CPF;MATRÍCULA;EMPRÉSTIMO;CARTÃO;BEN. SAQUE;BEN. COMPRA;VÍNCULO\n';
+    allMatriculas.forEach((matricula: any) => {
+        csv += `${matricula.nome};${matricula.cpf};${matricula.matricula};${matricula.margemEmprestimo};${matricula.margemCartao};${matricula.margemSaque};${matricula.margemCompra};${matricula.vinculo}\n`;
+    });
+    console.log(csv);
+    let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    let link = document.createElement('a');
+    let url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'clientes.csv');
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+}
+
 </script>
 
 <template>
     <div>
         <!-- modal -->
-        <Dialog v-model:visible="consultaCliente" header="Detalhes do Cliente" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
-            <DetailClientes :clienteRow="clienteSelecionado" />
-        </Dialog>
+            <DetailClientes :clienteRow="clienteSelecionado" :visivel="consultaCliente" @visivel="onRowUnselect($event)" />
 
         <div class="card">
             <!-- activate modal -->
@@ -348,6 +395,10 @@ const onRowSelect = (event: any) => {
                                         </div>
                                     </template>
                                 </Dialog>
+                            </div>
+                            <!-- export excel button -->
+                            <div class="col-2 flex justify-end align-middle text-center align-items-center ">
+                                <i @click="exportExcel()" outlined class="pi pi-file-excel export-excel-button p-button-rounded p-button-secondary p-button-outlined text-3xl text-green-800" />
                             </div>
                             <!-- <div class="col-8 flex flex-row gap-2 justify-end margemDrop">
                                 <div class="flex flex-row justify-start items-center col-2 p-0" v-for="option in margensOptions">
@@ -502,6 +553,10 @@ const onRowSelect = (event: any) => {
 </template>
 
 <style>
+
+.export-excel-button.p-button{
+}
+
 #dialogColunas > .p-dialog-header {
 }
 

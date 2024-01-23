@@ -1,8 +1,7 @@
 <template>
-    <div>
-        <div class="card my-2 flex-row gap-4">
-            <!-- message telegone updated -->
-            <span class="row flex p-0 gap-0">
+    <Dialog class="card gap-4" v-model:visible="CardVisivel" :modal="true" :style="{ width: '50vw' }" :baseZIndex="10000">
+        <template #header >
+            <span class=" row flex p-0 gap-0 justify-between w-full">
                 <div class="col-8 flex-col p-0">
                     <h1 class="text-3xl font-semibold text-primary-500">{{ cliente.nome }}</h1>
                     <span class="font-semibold text-lg text-primary-300"> {{ cliente.cpf }} </span>
@@ -12,69 +11,69 @@
                     <span class="text-sm font-semibold text-primary-300 p-0 justify-end flex"> {{ new Date(cliente.ultimaConsulta).toLocaleString('pt-BR', { timeZone: 'UTC' }) }} </span>
                 </div>
             </span>
-            <div class="flex-row flex row col-12 p-0 gap-0 py-2">
-                <div class="col-6 p-0 row flex-col py-2 gap-2 justify-end">
-                    <div class="col-12 gap-4 flex p-0 flex-row">
-                        <div class="col-10 p-0 p-inputgroup h-10 input-group-telefone">
-                            <span class="p-inputgroup-addon p-input-start"><a class="pi pi-whatsapp text-2xl text-green-200" @click="sendMessageWpp(telefone)" target="_blank" /> </span>
-                            <InputMask id="basic" v-model="telefone" mask="(99)99999-9999" placeholder="(99)99999-9999" class="w-3/4">
-                                <template #input>
-                                    <input type="text" class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-primary text-sm" />
-                                </template>
-                            </InputMask>
-                        </div>
-                        <div class="col-3 p-0 flex justify-end align-baseline">
-                            <Button class="h-10 w-full font-semibold px-6 rounded-md bg-primary text-sm flex justify-center" @click="salvaTelefone"> Alterar </Button>
-                        </div>
+        </template>
+        <div class="flex-row flex row col-12 p-0 gap-0 py-2">
+            <div class="col-6 p-0 row flex-col py-2 gap-2 justify-end">
+                <div class="col-12 gap-4 flex p-0 flex-row">
+                    <div class="col-10 p-0 p-inputgroup h-10 input-group-telefone">
+                        <span class="p-inputgroup-addon p-input-start"><a class="pi pi-whatsapp text-2xl text-green-200" @click="sendMessageWpp(telefone)" target="_blank" /> </span>
+                        <InputMask id="basic" v-model="telefone" mask="(99)99999-9999" placeholder="(99)99999-9999" class="w-3/4">
+                            <template #input>
+                                <input type="text" class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-primary text-sm" />
+                            </template>
+                        </InputMask>
                     </div>
-                    <Message severity="success" v-if="telefoneAtualizado"> <span>Telefone atualizado com sucesso!</span> </Message>
+                    <div class="col-3 p-0 flex justify-end align-baseline">
+                        <Button class="h-10 w-full font-semibold px-6 rounded-md bg-primary text-sm flex justify-center" @click="salvaTelefone"> Alterar </Button>
+                    </div>
                 </div>
-                <!-- button save phone -->
+                <Message severity="success" v-if="telefoneAtualizado"> <span>Telefone atualizado com sucesso!</span> </Message>
             </div>
-            <!-- card with margens -->
-            <div class="row flex justify-between p-0 gap-0 py-2">
-                <div class="col-5 flex-row p-0 gap-0 justify-end">
-                    <div class="drop-down-matricula mt-2">
-                        <div class="float-label">
-                            <label class="text-primary-300 text-xl font-bold">Matricula</label>
+            <!-- button save phone -->
+        </div>
+        <!-- card with margens -->
+        <div class="row flex justify-between p-0 gap-0 py-2">
+            <div class="col-5 flex-row p-0 gap-0 justify-end">
+                <div class="drop-down-matricula mt-2">
+                    <div class="float-label">
+                        <label class="text-primary-300 text-xl font-bold">Matricula</label>
 
-                            <Dropdown dropdown v-model="matriculaValue" :options="matriculasOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm">
-                                <template #value="{ value, placeholder }">
-                                    <span v-if="value" class="flex flex-row justify-start items-center gap-1">
-                                        <span class="">{{ value }}</span>
-                                    </span>
-                                    <span v-else class="flex flex-row justify-start items-center gap-1">
-                                        <span>{{ placeholder }}</span>
-                                    </span>
-                                </template>
-                            </Dropdown>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5 flex p-0 justify-end">
-                    <div class="mt-1">
-                        <h1 class="text-xl p-0 font-semibold text-primary-300">Tipo:</h1>
-                        <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.tipo" />
+                        <Dropdown dropdown v-model="matriculaValue" :options="matriculasOptions" optionLabel="label" optionValue="value" class="h-10 w-full text-sm">
+                            <template #value="{ value, placeholder }">
+                                <span v-if="value" class="flex flex-row justify-start items-center gap-1">
+                                    <span class="">{{ value }}</span>
+                                </span>
+                                <span v-else class="flex flex-row justify-start items-center gap-1">
+                                    <span>{{ placeholder }}</span>
+                                </span>
+                            </template>
+                        </Dropdown>
                     </div>
                 </div>
             </div>
-            <div class="row flex col-12 p-0 py-2 justify-between">
-                <div class="col-5 flex-col p-0 gap-0 justify-start">
-                    <h1 class="text-xl p-0 font-semibold text-primary-300">Situação:</h1>
-                    <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.situacao.split(' ')[0]" />
+            <div class="col-5 flex p-0 justify-end">
+                <div class="mt-1">
+                    <h1 class="text-xl p-0 font-semibold text-primary-300">Tipo:</h1>
+                    <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.tipo" />
                 </div>
-                <!-- phone with wpp logo to redirect to wpp -->
-            </div>
-            <!-- Table Margens -->
-            <div class="card flex-row col-12 p-0 py-2">
-                <DataTable :value="margensArray" tableStyle="min-width: 50rem" selectionMode="multiple" selection="selectedProduct">
-                    <Column field="tipo" header="Tipo" sortable></Column>
-                    <Column field="total" header="Total" sortable></Column>
-                    <Column field="disponivel" header="Disponível" sortable></Column>
-                </DataTable>
             </div>
         </div>
-    </div>
+        <div class="row flex col-12 p-0 py-2 justify-between">
+            <div class="col-5 flex-col p-0 gap-0 justify-start">
+                <h1 class="text-xl p-0 font-semibold text-primary-300">Situação:</h1>
+                <input type="text" disabled class="h-10 w-full mt-1 font-semibold p-2 rounded-md bg-slate-100" :value="matriculaSelecionada.situacao.split(' ')[0]" />
+            </div>
+            <!-- phone with wpp logo to redirect to wpp -->
+        </div>
+        <!-- Table Margens -->
+        <div class="card flex-row col-12 p-0 py-2">
+            <DataTable :value="margensArray" tableStyle="min-width: 50rem" selectionMode="multiple" selection="selectedProduct">
+                <Column field="tipo" header="Tipo" sortable></Column>
+                <Column field="total" header="Total" sortable></Column>
+                <Column field="disponivel" header="Disponível" sortable></Column>
+            </DataTable>
+        </div>
+    </Dialog>
 </template>
 
 <script lang="ts">
@@ -90,12 +89,18 @@ export default defineComponent({
         clienteRow: {
             type: Object as () => Cliente,
             required: true
+        },
+        visivel: {
+            type: Boolean,
+            required: true
         }
     },
 
     watch: {
         clienteRow: {
             handler() {
+                if (!this.clienteRow || this.clienteRow === undefined) return;
+                console.log('clienteRow', this.clienteRow);
                 this.cliente = this.clienteRow;
                 this.matriculasOptions = this.clienteRow.matriculas.map((matricula) => {
                     return { label: matricula.matricula, value: matricula.matricula };
@@ -106,8 +111,27 @@ export default defineComponent({
             },
             immediate: true
         },
+        visivel: {
+            handler() {
+                console.log('visivel', this.visivel);
+                this.CardVisivel = this.visivel;
+                // this.getCliente();
+            },
+            immediate: true
+        },
+
+        CardVisivel: {
+            handler() {
+                console.log('visivel', this.CardVisivel);
+                this.$emit('visivel', this.CardVisivel);
+            },
+            immediate: true
+        },
         matriculaValue: {
             handler() {
+                if (this.matriculaValue === '') return;
+                if (this.clienteRow.matriculas.length === 0) return;
+
                 this.matriculaSelecionada = this.clienteRow.matriculas.find((matricula) => matricula.matricula === this.matriculaValue);
                 let margensArray: { tipo: string; total: number; disponivel: number }[] = [];
 
@@ -134,7 +158,8 @@ export default defineComponent({
             matriculaValue: '',
             margensArray: [],
             telefone: '',
-            telefoneAtualizado: false
+            telefoneAtualizado: false,
+            CardVisivel: false
         };
     },
     methods: {
@@ -168,7 +193,8 @@ export default defineComponent({
         sendMessageWpp(telefone: string) {
             //remove mask from telefone (99)99999-9999
             let wpp = telefone.replace(/\D/g, '');
-            let texto = `Olá, ${this.cliente.nome}!`;
+            let firstName = this.cliente.nome.toLowerCase().split(' ')[0].charAt(0).toUpperCase();
+            let texto = `Olá, ${firstName}!`;
             let textoURI = encodeURIComponent(texto);
             window.open(`https://api.whatsapp.com/send?phone=${wpp}&text=${textoURI}&app_absent=1`);
         }
@@ -183,6 +209,7 @@ export default defineComponent({
         const margensArray = ref<{ tipo: string; total: number; disponivel: number }[]>([]);
         const telefone = ref('');
         const telefoneAtualizado = ref(false);
+        const CardVisivel = ref(false);
         return {
             cliente,
             matriculasOptions,
@@ -190,7 +217,8 @@ export default defineComponent({
             matriculaSelecionada,
             margensArray,
             telefone,
-            telefoneAtualizado
+            telefoneAtualizado,
+            CardVisivel
         };
     }
 });
