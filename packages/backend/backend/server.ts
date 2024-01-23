@@ -799,9 +799,13 @@ app.get("/getclientes", async (req: Request, res: Response) => {
             clienteJSON["nome"],
             clienteJSON["matriculas"]
           );
-          let clienteDB = await putClienteDB(clienteClass);
-          console.log("clienteDB:", clienteDB);
-          clientes.push(clienteDB);
+          if (clienteClass.nome.toLowerCase().includes("não encontrado") || clienteClass.nome.toLowerCase().includes("suspenso")) {
+            clientes.push(clienteClass);
+          } else {
+            let clienteDB = await putClienteDB(clienteClass);
+            console.log("clienteDB:", clienteDB);
+            clientes.push(clienteDB);
+          }
         }
       } catch (error) {
         console.error("erro cliente", error);
