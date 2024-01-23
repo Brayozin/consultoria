@@ -52,7 +52,7 @@ model Matricula {
   tipo      String
   situacao  String
   margens   Margem[]
-  owner     Cliente  @relation(fields: [ownerId], references: [id])
+  owner     Cliente  @relation(fields: [ownerId], references: [id], onDelete: Cascade) // when owner is deleted, delete all matriculas
   ownerId   String
 }
 
@@ -61,7 +61,7 @@ model Margem {
   categoria   String //emprestimo, cartao, saque, compra
   total       Float
   disponivel  Float
-  matricula   Matricula? @relation(fields: [matriculaId], references: [id])
+  matricula   Matricula? @relation(fields: [matriculaId], references: [id], onDelete: Cascade) // when matricula is deleted, delete all margens
   matriculaId String
 }
 
@@ -72,4 +72,18 @@ model Cliente {
   cpf            String      @unique
   ultimaConsulta DateTime    @default(now())
   matriculas     Matricula[]
+  telefone       String?
+  email          String?
+
+  //users whos has acess to this client
+  users User[]
+}
+
+model User {
+  id       String    @id @default(uuid())
+  name     String
+  email    String    @unique
+  password String
+  role     String    @default("user")
+  clientes Cliente[]
 }

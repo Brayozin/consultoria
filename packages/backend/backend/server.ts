@@ -8,23 +8,22 @@ const app = express();
 const PORT = 3000;
 import { spawn, ChildProcess } from "child_process";
 
-
-const allowedOrigin = 'https://frontend-app-eyu8p.ondigitalocean.app';
+const allowedOrigin = "https://frontend-app-eyu8p.ondigitalocean.app";
 
 const corsOptions = {
   origin: allowedOrigin,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 200,
 };
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    next();
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  next();
 });
 // run python script
 let pythonProcess: ChildProcess | null = null;
@@ -73,6 +72,7 @@ function startPythonProcess() {
     pythonProcessRunning = false;
   });
 
+  return pythonProcess;
 }
 startPythonProcess();
 
@@ -267,6 +267,7 @@ class matricula {
     this.nome = nome;
     this.tipo = tipo;
     this.situacao = situacao;
+    console.log("margens:", margens);
     let emprestimo = new margem(
       margens["emprestimo"]["total"],
       margens["emprestimo"]["disponivel"],
@@ -292,15 +293,25 @@ class matricula {
   }
 }
 
-class cliente {
+class Cliente {
   cpf: string;
   nome: string;
   matriculas: matricula[];
+  telefone: string; //optional
+  ultimaConsulta: Date | null; //optional
 
-  constructor(cpf: string, nome: string, matriculas: [matricula]) {
+  constructor(
+    cpf: string,
+    nome: string,
+    matriculas: [matricula],
+    telefone?: string,
+    ultimaConsulta?: Date | null
+  ) {
+    console.log("matriculas:", matriculas);
     this.cpf = cpf;
     this.nome = nome;
     this.matriculas = new Array<matricula>();
+    this.telefone = telefone ? telefone : "";
     for (let i = 0; i < matriculas.length; i++) {
       this.matriculas.push(
         new matricula(
@@ -313,6 +324,7 @@ class cliente {
         )
       );
     }
+    this.ultimaConsulta = ultimaConsulta ? ultimaConsulta : null;
   }
 }
 
@@ -381,6 +393,61 @@ const JSONCliente = {
   ],
 };
 
+// get client list from file
+app.post(
+  "/get-clientes-from-file",
+  async (req: Request, res: Response) => {
+    const cpfFile: File = req.body.cpfFile;
+    console.log("cpfFile", cpfFile);
+    if (!cpfFile) {
+      console.error("Invalid file");
+      res.status(400).send("Arquivo inválido");
+      return;
+    }
+    try {
+      // renmove \n and " and whiteSpaces from string
+      let clientsString = cpfFile
+        .toString()
+        .replace(/"/g, "")
+        .replace(/\n/g, "")
+        .replace(/\s/g, "");
+      console.log("clientsString:", clientsString);
+      let retornoJson: string | null = null;
+      let pythonReturn: string | null = await sendCommandToPython(
+        "consulta_lista_cpfs",
+        clientsString
+      );
+      let clientes: any[] = [];
+      while (
+        pythonReturn?.toString().includes("finished") == false &&
+        pythonReturn != null
+      ) {
+        console.log("pythonReturn:", pythonReturn);
+        retornoJson = pythonReturn?.toString().replace(/'/g, '"') ?? null;
+        if (retornoJson) {
+          console.log("returnJson:", retornoJson);
+          clientes.push(JSON.parse(retornoJson));
+        } else {
+          console.log("returnJson:", retornoJson);
+        }
+      }
+      console.log("pythonReturn:", pythonReturn);
+      console.log("clientes:", clientes);
+      res.status(200).json({
+        clientes: clientes,
+      });
+
+      if (!clientes) {
+        res.status(204).send({ response: [] });
+        return;
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error:" + error);
+    }
+  }
+);
+
 function getClientesArray(listJson: any) {
   const clientsString = listJson
     .toString()
@@ -393,7 +460,163 @@ function getClientesArray(listJson: any) {
   return clientsArray;
 }
 
-async function putClienteDB(cliente: cliente) {
+function clienteDbToCliente(clienteDB: any) {
+  console.log("clienteDbToCliente:", clienteDB);
+  let matriculaJson = clienteDB["matriculas"].map((matricula: any) => {
+    let margensJson = matricula["margens"].map((margem: any) => {
+      return {
+        categoria: margem["categoria"],
+        total: margem["total"],
+        disponivel: margem["disponivel"],
+      };
+    });
+    return {
+      matricula: matricula["matricula"],
+      cpf: matricula["cpf"],
+      nome: matricula["nome"],
+      tipo: matricula["tipo"],
+      situacao: matricula["situacao"],
+      telefone: matricula["telefone"],
+      ultimaConsulta: matricula["ultimaConsulta"],
+      margens: {
+        emprestimo: margensJson.find(
+          (margem: any) => margem["categoria"] === "emprestimo"
+        ),
+        cartao: margensJson.find(
+          (margem: any) => margem["categoria"] === "cartao"
+        ),
+        saque: margensJson.find(
+          (margem: any) => margem["categoria"] === "saque"
+        ),
+        compra: margensJson.find(
+          (margem: any) => margem["categoria"] === "compra"
+        ),
+      },
+    };
+  });
+  let clienteClass = new Cliente(
+    clienteDB["cpf"],
+    clienteDB["nome"],
+    matriculaJson,
+    clienteDB["telefone"],
+    clienteDB["ultimaConsulta"]
+  );
+  return clienteClass;
+}
+
+/**
+ * Update Client info, such as matriculas, margens, etc
+ * @param cliente
+ */
+async function updateClienteDB(cliente: Cliente) {
+  console.log("updateClienteDB:", cliente);
+
+  try {
+    let updateUltimaConsulta =
+      cliente.ultimaConsulta != null ? true : false;
+    let updateTelefone = cliente.telefone != "" ? true : false;
+    console.log("updateUltimaConsulta:", updateUltimaConsulta);
+    if (updateUltimaConsulta) {
+      const clienteDB = await prisma.cliente.update({
+        where: { cpf: cliente.cpf },
+        data: {
+          ultimaConsulta: cliente.ultimaConsulta?.toISOString(),
+        },
+      });
+      console.log("Cliente updated:", clienteDB);
+      if (updateTelefone) {
+        const clienteDB = await prisma.cliente.update({
+          where: { cpf: cliente.cpf },
+          data: {
+            telefone: cliente.telefone,
+          },
+        });
+        console.log("Cliente updated:", clienteDB);
+      }
+    } else {
+      if (updateTelefone) {
+        const clienteDB = await prisma.cliente.update({
+          where: { cpf: cliente.cpf },
+          data: {
+            telefone: cliente.telefone,
+          },
+        });
+        console.log("Cliente updated:", clienteDB);
+      }
+    }
+
+    // if cliente.ultimaConsulta
+    cliente.matriculas.forEach(async (matricula) => {
+      const matriculaDB = await prisma.matricula.update({
+        where: { matricula: matricula.matricula },
+        data: {
+          cpf: matricula.cpf,
+          nome: matricula.nome,
+          tipo: matricula.tipo,
+          situacao: matricula.situacao,
+          margens: {
+            updateMany: [
+              {
+                where: { categoria: "emprestimo" },
+                data: {
+                  total: parseFloat(matricula.margens.emprestimo.total),
+                  disponivel: parseFloat(
+                    matricula.margens.emprestimo.disponivel
+                  ),
+                },
+              },
+              {
+                where: { categoria: "cartao" },
+                data: {
+                  total: parseFloat(matricula.margens.cartao.total),
+                  disponivel: parseFloat(
+                    matricula.margens.cartao.disponivel
+                  ),
+                },
+              },
+              {
+                where: { categoria: "saque" },
+                data: {
+                  total: parseFloat(matricula.margens.saque.total),
+                  disponivel: parseFloat(
+                    matricula.margens.saque.disponivel
+                  ),
+                },
+              },
+              {
+                where: { categoria: "compra" },
+                data: {
+                  total: parseFloat(matricula.margens.compra.total),
+                  disponivel: parseFloat(
+                    matricula.margens.compra.disponivel
+                  ),
+                },
+              },
+            ],
+          },
+        },
+      });
+    });
+    let clientDB = await prisma.cliente.findUnique({
+      where: { cpf: cliente.cpf },
+      include: {
+        matriculas: {
+          include: {
+            margens: true,
+          },
+        },
+      },
+    });
+    console.log("clientDBput =", clientDB);
+    console.log("clientDB matriculas = :", clientDB?.matriculas);
+    return clienteDbToCliente(clientDB);
+  } catch (error) {
+    console.error("Error updating Cliente to DB", error);
+    return null;
+  }
+}
+
+async function putClienteDB(cliente: Cliente) {
   console.log("putClienteDB:", cliente);
   try {
     const clienteDB = await prisma.cliente.create({
@@ -450,7 +673,7 @@ async function putClienteDB(cliente: cliente) {
       });
     });
     console.log("Matriculas added:", clienteDB);
-    return prisma.cliente.findUnique({
+    let clientDB = prisma.cliente.findUnique({
       where: { cpf: cliente.cpf },
       include: {
         matriculas: {
@@ -460,28 +683,48 @@ async function putClienteDB(cliente: cliente) {
         },
       },
     });
+    console.log("clientDBput =", clientDB);
+    console.log("clientDB matriculas = :", clientDB["matriculas"]);
+    return clienteDbToCliente(clientDB);
   } catch (error: any) {
     if (error && error.code === "P2002") {
       console.error(
-        "The Cliente already exists. returning cliente from DB"
+        "The Cliente already exists. updating cliente, matriculas and margens from DB"
       );
-      const clienteDB = await prisma.cliente.update({
-        where: { cpf: cliente.cpf },
-        data: {
-          ultimaConsulta: new Date(),
-        },
-        include: {
-          matriculas: {
-            include: {
-              margens: true,
-            },
-          },
-        },
-      });
-      return clienteDB;
+      console.log("cliente:", cliente);
+      return await updateClienteDB(cliente);
     }
+    console.error("Error adding Cliente to DB", error);
   }
 }
+
+app.get("/updateCliente", async (req: Request, res: Response) => {
+  const cliente = req.query.cliente;
+  if (!cliente) {
+    console.error("Invalid command parameter");
+    res.status(400).send("Please provide a valid parameter");
+    return;
+  }
+  let clienteJSON = JSON.parse(cliente.toString().replace(/'/g, '"'));
+  console.log("clienteJSON:", clienteJSON);
+  let clienteClass = new Cliente(
+    clienteJSON["cpf"],
+    clienteJSON["nome"],
+    clienteJSON["matriculas"],
+    clienteJSON["telefone"]
+  );
+  console.log("clienteClass:", clienteClass);
+  try {
+    let clienteDB = await updateClienteDB(clienteClass);
+    console.log("clienteDB:", clienteDB);
+    res.status(200).json({
+      cliente: clienteDB,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error updating Client" + error);
+  }
+});
 
 app.get("/searchandupdate", async (req: Request, res: Response) => {
   const cpfList = req.query.cpfList;
@@ -511,7 +754,7 @@ app.get("/searchandupdate", async (req: Request, res: Response) => {
       let returnJson = pythonReturn?.toString().replace(/'/g, '"');
       if (returnJson) {
         let clienteJSON: any = JSON.parse(returnJson);
-        let clienteClass = new cliente(
+        let clienteClass = new Cliente(
           clienteJSON["cpf"],
           clienteJSON["nome"],
           clienteJSON["matriculas"]
@@ -533,7 +776,6 @@ app.get("/searchandupdate", async (req: Request, res: Response) => {
 
 app.get("/getclientes", async (req: Request, res: Response) => {
   const clientList = req.query.cpfList;
-  console.log("clientList", clientList);
   if (!clientList) {
     console.error("Invalid command parameter");
     res.status(400).send("Please provide a valid parameter");
@@ -542,7 +784,6 @@ app.get("/getclientes", async (req: Request, res: Response) => {
   try {
     let clientsArray = getClientesArray(clientList);
     let clientes: any[] = [];
-
 
     console.log("clientsArray:", clientsArray.length);
     for (let i = 0; i < clientsArray.length; i++) {
@@ -553,13 +794,16 @@ app.get("/getclientes", async (req: Request, res: Response) => {
         );
         let returnJson = pythonReturn?.toString().replace(/'/g, '"');
         if (returnJson) {
+          console.log("returnJson:", returnJson);
           let clienteJSON: any = JSON.parse(returnJson);
-          let clienteClass = new cliente(
+          let clienteClass = new Cliente(
             clienteJSON["cpf"],
             clienteJSON["nome"],
             clienteJSON["matriculas"]
           );
-          clientes.push(clienteClass);
+          let clienteDB = await putClienteDB(clienteClass);
+          console.log("clienteDB:", clienteDB);
+          clientes.push(clienteDB);
         }
       } catch (error) {
         console.error("erro cliente", error);
@@ -611,49 +855,78 @@ app.get("/getcliente/:param", async (req: Request, res: Response) => {
 
 function sendCommandToPython(
   command: string,
-  data: any
+  data: any,
+  tryCount: number = 0
 ): Promise<string | null> {
-  console.log("Sending command to Python:", pythonProcess);
+  let randomId = Math.floor(Math.random() * 1000);
+  console.log("function id:", randomId);
   // check if pythonProcess is running
   if (!pythonProcessRunning) {
     console.log("Python process is not running. Starting it...");
     startPythonProcess();
   }
-
   return new Promise((resolve, reject) => {
     try {
+      console.log("Sending command to Python try:", command);
       if (pythonProcess && pythonProcess.stdin) {
         pythonProcess.stdin.write(command + "\n");
         pythonProcess.stdin.write(data + "\n");
 
+        console.log("Python process is running. waiting for response...");
         const onData = (data: Buffer) => {
           const dataString = data.toString();
           console.log(`Received dataString from Python: ${dataString}`);
           if (dataString.includes("data:")) {
             // remove data: from beggining of string (there is more than one data: in the string)
-            const dataStringClean =  dataString.slice(5);
+            const dataStringClean = dataString.slice(5);
             resolve(dataStringClean);
             pythonProcess?.stdout?.off("data", onData);
+            pythonProcess?.off("close", onClose);
           } else if (dataString.includes("info:")) {
             console.info(dataString);
           } else if (dataString.includes("error:")) {
             console.error(dataString);
             reject(null);
             pythonProcess?.stdout?.off("data", onData);
+            pythonProcess?.off("close", onClose);
           } else if (dataString.includes("finished:")) {
             console.log("finished");
             resolve("finished");
             pythonProcess?.stdout?.off("data", onData);
+            pythonProcess?.off("close", onClose);
           }
           // remove listener
         };
+        const onClose = () => {
+          console.log("Python process closed", randomId);
+          pythonProcess?.stdout?.off("data", onData);
+          pythonProcess?.off("close", onClose);
+          pythonProcessRunning = false;
+          if (tryCount < 3) {
+            console.log(
+              "resolveSendCommandToPython:",
+              tryCount,
+              "-",
+              randomId
+            );
+            resolve(sendCommandToPython(command, data, tryCount + 1));
+            pythonProcess?.off("close", onClose);
+          } else {
+            reject(null);
+            pythonProcess?.stdout?.off("data", onData);
+            pythonProcess?.off("close", onClose);
+          }
+        };
 
         pythonProcess.stdout?.on("data", onData);
+        pythonProcess.on("close", onClose);
+        // see if python process closed or exited
       } else {
         console.error("Python process or stdin is not available");
         reject(null);
       }
     } catch (error) {
+      console.log("Error sending command to Python");
       console.error(error);
       reject(null);
     }

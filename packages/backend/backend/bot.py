@@ -207,14 +207,16 @@ class bot:
     class margem:
 
         def __init__(self, total, reservada, disponivel):
-            # clear the strings to get only the numbers, removing the R$ and the . and '\n'
-            total = total[3:].replace('.', '').replace('\n', '')
-            reservada = reservada[3:].replace('.', '').replace('\n', '')
-            disponivel = disponivel[3:].replace('.', '').replace('\n', '')
+            # clear the strings to get only the numbers, removing the R$ and the . and '\n and R$'
+            total = total.replace('.', '').replace('\n', '').replace(',', '.').replace('R$', '').replace(' ', '')
+            reservada = reservada.replace(
+                '.', '').replace('\n', '').replace(',', '.').replace('R$', '').replace(' ', '')
+            disponivel = disponivel.replace(
+                '.', '').replace('\n', '').replace(',', '.').replace('R$', '').replace(' ', '')
             
-            
-            self.total = total
-            self.reservada = reservada
+            # parse texto to float (include - in case of negative numbers)
+            self.total =  total
+            self.reservada = reservada 
             self.disponivel = disponivel
 
         def get_margem(self):
