@@ -869,7 +869,7 @@ function sendCommandToPython(
   let randomId = Math.floor(Math.random() * 1000);
   console.log("function id:", randomId);
   // check if pythonProcess is running
-  if (!pythonProcessRunning && !pythonProcess && tryCount >= 1) {
+  if (!pythonProcessRunning && tryCount >= 1) {
     console.log("Python process is not running. Starting it...");
     startPythonProcess();
   }
@@ -930,7 +930,10 @@ function sendCommandToPython(
         // see if python process closed or exited
       } else {
         console.error("Python process or stdin is not available");
-        reject(null);
+        if (tryCount < 3)
+          resolve(sendCommandToPython(command, data, tryCount + 1));
+        else  
+          reject(null);
       }
     } catch (error) {
       console.log("Error sending command to Python");
