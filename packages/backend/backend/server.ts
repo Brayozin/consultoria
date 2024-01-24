@@ -54,12 +54,6 @@ function startPythonProcess() {
     pythonProcessRunning = false;
   });
 
-  // Event listener when python process disconnects
-  pythonProcess.on("disconnect", () => {
-    console.log("Python process disconnected");
-    pythonProcessRunning = false;
-  });
-
   // Event listener when python process is spawned
   pythonProcess.on("spawn", () => {
     console.log("Python process spawned");
@@ -762,7 +756,9 @@ app.get("/searchandupdate", async (req: Request, res: Response) => {
         clientes.push(clienteDB);
       }
     }
-    console.log("terminou");
+    console.log("------------------terminou----------------------");
+    console.log("clientes:", clientes);
+    console.log("------------------terminou----------------------");
     res.status(200).json({
       clientes: clientes,
     });
@@ -811,11 +807,12 @@ app.get("/getclientes", async (req: Request, res: Response) => {
         console.error("erro cliente", error);
       }
     }
-    console.log("clientes:", clientes);
     res.status(200).json({
       clientes: clientes,
     });
-    console.log("terminou");
+        console.log("------------------terminou----------------------");
+        console.log("clientes:", clientes);
+        console.log("------------------terminou----------------------");
 
     if (!clientes) {
       res.status(204).send({ response: [] });
@@ -863,7 +860,7 @@ function sendCommandToPython(
   let randomId = Math.floor(Math.random() * 1000);
   console.log("function id:", randomId);
   // check if pythonProcess is running
-  if (!pythonProcessRunning) {
+  if (!pythonProcessRunning && !pythonProcess && tryCount >= 1) {
     console.log("Python process is not running. Starting it...");
     startPythonProcess();
   }
@@ -903,7 +900,6 @@ function sendCommandToPython(
           console.log("Python process closed", randomId);
           pythonProcess?.stdout?.off("data", onData);
           pythonProcess?.off("close", onClose);
-          pythonProcessRunning = false;
           if (tryCount < 3) {
             console.log(
               "resolveSendCommandToPython:",
