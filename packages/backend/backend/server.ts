@@ -760,7 +760,7 @@ app.get("/searchandupdate", async (req: Request, res: Response) => {
           clienteJSON["nome"],
           clienteJSON["matriculas"]
         );
-        let clienteDB = await putClienteDB(clienteClass);
+        let clienteDB = clienteClass;
         console.log("clienteDB:", clienteDB);
         clientes.push(clienteDB);
       }
