@@ -622,49 +622,56 @@ async function putClienteDB(cliente: Cliente) {
     });
     console.log("Cliente added:", clienteDB);
     cliente.matriculas.forEach(async (matricula) => {
-      const matriculaDB = await prisma.matricula.create({
+      const matriculaDB = await prisma.matricula.update({
+        where: { matricula: matricula.matricula },
         data: {
           cpf: matricula.cpf,
           nome: matricula.nome,
           tipo: matricula.tipo,
           situacao: matricula.situacao,
-          matricula: matricula.matricula,
           margens: {
-            create: [
+            updateMany: [
               {
-                categoria: "emprestimo",
-                total: parseFloat(matricula.margens.emprestimo.total),
-                disponivel: parseFloat(
-                  matricula.margens.emprestimo.disponivel
-                ),
+                where: { categoria: "emprestimo" },
+                data: {
+                  total: parseFloat(matricula.margens.emprestimo.total),
+                  disponivel: parseFloat(
+                    matricula.margens.emprestimo.disponivel
+                  ),
+                },
               },
               {
-                categoria: "cartao",
-                total: parseFloat(matricula.margens.cartao.total),
-                disponivel: parseFloat(
-                  matricula.margens.cartao.disponivel
-                ),
+                where: { categoria: "cartao" },
+                data: {
+                  total: parseFloat(matricula.margens.cartao.total),
+                  disponivel: parseFloat(
+                    matricula.margens.cartao.disponivel
+                  ),
+                },
               },
               {
-                categoria: "saque",
-                total: parseFloat(matricula.margens.saque.total),
-                disponivel: parseFloat(matricula.margens.saque.disponivel),
+                where: { categoria: "saque" },
+                data: {
+                  total: parseFloat(matricula.margens.saque.total),
+                  disponivel: parseFloat(
+                    matricula.margens.saque.disponivel
+                  ),
+                },
               },
               {
-                categoria: "compra",
-                total: parseFloat(matricula.margens.compra.total),
-                disponivel: parseFloat(
-                  matricula.margens.compra.disponivel
-                ),
+                where: { categoria: "compra" },
+                data: {
+                  total: parseFloat(matricula.margens.compra.total),
+                  disponivel: parseFloat(
+                    matricula.margens.compra.disponivel
+                  ),
+                },
               },
             ],
           },
-
-          owner: {
-            connect: { cpf: cliente.cpf },
-          },
         },
       });
+      console.log("Matricula added:", matriculaDB);
     });
     console.log("Matriculas added:", clienteDB);
     let clientDB = await prisma.cliente.findUnique({
@@ -677,6 +684,8 @@ async function putClienteDB(cliente: Cliente) {
         },
       },
     });
+    console.log("clientDBPost =", clientDB);
+    console.log("clientDBPost matriculas = :", clientDB?.matriculas);
     return clienteDbToCliente(clientDB);
   } catch (error: any) {
     if (error && error.code === "P2002") {
