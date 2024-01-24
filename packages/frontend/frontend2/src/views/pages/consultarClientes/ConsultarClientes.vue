@@ -147,7 +147,7 @@ const onFileUpload = async (e: any) => {
 };
 
 // Search Clients
-
+const keyAttTabela = ref(0);
 const searchClients = async () => {
     console.log('searching clients');
     console.log(cpfList.value);
@@ -157,44 +157,46 @@ const searchClients = async () => {
     // remove - . and ,
     let cpfs = cpfList.value.map((cpf: any) => cpf.replace(/[.-]/g, ''));
     let cpflistString = cpfs.join(',');
-    let request = {
-        params: {
-            cpfList: cpflistString // Assuming cpfList.value is an array
-        }
-    };
+    // let request = {
+    //     params: {
+    //         cpfList: cpflistString // Assuming cpfList.value is an array
+    //     }
+    // };
 
     try {
-        let response: any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
-        let clientes = response.data.clientes;
-        console.log('clientes', clientes);
         let matriculas: any = [];
-        for (let i = 0; i < clientes.length; i++) {
-            let cliente = new Cliente(clientes[i].cpf, clientes[i].nome, clientes[i].matriculas, clientes[i].telefone, clientes[i].ultimaConsulta);
-            matriculas.push({
-                cliente: cliente,
-                matriculaSelecionada: cliente.matriculas[0].matricula,
-                matriculasOptions: cliente.matriculas.map((matricula) => {
-                    return { label: matricula.matricula, value: matricula.matricula };
-                }),
-                margemSelecionada: cliente.matriculas[0].margens.emprestimo.categoria,
-                margem: cliente.matriculas[0].margens.emprestimo
-            });
+
+        for (let i = 0; i < cpfs.length; i++) {
+            let cpf = cpfs[i];
+            let request = {
+                params: {
+                    cpfList: cpf // Assuming cpfList.value is an array
+                }
+            };
+
+            let response: any = await axios.get('https://api.idealfinanceira.com/getclientes', request);
+            if (response.data.clientes.length === 0) {
+                alert(`CPF ${cpf} não encontrado`);
+            } else {
+                let cliente = response.data.clientes[0];
+                console.log('cliente', cliente);
+                let clienteClass = new Cliente(cliente.cpf, cliente.nome, cliente.matriculas, cliente.telefone, cliente.ultimaConsulta);
+                let matricula = {
+                    cliente: clienteClass,
+                    matriculaSelecionada: clienteClass.matriculas[0].matricula,
+                    matriculasOptions: clienteClass.matriculas.map((matricula) => {
+                        return { label: matricula.matricula, value: matricula.matricula };
+                    }),
+                    margemSelecionada: clienteClass.matriculas[0].margens.emprestimo.categoria,
+                    margem: clienteClass.matriculas[0].margens.emprestimo
+                };
+                matriculas.push(matricula);
+                clientResponse.value = matriculas;
+                keyAttTabela.value++;
+            }
+
         }
-        // let matriculas: any = [];
 
-        // let clienteParse = JSON.parse(JSON.stringify(clienteExemploJson));
-        // let cliente = new Cliente(clienteParse.cpf, clienteParse.nome, clienteParse.matriculas);
-        // matriculas.push({
-        //     cliente: cliente,
-        //     matriculaSelecionada: cliente.matriculas[0].matricula,
-        //     matriculasOptions: cliente.matriculas.map((matricula) => {
-        //         return { label: matricula.matricula, value: matricula.matricula };
-        //     }),
-        //     margemSelecionada: cliente.matriculas[0].margens.emprestimo.categoria,
-        //     margem: cliente.matriculas[0].margens.emprestimo
-        // });
-
-        clientResponse.value = matriculas;
         loading.value = false;
     } catch (error) {
         // Handle errors if any
@@ -360,8 +362,9 @@ const exportExcel = () => {
                 </div>
                 <div class="mt-4" v-else></div>
             </div>
-            <div class="card p-1" id="clientTable">
+            <div class="card p-1" id="clientTable" :key="'attTabel'+keyAttTabela">
                 <DataTable
+                
                     :value="clientResponse"
                     tableStyle="min-width: 50rem"
                     stripedRows
