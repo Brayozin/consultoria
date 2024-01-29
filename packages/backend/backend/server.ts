@@ -503,7 +503,6 @@ function clienteDbToCliente(clienteDB: any) {
  * @param cliente
  */
 async function updateClienteDB(cliente: Cliente) {
-  console.log("updateClienteDB:", cliente);
 
   try {
     let updateUltimaConsulta =
@@ -612,82 +611,105 @@ async function updateClienteDB(cliente: Cliente) {
 
 async function putClienteDB(cliente: Cliente) {
   console.log("putClienteDB:", cliente);
+  // check if client is already in DB
+  let clienteDB = await prisma.cliente.findUnique({
+    where: { cpf: cliente.cpf },
+    include: {
+      matriculas: {
+        include: {
+          margens: true,
+        },
+      },
+    },
+  });
+  if (clienteDB != null) {
+    console.log("clienteDB alreadyExists:", clienteDB);
+    return await updateClienteDB(cliente);
+  }
+ 
   try {
-    const clienteDB = await prisma.cliente.create({
-      data: {
-        cpf: cliente.cpf,
-        nome: cliente.nome,
-        ultimaConsulta: new Date(),
-      },
-    });
-    console.log("Cliente added:", clienteDB);
-    cliente.matriculas.forEach(async (matricula) => {
-      const matriculaDB = await prisma.matricula.update({
-        where: { matricula: matricula.matricula },
+    const clienteDB = new Promise(function (resolve, reject) {
+      prisma.cliente
+      .create({
         data: {
-          cpf: matricula.cpf,
-          nome: matricula.nome,
-          tipo: matricula.tipo,
-          situacao: matricula.situacao,
-          margens: {
-            updateMany: [
-              {
-                where: { categoria: "emprestimo" },
-                data: {
-                  total: parseFloat(matricula.margens.emprestimo.total),
-                  disponivel: parseFloat(
-                    matricula.margens.emprestimo.disponivel
-                  ),
-                },
-              },
-              {
-                where: { categoria: "cartao" },
-                data: {
-                  total: parseFloat(matricula.margens.cartao.total),
-                  disponivel: parseFloat(
-                    matricula.margens.cartao.disponivel
-                  ),
-                },
-              },
-              {
-                where: { categoria: "saque" },
-                data: {
-                  total: parseFloat(matricula.margens.saque.total),
-                  disponivel: parseFloat(
-                    matricula.margens.saque.disponivel
-                  ),
-                },
-              },
-              {
-                where: { categoria: "compra" },
-                data: {
-                  total: parseFloat(matricula.margens.compra.total),
-                  disponivel: parseFloat(
-                    matricula.margens.compra.disponivel
-                  ),
-                },
-              },
-            ],
-          },
+          cpf: cliente.cpf,
+          nome: cliente.nome,
+          ultimaConsulta: new Date(),
         },
+      }).then((clienteCreated) => {
+        console.log("clienteCreated:", clienteCreated);
+        resolve(clienteCreated);
+      })
+    }).then(async (clientCreated) => {
+      console.log("clienteDB:", clientCreated);
+      console.log("Updating Client Matriculas");
+      for (const matricula of cliente.matriculas) {
+        const matriculaDB = await prisma.matricula.create({
+          data: {
+            matricula: matricula.matricula,
+            cpf: matricula.cpf,
+            nome: matricula.nome,
+            tipo: matricula.tipo,
+            situacao: matricula.situacao,
+            owner: {
+              connect: { cpf: cliente.cpf },
+            },
+            margens: {
+              createMany: {
+                data: [
+                  {
+                    categoria: "emprestimo",
+                    total: parseFloat(matricula.margens.emprestimo.total),
+                    disponivel: parseFloat(matricula.margens.emprestimo.disponivel),
+                  },
+                  {
+                    categoria: "cartao",
+                    total: parseFloat(matricula.margens.cartao.total),
+                    disponivel: parseFloat(matricula.margens.cartao.disponivel),
+                  },
+                  {
+                    categoria: "saque",
+                    total: parseFloat(matricula.margens.saque.total),
+                    disponivel: parseFloat(matricula.margens.saque.disponivel),
+                  },
+                  {
+                    categoria: "compra",
+                    total: parseFloat(matricula.margens.compra.total),
+                    disponivel: parseFloat(matricula.margens.compra.disponivel),
+                  },
+                ],
+              },
+            },
+          },
+        });
+        console.log("Matricula added:", matriculaDB);
+      }
+    })
+      .then(async (matriculasCreated) => {
+        console.log("matriculasCreated:", matriculasCreated);
+        console.log("Cliente added matriculasCreated:", matriculasCreated);
+
+         let clientWithMatriculas = await prisma.cliente.findUnique({
+           where: { cpf: cliente.cpf },
+           include: {
+             matriculas: {
+               include: {
+                 margens: true,
+               },
+             },
+           },
+         });
+        return clienteDbToCliente(clientWithMatriculas);
       });
-      console.log("Matricula added:", matriculaDB);
-    });
-    console.log("Matriculas added:", clienteDB);
-    let clientDB = await prisma.cliente.findUnique({
-      where: { cpf: cliente.cpf },
-      include: {
-        matriculas: {
-          include: {
-            margens: true,
-          },
-        },
-      },
-    });
-    console.log("clientDBPost =", clientDB);
-    console.log("clientDBPost matriculas = :", clientDB?.matriculas);
-    return clienteDbToCliente(clientDB);
+    
+    console.log("clienteDB:", clienteDB);
+    return clienteDB;
+
+
   } catch (error: any) {
+    console.log("------------ERROR PUT CLIENT DB------------------");
+    console.log("error:", error);
+    console.log("------------/ERROR PUT CLIENT DB-----------------");
     if (error && error.code === "P2002") {
       console.error(
         "The Cliente already exists. updating cliente, matriculas and margens from DB"
@@ -804,7 +826,10 @@ app.get("/getclientes", async (req: Request, res: Response) => {
             clienteJSON["nome"],
             clienteJSON["matriculas"]
           );
-          if (clienteClass.nome.toLowerCase().includes("não encontrado") || clienteClass.nome.toLowerCase().includes("suspenso")) {
+          if (
+            clienteClass.nome.toLowerCase().includes("não encontrado") ||
+            clienteClass.nome.toLowerCase().includes("suspenso")
+          ) {
             clientes.push(clienteClass);
           } else {
             let clienteDB = await putClienteDB(clienteClass);
@@ -819,9 +844,9 @@ app.get("/getclientes", async (req: Request, res: Response) => {
     res.status(200).json({
       clientes: clientes,
     });
-        console.log("------------------terminou----------------------");
-        console.log("clientes:", clientes);
-        console.log("------------------terminou----------------------");
+    console.log("------------------terminou----------------------");
+    console.log("clientes:", clientes);
+    console.log("------------------terminou----------------------");
 
     if (!clientes) {
       res.status(204).send({ response: [] });
@@ -932,8 +957,7 @@ function sendCommandToPython(
         console.error("Python process or stdin is not available");
         if (tryCount < 3)
           resolve(sendCommandToPython(command, data, tryCount + 1));
-        else  
-          reject(null);
+        else reject(null);
       }
     } catch (error) {
       console.log("Error sending command to Python");
