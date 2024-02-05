@@ -11,12 +11,17 @@ const router = createRouter({
                 {
                     path: '/',
                     name: 'dashboard',
-                    component: () => import('@/views/Dashboard.vue')
+                    component: () => import('@/views/pages/consultarClientes/ConsultarClientes.vue')
                 },
                 {
                     path: '/consultar-clientes',
                     name: 'ConsultarClientes',
                     component: () => import('@/views/pages/consultarClientes/ConsultarClientes.vue')
+                },
+                {
+                    path: '/usuarios',
+                    name: 'Usuarios',
+                    component: () => import('@/views/pages/usuarios/Usuarios.vue')
                 },
                 {
                     path: '/uikit/formlayout',

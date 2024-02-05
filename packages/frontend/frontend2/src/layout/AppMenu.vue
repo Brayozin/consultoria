@@ -43,6 +43,16 @@ const model = ref([
             }
         ]
     },
+    {
+        label: 'Administração',
+        items: [
+            {
+                label: 'Usuários',
+                icon: 'pi pi-fw pi-user',
+                to: '/usuarios'
+            },
+        ]
+    }
 
 ]);
 </script>
